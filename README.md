@@ -3,12 +3,12 @@ Factory Talk View ME Page Difference Reporting Tool
 
 ## Table of contents
 * [About](#About)
-* [Features](#Fetures)
+* [Features](#Features)
 * [Supported Versions](#Supported-Versions)
 * [Technologies](#Technologies)
 * [Utilisations](#Utilisations)
 
-## about
+## About
 This project was created to facilitate the useful comparison of Rockwell factory talk view ME HMI project pages.
 This is a work in progress and will be updated regularly 
 
