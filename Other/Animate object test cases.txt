@@ -1,0 +1,37 @@
+Animate color tests
+
+class - AnimationsAllMEType
+
+Left object no animation
+right object no animation
+left object doesnt exist
+right object doesnt exist
+expression - string
+blinkrate - single
+Animate color
+	backbehavior.tostring
+	backbehavior specified bool
+	backcolor1.tostring
+	backcolor2.tostring
+	endcolor.tostring
+	fillcolormode.tostring
+	fillcolormodespecified.tostring
+	fillendcolor
+	fillgradientdirection
+	fillgradientdirectionspecified
+	fillgradientshadingstyle
+	fillgradientshadingstylespecified
+	fillgradientstop
+	fillgradientstopspecified
+	forebehavior	
+	forebehaviorspecified	
+	forecolor1
+	forecolor2
+	gradientdirection
+	gradientdirectionspecified
+	gradientshadingstyle
+	gradientshadingstylespecified
+	gradientstop
+	gradientstopspecified
+	value
+	valuespecified
