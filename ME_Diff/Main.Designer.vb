@@ -40,7 +40,6 @@ Partial Class Main
         Me.Width_Checkbox = New System.Windows.Forms.CheckBox()
         Me.Height_Checkbox = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Pnl_ComparisonFilters.SuspendLayout()
         Me.SuspendLayout()
@@ -229,21 +228,11 @@ Partial Class Main
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Comparison Filters"
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(150, 128)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(212, 137)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Pnl_ComparisonFilters)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -278,5 +267,4 @@ Partial Class Main
     Friend WithEvents Width_Checkbox As CheckBox
     Friend WithEvents Height_Checkbox As CheckBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button3 As Button
 End Class

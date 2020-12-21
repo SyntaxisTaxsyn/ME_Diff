@@ -362,17 +362,47 @@ Module Subroutines
 
                 ' value
                 Desc = "value"
-                Left = LState.value.ToString
-                Right = Rstate.value.ToString
-                If Not Left = Right Then
-                    Call AddListContentMatch(Gnest,
-                                             fname,
-                                             lobj.name,
-                                             GetMEObjectType(lobj),
-                                             "State " & a & " - " & Desc,
-                                             Left,
-                                             Right)
+                If LState.value IsNot Nothing Then
+                    If Rstate.value IsNot Nothing Then
+                        Left = LState.value.ToString
+                        Right = Rstate.value.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "State " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+                    Else
+                        If LState.value IsNot Nothing Then
+                            ' Left is set to value but right is not
+                            Left = LState.value.ToString
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "State " & a & " - " & Desc,
+                                                     Left,
+                                                     "Nothing")
+                        End If
+                    End If
+
+                Else
+                    If Rstate.value IsNot Nothing Then
+                        Right = Rstate.value.ToString
+                        Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "State " & a & " - " & Desc,
+                                                     "Nothing",
+                                                     Right)
+                    End If
                 End If
+
+
 
                 ' Handle special datatypes within the multistate indicator
                 Call Compare_BasicCaptionType(lobj, robj, fname, Gnest, LState, Rstate, a)
@@ -768,5 +798,21 @@ Module Subroutines
             System.Diagnostics.Process.Start("notepad.exe", Path.GetDirectoryName(pathtofile) & "\Output.txt")
         End Using
     End Sub
+
+    ''' <summary>
+    ''' Returns the contents of the output file as a string to pass back to the calling method instead of outputting to a text file
+    ''' </summary>
+    Public Function OutputToTest_File()
+        Dim strout As String = ""
+        OutputToTest_File = ""
+        For a = 0 To List_FileCompareContentMatch.Count - 1
+            strout = strout & List_FileCompareContentMatch.Item(a) & vbCrLf
+        Next
+        OutputToTest_File = strout
+    End Function
+
+
+
+
 
 End Module
