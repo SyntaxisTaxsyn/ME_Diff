@@ -5,19 +5,21 @@ Imports System.IO
 Imports System.Windows
 Imports System.Reflection
 
-<TestClass()> Public Class UnitTest1
+<TestClass()> Public Class DrawingTests
 
-    <TestMethod()> Public Sub TestMethod1()
+    <TestMethod()> Public Sub TextTest()
         Dim fcomp As New FileCompare
-        Dim lstr As String = Path.Combine((Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)), "/Test Files/TextFile1.txt")
-        Dim rstr As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) & "\Test Files\TextFile1.txt"
-        'Dim rstr As String
-        'fcomp.SetFilePaths()
-        Dim sstr As String = ""
-        Using ffile As StreamReader = New StreamReader(rstr)
-            sstr = sstr & ffile.ReadLine
-        End Using
-        MsgBox(sstr)
+        Dim tdfstr As String = GetPathToFileCSV("00Drawing", "00Text", "0000", "Text")
+        Dim Lfile As String = GetPathToFileXML("00Drawing", "00Text", "0000", "Text", "L", "text")
+        Dim Rfile As String = GetPathToFileXML("00Drawing", "00Text", "0000", "Text", "R", "text")
+        Dim ThisTestCase As New TestCases(tdfstr)
+        Dim strlst As List(Of String)
+        Dim Result As TestResult = TestResult.Fail
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        Result = CheckTestCriteria(ThisTestCase.TestList.Item(0), strlst)
+        Assert.IsTrue(Result)
+
 
     End Sub
 

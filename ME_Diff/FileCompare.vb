@@ -1,9 +1,15 @@
 ﻿Imports System.IO
 Public Class FileCompare
 
+    Public Sub New()
+        List_FileCompareContentMatch = New List(Of String)
+        List_FileCompareContentNoMatch = New List(Of String)
+        List_FolderCompare = New List(Of String)
+    End Sub
+
     Public Sub SetFilePaths(ByRef Lfile As String, ByRef Rfile As String)
         STR_LeftPathFile = Lfile
-        STR_RightPathFolder = Rfile
+        STR_RightPathFile = Rfile
     End Sub
 
     Public Function CompareFiles(ByVal TestMode As UnitTestType)

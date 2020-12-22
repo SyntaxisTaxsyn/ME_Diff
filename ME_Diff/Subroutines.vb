@@ -803,12 +803,13 @@ Module Subroutines
     ''' Returns the contents of the output file as a string to pass back to the calling method instead of outputting to a text file
     ''' </summary>
     Public Function OutputToTest_File()
-        Dim strout As String = ""
-        OutputToTest_File = ""
-        For a = 0 To List_FileCompareContentMatch.Count - 1
-            strout = strout & List_FileCompareContentMatch.Item(a) & vbCrLf
-        Next
-        OutputToTest_File = strout
+        'Dim strout As String = ""
+        'OutputToTest_File = ""
+        'For a = 0 To List_FileCompareContentMatch.Count - 1
+        '    strout = strout & List_FileCompareContentMatch.Item(a) & vbCrLf
+        'Next
+        'OutputToTest_File = strout
+        OutputToTest_File = List_FileCompareContentMatch ' return the complete list
     End Function
 
 

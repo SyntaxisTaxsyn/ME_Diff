@@ -1,0 +1,19 @@
+Test number,Property,Left,Right
+1,caption,text,text1
+2,fontFamily,Arial,Arial Black
+3,backcolor,white,yellow
+4,forecolor,black,red
+5,sizeToFit,TRUE,FALSE
+6,wordWrap,TRUE,FALSE
+7,fontSize,13,12
+8,alignment,middleCenter,middleRight
+9,bold,FALSE,TRUE
+10,italic,FALSE,TRUE
+11,underline,FALSE,TRUE
+12,backStyle,transparent,solid
+13,height,19,18
+14,width,25,24
+15,top,439,440
+16,left,263,264
+17,name,Text_Test17,Text_Test17s
+18,visible,TRUE,FALSE
