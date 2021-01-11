@@ -1,0 +1,11 @@
+Test number,Property,Left,Right
+1,imageName,Alm_AckReqd,Alm_Active
+2,imageColor,white,lime
+3,imageBackColor,navy,#FF8000
+4,imageBlink,False,True
+5,imageBackStyle,transparent,solid
+6,height,16,17
+7,width,16,17
+8,top,358,359
+9,left,204,205
+10,visible,True,False

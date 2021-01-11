@@ -29,4 +29,26 @@ Imports System.Reflection
 
     End Sub
 
+    <TestMethod()> Public Sub ImageTest()
+        Dim fcomp As New FileCompare
+        Dim tdfstr As String = GetPathToFileCSV("00Drawing", "01Image", "0001", "Image")
+        Dim Lfile As String = GetPathToFileXML("00Drawing", "01Image", "0001", "Image", "L", "main")
+        Dim Rfile As String = GetPathToFileXML("00Drawing", "01Image", "0001", "Image", "R", "main")
+        Dim ThisTestCase As New TestCases(tdfstr)
+        Dim strlst As List(Of String)
+        Dim Result(50) As TestResult
+
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a)
+        Next
+
+    End Sub
+
 End Class
