@@ -128,6 +128,9 @@
     <None Include="Test Pages\00Drawing\03Arc\0003Arc.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\00Drawing\04Ellipse\0004Ellipse.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -136,7 +139,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\00Drawing\04Ellipse\" />
     <Folder Include="Test Pages\00Drawing\05Freehand\" />
     <Folder Include="Test Pages\00Drawing\06Line\" />
     <Folder Include="Test Pages\00Drawing\07Polygon\" />
@@ -180,6 +182,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\00Drawing\03Arc\0003ArcR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\04Ellipse\0004EllipseL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\04Ellipse\0004EllipseR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
