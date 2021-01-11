@@ -1,0 +1,18 @@
+Test number,Property,Left,Right
+1,lineStyle,solid,dash
+2,backStyle,solid,transparent
+3,patternStyle,none,dots
+4,foreColor,black,white
+5,backColor,teal,lime
+6,patternColor,black,white
+7,lineWidth,1,2
+8,height,2,3
+9,width,8,9
+10,top,394,395
+11,left,288,289
+12,visible,True,False
+13,endColor,white,black
+14,gradientStop,50,40
+15,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+16,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop
+17,path,288 659 292 659 292 659 293 659 294 659 295 659 295 660 295 660 ,289 659 292 659 292 659 293 659 294 659 295 659 295 660 295 660 
