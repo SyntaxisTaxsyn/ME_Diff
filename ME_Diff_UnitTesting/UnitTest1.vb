@@ -14,12 +14,18 @@ Imports System.Reflection
         Dim Rfile As String = GetPathToFileXML("00Drawing", "00Text", "0000", "Text", "R", "text")
         Dim ThisTestCase As New TestCases(tdfstr)
         Dim strlst As List(Of String)
-        Dim Result As TestResult = TestResult.Fail
+        Dim Result(50) As TestResult
+
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
         fcomp.SetFilePaths(Lfile, Rfile)
         strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
-        Result = CheckTestCriteria(ThisTestCase.TestList.Item(0), strlst)
-        Assert.IsTrue(Result)
-
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a)
+        Next
 
     End Sub
 
