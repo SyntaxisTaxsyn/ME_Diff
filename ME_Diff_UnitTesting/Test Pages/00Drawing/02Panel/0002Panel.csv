@@ -1,0 +1,15 @@
+Test number,Property,Left,Right
+1,borderStyle,raised,inset
+2,backStyle,solid,transparent
+3,borderWidth,2,3
+4,patternStyle,none,dots
+5,borderUsesBackColor,True,False
+6,patternColor,white,lime
+7,backColor,navy,lime
+8,borderColor,navy,lime
+9,blink,False,True
+10,height,33,34
+11,width,172,173
+12,top,543,544
+13,left,278,279
+14,visible,True,False
