@@ -104,6 +104,8 @@ Public Class FileCompare
             Else
                 ' other cases when top level content doesnt match are handled here
             End If
+        Else
+            Throw New Exception("Object count no match exception, not implemented yet")
         End If
 
         'For a = 0 To LeftObj.ItemsElementName.Count - 1

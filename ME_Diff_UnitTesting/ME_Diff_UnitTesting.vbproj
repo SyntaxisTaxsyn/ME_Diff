@@ -134,6 +134,24 @@
     <None Include="Test Pages\00Drawing\05Freehand\0005Freehand.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\00Drawing\06Line\0006Line.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\00Drawing\07Polygon\0007Polygon.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\00Drawing\08Polyline\0008Polyline.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\00Drawing\09Rectangle\0009Rectangle.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\00Drawing\10RoundedRectangle\0010RoundedRectangle.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\00Drawing\11Wedge\0011Wedge.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -142,12 +160,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\00Drawing\06Line\" />
-    <Folder Include="Test Pages\00Drawing\07Polygon\" />
-    <Folder Include="Test Pages\00Drawing\08Polyline\" />
-    <Folder Include="Test Pages\00Drawing\09Rectangle\" />
-    <Folder Include="Test Pages\00Drawing\10Rounded rectangle\" />
-    <Folder Include="Test Pages\00Drawing\11Wedge\" />
     <Folder Include="Test Pages\01Pushbutton\" />
     <Folder Include="Test Pages\02Numeric and string\" />
     <Folder Include="Test Pages\03Display Navigation\" />
@@ -196,6 +208,42 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\00Drawing\05Freehand\0005FreehandR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\06Line\0006LineL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\06Line\0006LineR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\07Polygon\0007PolygonL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\07Polygon\0007PolygonR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\08Polyline\0008PolylineL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\08Polyline\0008PolylineR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\09Rectangle\0009RectangleL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\09Rectangle\0009RectangleR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\10RoundedRectangle\0010RoundedRectangleL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\10RoundedRectangle\0010RoundedRectangleR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\11Wedge\0011WedgeL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\00Drawing\11Wedge\0011WedgeR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

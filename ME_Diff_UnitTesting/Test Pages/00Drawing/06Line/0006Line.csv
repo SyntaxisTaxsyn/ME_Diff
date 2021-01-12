@@ -1,0 +1,12 @@
+Test number,Property,Left,Right
+1,lineStyle,solid,dash
+2,backStyle,solid,transparent
+3,foreColor,black,white
+4,backColor,teal,lime
+5,lineWidth,1,2
+6,height,15,16
+7,width,80,81
+8,top,368,369
+9,left,202,203
+10,visible,True,False
+11,line,204 503 283 489 ,204 503 283 490 

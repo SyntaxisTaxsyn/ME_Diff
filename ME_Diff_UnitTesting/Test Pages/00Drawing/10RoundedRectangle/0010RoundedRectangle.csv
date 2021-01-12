@@ -1,0 +1,19 @@
+Test number,Property,Left,Right
+1,lineStyle,solid,dash
+2,backStyle,solid,transparent
+3,patternStyle,none,dots
+4,foreColor,black,white
+5,backColor,teal,lime
+6,patternColor,black,white
+7,lineWidth,1,2
+8,height,27,28
+9,width,55,56
+10,top,338,339
+11,left,247,248
+12,visible,True,False
+13,endColor,white,black
+14,gradientStop,50,40
+15,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+16,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop
+17,roundingWidth,12,22
+18,roundingHeight,27,28
