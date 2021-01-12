@@ -256,8 +256,8 @@ Module Subroutines
                 Dim Right As String = ""
                 Dim Desc As String = ""
 
-                ' Backcolor
-                Desc = "Backcolor"
+                ' backColor
+                Desc = "backColor"
                 Left = LState.backColor.ToString
                 Right = Rstate.backColor.ToString
                 If Not Left = Right Then

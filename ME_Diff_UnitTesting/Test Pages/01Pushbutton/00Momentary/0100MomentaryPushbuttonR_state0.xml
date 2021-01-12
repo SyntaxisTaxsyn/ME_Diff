@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME12.xsd">
+    <displaySettings displayType="replace" securityCode="*" backColor="white" maximumTagUpdateRate="1" focusHighlightColor="lime" disableFocusHighlight="false" width="1024" height="768" displayNumber="1" disableInitialInputFocus="false" startupMacro="" shutdownMacro="" useGradientStyle="false" endColor="teal" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight"/>
+    <text name="Text2" height="19" width="91" left="44" top="41" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - value"/>
+    <line name="Line2" height="1" width="267" left="42" top="64" visible="true" wallpaper="false" isReferenceObject="false" line="42 64 308 64 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test1" height="18" width="73" left="236" top="42" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text1" height="19" width="130" left="42" top="67" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - back color"/>
+    <line name="Line1" height="1" width="267" left="40" top="90" visible="true" wallpaper="false" isReferenceObject="false" line="40 90 306 90 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test2" height="18" width="73" left="234" top="68" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="lime" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text3" height="19" width="134" left="42" top="87" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - bordr color"/>
+    <line name="Line3" height="1" width="267" left="40" top="110" visible="true" wallpaper="false" isReferenceObject="false" line="40 110 306 110 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test3" height="18" width="73" left="234" top="88" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="lime" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text4" height="19" width="145" left="40" top="115" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - pattern color"/>
+    <line name="Line4" height="1" width="267" left="38" top="138" visible="true" wallpaper="false" isReferenceObject="false" line="38 138 304 138 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test4" height="18" width="73" left="232" top="116" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="black" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text5" height="19" width="142" left="42" top="140" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - pattern style"/>
+    <line name="Line5" height="1" width="267" left="40" top="163" visible="true" wallpaper="false" isReferenceObject="false" line="40 163 306 163 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test5" height="18" width="73" left="234" top="141" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="dots" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text6" height="19" width="87" left="41" top="165" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - blink"/>
+    <line name="Line6" height="1" width="267" left="39" top="188" visible="true" wallpaper="false" isReferenceObject="false" line="39 188 305 188 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test6" height="18" width="73" left="233" top="166" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="true" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text7" height="19" width="122" left="41" top="190" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - end color"/>
+    <line name="Line7" height="1" width="267" left="39" top="213" visible="true" wallpaper="false" isReferenceObject="false" line="39 213 305 213 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test7" height="18" width="73" left="233" top="191" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="gradient" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="black" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text8" height="19" width="148" left="40" top="213" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - gradient stop"/>
+    <line name="Line8" height="1" width="267" left="38" top="236" visible="true" wallpaper="false" isReferenceObject="false" line="38 236 304 236 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test8" height="18" width="73" left="232" top="214" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="gradient" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="40" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text9" height="19" width="137" left="40" top="239" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - gradient dir"/>
+    <line name="Line9" height="1" width="267" left="38" top="262" visible="true" wallpaper="false" isReferenceObject="false" line="38 262 304 262 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test9" height="18" width="73" left="232" top="240" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="gradient" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionVertical" gradientShadingStyle="gradientVerticalFromBottom">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text10" height="19" width="174" left="40" top="266" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="State - grad shade style"/>
+    <line name="Line10" height="1" width="267" left="38" top="289" visible="true" wallpaper="false" isReferenceObject="false" line="38 289 304 289 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test10" height="18" width="73" left="232" top="267" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="gradient" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionVertical" gradientShadingStyle="gradientVerticalFromTop">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text11" height="19" width="148" left="38" top="296" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - font family"/>
+    <line name="Line11" height="1" width="267" left="36" top="319" visible="true" wallpaper="false" isReferenceObject="false" line="36 319 302 319 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test11" height="18" width="73" left="230" top="297" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial Black" fontSize="13" bold="true" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text12" height="19" width="134" left="39" top="324" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - font size"/>
+    <line name="Line12" height="1" width="267" left="37" top="347" visible="true" wallpaper="false" isReferenceObject="false" line="37 347 303 347 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test12" height="18" width="73" left="231" top="325" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="14" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text13" height="19" width="103" left="38" top="352" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - bold"/>
+    <line name="Line13" height="1" width="267" left="36" top="375" visible="true" wallpaper="false" isReferenceObject="false" line="36 375 302 375 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test13" height="18" width="73" left="230" top="353" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="true" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text14" height="19" width="106" left="38" top="380" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - italic"/>
+    <line name="Line14" height="1" width="267" left="36" top="403" visible="true" wallpaper="false" isReferenceObject="false" line="36 403 302 403 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test14" height="18" width="73" left="230" top="381" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="true" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text15" height="19" width="140" left="41" top="405" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - underline"/>
+    <line name="Line15" height="1" width="267" left="39" top="428" visible="true" wallpaper="false" isReferenceObject="false" line="39 428 305 428 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test15" height="18" width="73" left="233" top="406" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="true" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text16" height="19" width="167" left="43" top="431" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - strikethrough"/>
+    <line name="Line16" height="1" width="267" left="41" top="454" visible="true" wallpaper="false" isReferenceObject="false" line="41 454 307 454 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test16" height="18" width="73" left="235" top="432" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text17" height="19" width="126" left="41" top="456" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - caption"/>
+    <line name="Line17" height="1" width="267" left="39" top="479" visible="true" wallpaper="false" isReferenceObject="false" line="39 479 305 479 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test17" height="18" width="73" left="233" top="457" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="texts" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text18" height="19" width="109" left="41" top="481" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - color"/>
+    <line name="Line18" height="1" width="267" left="39" top="504" visible="true" wallpaper="false" isReferenceObject="false" line="39 504 305 504 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test18" height="18" width="73" left="233" top="482" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text19" height="19" width="147" left="39" top="506" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - backColor"/>
+    <line name="Line19" height="1" width="267" left="37" top="529" visible="true" wallpaper="false" isReferenceObject="false" line="37 529 303 529 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test19" height="18" width="73" left="231" top="507" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="lime" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text20" height="19" width="146" left="39" top="532" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - back style"/>
+    <line name="Line20" height="1" width="267" left="37" top="555" visible="true" wallpaper="false" isReferenceObject="false" line="37 555 303 555 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test20" height="18" width="73" left="231" top="533" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="solid" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text21" height="19" width="142" left="39" top="557" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - alignment"/>
+    <line name="Line21" height="1" width="267" left="37" top="580" visible="true" wallpaper="false" isReferenceObject="false" line="37 580 303 580 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test21" height="18" width="73" left="231" top="558" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleLeft" wordWrap="true" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text22" height="19" width="143" left="38" top="582" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - wordwrap"/>
+    <line name="Line22" height="1" width="267" left="36" top="605" visible="true" wallpaper="false" isReferenceObject="false" line="36 605 302 605 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test22" height="18" width="73" left="230" top="583" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="false" blink="false"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+    <text name="Text23" height="19" width="106" left="37" top="607" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Caption - blink"/>
+    <line name="Line23" height="1" width="267" left="35" top="630" visible="true" wallpaper="false" isReferenceObject="false" line="35 630 301 630 " backStyle="solid" lineStyle="solid" lineWidth="1" backColor="teal" foreColor="black"/>
+    <momentaryButton name="MPB_Test23" height="18" width="73" left="229" top="608" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backStyle="solid" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" buttonAction="value" description="" holdTime="250" highlightColor="lime" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" currentStateId="0" captionOnBorder="false">
+        <states>
+            <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+            <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="true"/>
+                <imageSettings imageName="Arrow Down" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false"/>
+            </state>
+            <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight">
+                <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false"/>
+                <imageSettings imageName="" alignment="middleCenter" backStyle="transparent" color="white" backColor="navy" scaled="false" blink="false"/>
+            </state>
+        </states>
+        <connections>
+            <connection name="Value" expression="dummy"/>
+            <connection name="Indicator" expression="dummy==1"/>
+        </connections>
+    </momentaryButton>
+</gfx>

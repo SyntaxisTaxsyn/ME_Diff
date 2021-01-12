@@ -1,0 +1,18 @@
+Test number,Property,Left,Right
+1,borderStyle,raised,inset
+2,backStyle,solid,transparent
+3,shape,rectangle,circle
+4,borderWidth,4,5
+5,borderUsesBackColor,True,False
+6,highlightColor,lime,black
+7,buttonAction,normallyOpen,normallyClosed
+8,holdTime,250,500
+9,horizontalMargin,0,1
+10,verticalMargin,0,1
+11,audio,True,False
+12,currentStateId,0,1
+13,height,24,25
+14,width,73,74
+15,top,481,482
+16,left,227,228
+17,visible,True,False
