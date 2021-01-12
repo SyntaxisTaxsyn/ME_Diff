@@ -1,0 +1,10 @@
+Test number,Property,Left,Right
+1,State 1 - imageName,Arrow Down,Arrow Up
+2,State 1 - alignment,middleCenter,middleLeft
+3,State 1 - backStyle,solid,transparent
+4,State 1 - color,black,white
+5,State 1 - backColor,white,black
+6,State 1 - scaled,False,True
+7,State 1 - blink,False,True
+8,Connection 0 - name,Value,Values
+9,Connection 1 - expression,exp,exps
