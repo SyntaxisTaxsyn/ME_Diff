@@ -76,7 +76,7 @@ Module Subroutines
         ' todo - add select case handler for complex types that need to be compared, do an HMI page with every type possible and work on code that detects the changes in each of those special object types 
 
         Dim linfo() As PropertyInfo = lobj.GetType().GetProperties()
-        Dim rinfo() As PropertyInfo = lobj.GetType().GetProperties()
+        Dim rinfo() As PropertyInfo = robj.GetType().GetProperties()
         For a = 0 To linfo.Count - 1
             If linfo(a).CanRead Then
                 Dim str As String = linfo(a).PropertyType().ToString
@@ -85,6 +85,8 @@ Module Subroutines
                         ' call special case handler for dealing with animation property comparison
                         Call CompareAnimationsProperties(lobj.animations, robj.animations, Gnest, fname, lobj.name.ToString)
                     Case "ME_Diff.multistateButtonBaseStateType"
+                        MsgBox("")
+                    Case "ME_Diff.connectionType"
                         MsgBox("")
 
                 End Select
@@ -103,6 +105,7 @@ Module Subroutines
         Next
 
         Call CompareItemsByType_SpecificCases(lobj, robj, fname, Gnest)
+        Call CheckConnectionsByType_SpecificCases(lobj, robj, fname, Gnest)
 
     End Sub
 
@@ -120,7 +123,400 @@ Module Subroutines
         Select Case LobjTyp
             Case "ME_Diff.multistateButtonType"
                 Call CompareMultistateProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.momentaryButtonType"
+                Call CompareMomentaryButtonMultistateProperties(lobj, robj, fname, Gnest)
         End Select
+
+    End Sub
+
+    ''' <summary>
+    ''' Case handler for specific comparison of certian object types who contain arrays of other types that cant be picked up using the generic code
+    ''' </summary>
+    ''' <param name="lobj">Left object</param>
+    ''' <param name="robj">Right object</param>
+    ''' <param name="fname">File name</param>
+    ''' <param name="Gnest">Group nest level</param>
+    Public Sub CheckConnectionsByType_SpecificCases(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Select the special case handling behaviour by object type
+        Dim LobjTyp As String = lobj.GetType.ToString
+        Select Case LobjTyp
+            'Case "ME_Diff.multistateButtonType"
+            '    Call CompareMultistateProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.momentaryButtonType"
+                Call CheckMomentaryPBConnections(lobj, robj, fname, Gnest)
+        End Select
+
+    End Sub
+
+    Public Sub CheckMomentaryPBConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.momentaryButtonType = lobj
+        Dim RMSB As ME_Diff.momentaryButtonType = robj
+
+        If Not LMSB.connections.Count = RMSB.connections.Count Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Momentary Button - Connection Count Mismatch",
+                                     LMSB.states.Count,
+                                     RMSB.states.Count)
+        Else
+            For a = 0 To LMSB.connections.Count - 1
+
+                ' Declare reuseable loop variables
+                Dim MEObjType As String = GetMEObjectType(lobj)
+                Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                Dim Left As String = ""
+                Dim Right As String = ""
+                Dim Desc As String = ""
+
+                ' expression
+                Desc = "expression"
+                Left = LConn.expression.ToString
+                Right = RConn.expression.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Connection " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' name
+                Desc = "name"
+                Left = LConn.name.ToString
+                Right = RConn.name.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Connection " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' optionalExpression
+                If LConn.optionalExpression IsNot Nothing Then
+                    If RConn.optionalExpression IsNot Nothing Then
+                        Desc = "optionalExpression"
+                        Left = LConn.optionalExpression.ToString
+                        Right = RConn.optionalExpression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+                    End If
+                End If
+
+
+            Next
+        End If
+
+
+    End Sub
+
+    Public Sub CompareMomentaryButtonMultistateProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.momentaryButtonType = lobj
+        Dim RMSB As ME_Diff.momentaryButtonType = robj
+
+        If Not LMSB.states.Count = RMSB.states.Count Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "MultistateButton - State Count Mismatch",
+                                     LMSB.states.Count,
+                                     RMSB.states.Count)
+        Else
+
+            For a = 0 To LMSB.states.Count - 1
+
+                ' Declare reuseable loop variables
+                Dim MEObjType As String = GetMEObjectType(lobj)
+                Dim LState As ME_Diff.pushButtonBaseStateValueType = LMSB.states(a)
+                Dim Rstate As ME_Diff.pushButtonBaseStateValueType = RMSB.states(a)
+                Dim Left As String = ""
+                Dim Right As String = ""
+                Dim Desc As String = ""
+
+                ' Backcolor
+                Desc = "Backcolor"
+                Left = LState.backColor.ToString
+                Right = Rstate.backColor.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' blink
+                Desc = "blink"
+                Left = LState.blink.ToString
+                Right = Rstate.blink.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' blinkSpecified
+                Desc = "blinkSpecified"
+                Left = LState.blinkSpecified.ToString
+                Right = Rstate.blinkSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' borderColor
+                Desc = "borderColor"
+                Left = LState.borderColor.ToString
+                Right = Rstate.borderColor.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' endColor
+                Desc = "endColor"
+                Left = LState.endColor.ToString
+                Right = Rstate.endColor.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' gradientDirection
+                Desc = "gradientDirection"
+                Left = LState.gradientDirection.ToString
+                Right = Rstate.gradientDirection.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' gradientDirectionSpecified
+                Desc = "gradientDirectionSpecified"
+                Left = LState.gradientDirectionSpecified.ToString
+                Right = Rstate.gradientDirectionSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' gradientShadingStyle
+                Desc = "gradientShadingStyle"
+                Left = LState.gradientShadingStyle.ToString
+                Right = Rstate.gradientShadingStyle.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' gradientShadingStyleSpecified
+                Desc = "gradientShadingStyleSpecified"
+                Left = LState.gradientShadingStyleSpecified.ToString
+                Right = Rstate.gradientShadingStyleSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' gradientStop
+                Desc = "gradientStop"
+                Left = LState.gradientStop.ToString
+                Right = Rstate.gradientStop.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' gradientStopSpecified
+                Desc = "gradientStopSpecified"
+                Left = LState.gradientStopSpecified.ToString
+                Right = Rstate.gradientStopSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' patternColor
+                Desc = "patternColor"
+                Left = LState.patternColor.ToString
+                Right = Rstate.patternColor.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' patternStyle
+                Desc = "patternStyle"
+                Left = LState.patternStyle.ToString
+                Right = Rstate.patternStyle.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' patternStyleSpecified
+                Desc = "patternStyleSpecified"
+                Left = LState.patternStyleSpecified.ToString
+                Right = Rstate.patternStyleSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' stateId
+                Desc = "stateId"
+                Left = LState.stateId.ToString
+                Right = Rstate.stateId.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' value
+                Desc = "value"
+                If LState.value IsNot Nothing Then
+                    If Rstate.value IsNot Nothing Then
+                        Left = LState.value.ToString
+                        Right = Rstate.value.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "State " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+                    Else
+                        If LState.value IsNot Nothing Then
+                            ' Left is set to value but right is not
+                            Left = LState.value.ToString
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "State " & a & " - " & Desc,
+                                                     Left,
+                                                     "Nothing")
+                        End If
+                    End If
+
+                Else
+                    If Rstate.value IsNot Nothing Then
+                        Right = Rstate.value.ToString
+                        Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "State " & a & " - " & Desc,
+                                                     "Nothing",
+                                                     Right)
+                    End If
+                End If
+
+
+
+                ' Handle special datatypes within the multistate indicator
+                Call Compare_BasicCaptionType(lobj, robj, fname, Gnest, LState, Rstate, a)
+                Call Compare_BasicImageType(lobj, robj, fname, Gnest, LState, Rstate, a)
+
+            Next
+
+        End If
 
     End Sub
 
@@ -738,6 +1134,330 @@ Module Subroutines
 
     End Sub
 
+    Public Sub Compare_BasicCaptionType(ByRef lobj As Object,
+                                        ByRef robj As Object,
+                                        ByRef fname As String,
+                                        ByRef Gnest As String,
+                                        ByRef LState As ME_Diff.pushButtonBaseStateValueType,
+                                        ByRef RState As ME_Diff.pushButtonBaseStateValueType,
+                                        ByRef StateIndex As Integer)
+
+        Dim LCap As ME_Diff.basicCaptionType = LState.caption
+        Dim RCap As ME_Diff.basicCaptionType = RState.caption
+        Dim Desc As String = ""
+        Dim Left As String = ""
+        Dim Right As String = ""
+
+        ' alignment
+        Desc = "alignment"
+        Left = LCap.alignment.ToString
+        Right = RCap.alignment.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' alignmentSpecified
+        Desc = "alignmentSpecified"
+        Left = LCap.alignmentSpecified.ToString
+        Right = RCap.alignmentSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backColor
+        Desc = "backColor"
+        Left = LCap.backColor.ToString
+        Right = RCap.backColor.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyle
+        Desc = "backStyle"
+        Left = LCap.backStyle.ToString
+        Right = RCap.backStyle.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyleSpecified
+        Desc = "backStyleSpecified"
+        Left = LCap.backStyleSpecified.ToString
+        Right = RCap.backStyleSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blink
+        Desc = "blink"
+        Left = LCap.blink.ToString
+        Right = RCap.blink.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blinkSpecified
+        Desc = "blinkSpecified"
+        Left = LCap.blinkSpecified.ToString
+        Right = RCap.blinkSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' bold
+        Desc = "bold"
+        Left = LCap.bold.ToString
+        Right = RCap.bold.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' boldSpecified
+        Desc = "boldSpecified"
+        Left = LCap.boldSpecified.ToString
+        Right = RCap.boldSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' Caption
+        Desc = "caption"
+        Left = LCap.caption.ToString
+        Right = RCap.caption.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' color
+        Desc = "color"
+        Left = LCap.color.ToString
+        Right = RCap.color.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' fontFamily
+        Desc = "fontFamily"
+        Left = LCap.fontFamily.ToString
+        Right = RCap.fontFamily.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' fontSize
+        Desc = "fontSize"
+        Left = LCap.fontSize.ToString
+        Right = RCap.fontSize.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' fontSizeSpecified
+        Desc = "fontSizeSpecified"
+        Left = LCap.fontSizeSpecified.ToString
+        Right = RCap.fontSizeSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' italic
+        Desc = "italic"
+        Left = LCap.italic.ToString
+        Right = RCap.italic.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' italicSpecified
+        Desc = "italicSpecified"
+        Left = LCap.italicSpecified.ToString
+        Right = RCap.italicSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' strikethrough
+        Desc = "strikethrough"
+        Left = LCap.strikethrough.ToString
+        Right = RCap.strikethrough.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' strikethroughSpecified
+        Desc = "strikethroughSpecified"
+        Left = LCap.strikethroughSpecified.ToString
+        Right = RCap.strikethroughSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' underline
+        Desc = "underline"
+        Left = LCap.underline.ToString
+        Right = RCap.underline.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' underlineSpecified
+        Desc = "underlineSpecified"
+        Left = LCap.underlineSpecified.ToString
+        Right = RCap.underlineSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' wordWrap
+        Desc = "wordWrap"
+        Left = LCap.wordWrap.ToString
+        Right = RCap.wordWrap.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' wordWrapSpecified
+        Desc = "wordWrapSpecified"
+        Left = LCap.wordWrapSpecified.ToString
+        Right = RCap.wordWrapSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+    End Sub
+
     Public Sub Compare_BasicImageType(ByRef lobj As Object,
                                         ByRef robj As Object,
                                         ByRef fname As String,
@@ -753,7 +1473,7 @@ Module Subroutines
         Dim Right As String = ""
 
         ' alignment
-        Desc = "caption"
+        Desc = "alignment"
         Left = LImg.alignment.ToString
         Right = RImg.alignment.ToString
         If Not Left = Right Then
@@ -766,7 +1486,315 @@ Module Subroutines
                                      Right)
         End If
 
-        ' Todo - fill in the rest of the properties for this data type
+        ' alignmentSpecified
+        Desc = "alignmentSpecified"
+        Left = LImg.alignmentSpecified.ToString
+        Right = RImg.alignmentSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backColor
+        Desc = "backColor"
+        Left = LImg.backColor.ToString
+        Right = RImg.backColor.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyle
+        Desc = "backStyle"
+        Left = LImg.backStyle.ToString
+        Right = RImg.backStyle.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyleSpecified
+        Desc = "backStyleSpecified"
+        Left = LImg.backStyleSpecified.ToString
+        Right = RImg.backStyleSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blink
+        Desc = "blink"
+        Left = LImg.blink.ToString
+        Right = RImg.blink.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blinkSpecified
+        Desc = "blinkSpecified"
+        Left = LImg.blinkSpecified.ToString
+        Right = RImg.blinkSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' color
+        Desc = "color"
+        Left = LImg.color.ToString
+        Right = RImg.color.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' imageName
+        Desc = "imageName"
+        Left = LImg.imageName.ToString
+        Right = RImg.imageName.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' scaled
+        Desc = "scaled"
+        Left = LImg.scaled.ToString
+        Right = RImg.scaled.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' scaledSpecified
+        Desc = "scaledSpecified"
+        Left = LImg.scaledSpecified.ToString
+        Right = RImg.scaledSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+    End Sub
+
+    Public Sub Compare_BasicImageType(ByRef lobj As Object,
+                                        ByRef robj As Object,
+                                        ByRef fname As String,
+                                        ByRef Gnest As String,
+                                        ByRef LState As ME_Diff.pushButtonBaseStateValueType,
+                                        ByRef RState As ME_Diff.pushButtonBaseStateValueType,
+                                        ByRef StateIndex As Integer)
+
+        Dim LImg As ME_Diff.basicImageType = LState.imageSettings
+        Dim RImg As ME_Diff.basicImageType = RState.imageSettings
+        Dim Desc As String = ""
+        Dim Left As String = ""
+        Dim Right As String = ""
+
+        ' alignment
+        Desc = "alignment"
+        Left = LImg.alignment.ToString
+        Right = RImg.alignment.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' alignmentSpecified
+        Desc = "alignmentSpecified"
+        Left = LImg.alignmentSpecified.ToString
+        Right = RImg.alignmentSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backColor
+        Desc = "backColor"
+        Left = LImg.backColor.ToString
+        Right = RImg.backColor.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyle
+        Desc = "backStyle"
+        Left = LImg.backStyle.ToString
+        Right = RImg.backStyle.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyleSpecified
+        Desc = "backStyleSpecified"
+        Left = LImg.backStyleSpecified.ToString
+        Right = RImg.backStyleSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blink
+        Desc = "blink"
+        Left = LImg.blink.ToString
+        Right = RImg.blink.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blinkSpecified
+        Desc = "blinkSpecified"
+        Left = LImg.blinkSpecified.ToString
+        Right = RImg.blinkSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' color
+        Desc = "color"
+        Left = LImg.color.ToString
+        Right = RImg.color.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' imageName
+        Desc = "imageName"
+        Left = LImg.imageName.ToString
+        Right = RImg.imageName.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' scaled
+        Desc = "scaled"
+        Left = LImg.scaled.ToString
+        Right = RImg.scaled.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' scaledSpecified
+        Desc = "scaledSpecified"
+        Left = LImg.scaledSpecified.ToString
+        Right = RImg.scaledSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
 
     End Sub
 

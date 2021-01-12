@@ -16,7 +16,7 @@ Public Class Main
         Dim Fcompare As New ME_Diff.FileCompare
         Dim str As String = Fcompare.CompareFiles(FileCompare.UnitTestType.DontUse)
         If Not str = "" Then
-            ' Only display errors returned back by the comparison operation
+            ' Only display errors/differences returned by the comparison operation
             MsgBox(str)
         End If
     End Sub

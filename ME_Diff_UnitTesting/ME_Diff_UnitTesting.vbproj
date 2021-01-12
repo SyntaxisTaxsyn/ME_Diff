@@ -152,6 +152,7 @@
     <None Include="Test Pages\00Drawing\11Wedge\0011Wedge.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\01Pushbutton\00Momentary\0101Momentary.csv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -160,7 +161,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\01Pushbutton\" />
+    <Folder Include="Test Pages\01Pushbutton\01Maintained\" />
+    <Folder Include="Test Pages\01Pushbutton\02Latched\" />
+    <Folder Include="Test Pages\01Pushbutton\03Multistate\" />
+    <Folder Include="Test Pages\01Pushbutton\04Interlocked\" />
+    <Folder Include="Test Pages\01Pushbutton\05Ramp\" />
     <Folder Include="Test Pages\02Numeric and string\" />
     <Folder Include="Test Pages\03Display Navigation\" />
     <Folder Include="Test Pages\04Indicator\" />
