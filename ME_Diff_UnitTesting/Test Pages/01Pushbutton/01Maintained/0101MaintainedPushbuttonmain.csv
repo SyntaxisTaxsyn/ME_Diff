@@ -1,0 +1,27 @@
+Test number,Property,Left,Right
+1,borderStyle,raised,inset
+2,backStyle,solid,transparent
+3,shape,rectangle,circle
+4,borderWidth,4,5
+5,borderUsesBackColor,True,False
+6,highlightColor,lime,black
+7,nextStateBasedOn,currentState,valueControl
+8,horizontalMargin,0,1
+9,verticalMargin,0,1
+10,audio,True,False
+11,currentStateId,0,1
+12,height,26,27
+13,width,78,79
+14,top,460,461
+15,left,214,215
+16,visible,True,False
+17,RequireElectronicSignature,True,False
+18,AllowBlankComment,True,False
+19,RequireReAuthentication,True,False
+20,RequireCounterSignature,True,False
+21,AuthorizedGroup,Administrators,Windows Administrators
+22,ESDomainNameVisible,True,False
+23,ESDomainNameType,ESDomainNameConstant,ESDomainNameVariable
+24,ESDomainName,,text
+25,VariableDomainName,,text
+26,ESDomainNameDisable,True,False
