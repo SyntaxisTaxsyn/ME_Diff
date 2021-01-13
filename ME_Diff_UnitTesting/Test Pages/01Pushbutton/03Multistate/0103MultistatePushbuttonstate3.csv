@@ -1,0 +1,11 @@
+Test number,Property,Left,Right
+1,State 3 - value,2,3
+2,State 3 - backColor,navy,lime
+3,State 3 - borderColor,navy,lime
+4,State 3 - patternColor,white,black
+5,State 3 - patternStyle,none,dots
+6,State 3 - blink,False,True
+7,State 3 - endColor,white,black
+8,State 3 - gradientStop,50,40
+9,State 3 - gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+10,State 3 - gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop

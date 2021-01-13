@@ -1,0 +1,7 @@
+Test number,Property,Left,Right
+1,Multistate Button - Connection Count Mismatch,1,2
+2,Multistate Button - Connection Count Mismatch,2,1
+3,Connection 0 - expression,indicator,value
+4,Connection 0 - expression,value,indicator
+5,Multistate Button - Connection Count Mismatch,defined,nothing
+6,Multistate Button - Connection Count Mismatch,nothing,defined
