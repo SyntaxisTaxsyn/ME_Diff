@@ -443,6 +443,30 @@ End Class
                           ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
         Next
 
+        ' connections tests
+        T = "connections"
+        tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Lfile = GetPathToFileXML(P, C, I, N, "L", T)
+        Rfile = GetPathToFileXML(P, C, I, N, "R", T)
+        fcomp = Nothing
+        fcomp = New FileCompare
+        ThisTestCase = New TestCases(tdfstr)
+        strlst = Nothing
+        strlst = New List(Of String)
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
 
     End Sub
 
@@ -526,6 +550,30 @@ End Class
 
         ' state 2 tests
         T = "state2"
+        tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Lfile = GetPathToFileXML(P, C, I, N, "L", T)
+        Rfile = GetPathToFileXML(P, C, I, N, "R", T)
+        fcomp = Nothing
+        fcomp = New FileCompare
+        ThisTestCase = New TestCases(tdfstr)
+        strlst = Nothing
+        strlst = New List(Of String)
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+        ' connections tests
+        T = "connections"
         tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
         Lfile = GetPathToFileXML(P, C, I, N, "L", T)
         Rfile = GetPathToFileXML(P, C, I, N, "R", T)

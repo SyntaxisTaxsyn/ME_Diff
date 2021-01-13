@@ -172,8 +172,8 @@ Module Subroutines
                                              lobj.name,
                                              GetMEObjectType(lobj),
                                              "Momentary Button - Connection Count Mismatch",
-                                             LMSB.states.Count,
-                                             RMSB.states.Count)
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
                 Else
                     For a = 0 To LMSB.connections.Count - 1
 
@@ -279,9 +279,9 @@ Module Subroutines
                                              fname,
                                              lobj.name,
                                              GetMEObjectType(lobj),
-                                             "Momentary Button - Connection Count Mismatch",
-                                             LMSB.states.Count,
-                                             RMSB.states.Count)
+                                             "Maintained Button - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
                 Else
                     For a = 0 To LMSB.connections.Count - 1
 
@@ -349,8 +349,8 @@ Module Subroutines
                                      fname,
                                      lobj.name,
                                      GetMEObjectType(lobj),
-                                     "Momentary Button - Connection Count Mismatch",
-                                     "Defined",
+                                     "Maintained Button - Connection Count Mismatch",
+                                     "defined",
                                      "nothing")
                 End If
 
@@ -362,9 +362,9 @@ Module Subroutines
                                      fname,
                                      lobj.name,
                                      GetMEObjectType(lobj),
-                                     "Momentary Button - Connection Count Mismatch",
-                                     "Nothing",
-                                     "Defined")
+                                     "Maintained Button - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
             End If
         End If
 
