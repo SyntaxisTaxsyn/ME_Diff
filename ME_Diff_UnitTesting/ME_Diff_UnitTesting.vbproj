@@ -182,6 +182,21 @@
     <None Include="Test Pages\01Pushbutton\01Maintained\0101MaintainedPushbuttonstate2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonstate1.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonstate2.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -190,7 +205,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\01Pushbutton\02Latched\" />
     <Folder Include="Test Pages\01Pushbutton\03Multistate\" />
     <Folder Include="Test Pages\01Pushbutton\04Interlocked\" />
     <Folder Include="Test Pages\01Pushbutton\05Ramp\" />
@@ -337,6 +351,36 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\01Pushbutton\01Maintained\0101MaintainedPushbuttonR_state2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonL_state1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonL_state2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonR_state1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\02Latched\0102LatchedPushbuttonR_state2.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

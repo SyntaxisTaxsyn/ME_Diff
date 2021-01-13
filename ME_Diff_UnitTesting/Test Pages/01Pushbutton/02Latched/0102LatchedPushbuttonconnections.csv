@@ -1,0 +1,7 @@
+Test number,Property,Left,Right
+1,Latched Button - Connection Count Mismatch,2,3
+2,Latched Button - Connection Count Mismatch,3,2
+3,Connection 0 - expression,indicator,value
+4,Connection 0 - expression,value,indicator
+5,Latched Button - Connection Count Mismatch,defined,nothing
+6,Latched Button - Connection Count Mismatch,nothing,defined

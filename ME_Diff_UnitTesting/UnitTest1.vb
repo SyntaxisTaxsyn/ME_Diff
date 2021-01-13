@@ -598,4 +598,132 @@ End Class
 
     End Sub
 
+    <TestMethod()> Public Sub _0102LatchedPBTest()
+
+        ' main tests
+        Dim fcomp As New FileCompare
+        Dim P As String = "01Pushbutton"
+        Dim C As String = "02Latched"
+        Dim I As String = "0102"
+        Dim N As String = "LatchedPushbutton"
+        Dim T As String = "main"
+        Dim tdfstr As String = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Dim Lfile As String = GetPathToFileXML(P, C, I, N, "L", T)
+        Dim Rfile As String = GetPathToFileXML(P, C, I, N, "R", T)
+        Dim ThisTestCase As New TestCases(tdfstr)
+        Dim strlst As List(Of String)
+        Dim Result(50) As TestResult
+
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+        ' state1 and caption tests
+        T = "state1"
+        tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Lfile = GetPathToFileXML(P, C, I, N, "L", T)
+        Rfile = GetPathToFileXML(P, C, I, N, "R", T)
+        fcomp = Nothing
+        fcomp = New FileCompare
+        ThisTestCase = New TestCases(tdfstr)
+        strlst = Nothing
+        strlst = New List(Of String)
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+        ' image tests
+        T = "image"
+        tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Lfile = GetPathToFileXML(P, C, I, N, "L", T)
+        Rfile = GetPathToFileXML(P, C, I, N, "R", T)
+        fcomp = Nothing
+        fcomp = New FileCompare
+        ThisTestCase = New TestCases(tdfstr)
+        strlst = Nothing
+        strlst = New List(Of String)
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+        ' state 2 tests
+        T = "state2"
+        tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Lfile = GetPathToFileXML(P, C, I, N, "L", T)
+        Rfile = GetPathToFileXML(P, C, I, N, "R", T)
+        fcomp = Nothing
+        fcomp = New FileCompare
+        ThisTestCase = New TestCases(tdfstr)
+        strlst = Nothing
+        strlst = New List(Of String)
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+        ' connections tests
+        T = "connections"
+        tdfstr = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Lfile = GetPathToFileXML(P, C, I, N, "L", T)
+        Rfile = GetPathToFileXML(P, C, I, N, "R", T)
+        fcomp = Nothing
+        fcomp = New FileCompare
+        ThisTestCase = New TestCases(tdfstr)
+        strlst = Nothing
+        strlst = New List(Of String)
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckTestCriteria(ThisTestCase.TestList.Item(a), strlst)
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+    End Sub
+
 End Class
