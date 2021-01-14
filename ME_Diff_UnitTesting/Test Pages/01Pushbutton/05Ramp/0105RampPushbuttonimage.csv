@@ -1,0 +1,23 @@
+Test number,Property,Left,Right
+1,imageName,Arrow Down,Arrow Up
+2,alignment,middleCenter,middleLeft
+3,backStyle,solid,transparent
+4,color,black,white
+5,backColor,white,black
+6,scaled,False,True
+7,blink,False,True
+8,fontFamily,Arial,Arial Black
+9,fontSize,13,14
+10,bold,False,True
+11,italic,False,True
+12,underline,False,True
+14,caption,text,texts
+15,color,white,black
+16,backColor,navy,lime
+17,backStyle,transparent,solid
+18,alignment,middleCenter,middleLeft
+19,wordWrap,True,False
+20,blink,False,True
+21,Connection 0 - expression,value,values
+22,Connection 1 - expression,ramp,ramps
+23,Connection 2 - expression,limit,limits

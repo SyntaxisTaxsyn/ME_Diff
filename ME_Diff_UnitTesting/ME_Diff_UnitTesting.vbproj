@@ -227,6 +227,15 @@
     <None Include="Test Pages\01Pushbutton\04Interlocked\0104InterlockedPushbuttonstate1.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -235,7 +244,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\01Pushbutton\05Ramp\" />
     <Folder Include="Test Pages\02Numeric and string\" />
     <Folder Include="Test Pages\03Display Navigation\" />
     <Folder Include="Test Pages\04Indicator\" />
@@ -469,6 +477,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\01Pushbutton\04Interlocked\0104InterlockedPushbuttonR_state1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
