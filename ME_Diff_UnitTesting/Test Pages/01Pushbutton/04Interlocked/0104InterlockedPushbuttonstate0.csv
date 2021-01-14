@@ -1,0 +1,22 @@
+Test number,Property,Left,Right
+2,State 0 - backColor,navy,lime
+3,State 0 - borderColor,navy,lime
+4,State 0 - patternColor,white,black
+5,State 0 - patternStyle,none,dots
+6,State 0 - blink,False,True
+7,State 0 - endColor,white,black
+8,State 0 - gradientStop,50,40
+9,State 0 - gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+10,State 0 - gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop
+11,State 0 - fontFamily,Arial,Arial Black
+12,State 0 - fontSize,13,14
+13,State 0 - bold,False,True
+14,State 0 - italic,False,True
+15,State 0 - underline,False,True
+17,State 0 - caption,test,tests
+18,State 0 - color,white,black
+19,State 0 - backColor,navy,lime
+20,State 0 - backStyle,transparent,solid
+21,State 0 - alignment,middleCenter,middleLeft
+22,State 0 - wordWrap,True,False
+23,State 0 - blink,False,True

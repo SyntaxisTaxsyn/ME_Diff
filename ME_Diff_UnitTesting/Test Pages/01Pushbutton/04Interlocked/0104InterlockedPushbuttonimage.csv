@@ -1,0 +1,9 @@
+Test number,Property,Left,Right
+1,State 0 - imageName,Arrow Down,Arrow Up
+2,State 0 - alignment,middleCenter,middleLeft
+3,State 0 - backStyle,solid,transparent
+4,State 0 - color,black,white
+5,State 0 - backColor,white,black
+6,State 0 - scaled,False,True
+7,State 0 - blink,False,True
+8,Connection 0 - expression,value,values
