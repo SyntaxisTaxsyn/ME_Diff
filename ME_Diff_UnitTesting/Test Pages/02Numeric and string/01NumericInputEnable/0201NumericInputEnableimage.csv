@@ -1,0 +1,24 @@
+Test number,Property,Left,Right
+1,fontFamily,Arial,Arial Black
+2,fontSize,13,14
+3,bold,False,True
+4,italic,False,True
+5,underline,False,True
+6,caption,text,texts
+7,color,white,black
+8,backColor,navy,lime
+9,backStyle,transparent,solid
+10,alignment,middleCenter,middleLeft
+11,wordWrap,True,False
+12,blink,False,True
+13,imageName,Arrow Down,Arrow Up
+14,alignment,middleCenter,middleLeft
+15,backStyle,solid,transparent
+16,color,black,white
+17,backColor,white,black
+18,scaled,False,True
+19,blink,False,True
+20,endColor,white,black
+21,gradientStop,50,40
+22,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+23,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop

@@ -1,0 +1,9 @@
+Test number,Property,Left,Right
+1,Numeric Input Enable - Connection Count Mismatch,4,5
+2,Numeric Input Enable - Connection Count Mismatch,5,4
+3,Connection 0 - expression,enter,value
+4,Connection 0 - expression,value,enter
+5,Numeric Input Enable - Connection Count Mismatch,defined,nothing
+6,Numeric Input Enable - Connection Count Mismatch,nothing,defined
+7,Connection 0 - optionalExpression,nothing,defined
+8,Connection 0 - optionalExpression,defined,nothing

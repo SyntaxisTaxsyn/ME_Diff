@@ -133,6 +133,8 @@ Module Subroutines
                 Call CompareInterlockedProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.rampButtonType"
                 Call CompareRampProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.numericInputEnableType"
+                Call CompareNumericInputEnableProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -165,6 +167,8 @@ Module Subroutines
                 Call CheckRampPBConnections(lobj, robj, fname, Gnest)
             Case "ME_Diff.numericDisplayType"
                 Call CheckNumericDisplayConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.numericInputEnableType"
+                Call CheckNumericInputEnableConnections(lobj, robj, fname, Gnest)
 
 
         End Select
@@ -810,6 +814,138 @@ Module Subroutines
                                      lobj.name,
                                      GetMEObjectType(lobj),
                                      "Numeric Display - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+
+
+
+    End Sub
+
+    Public Sub CheckNumericInputEnableConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.numericInputEnableType = lobj
+        Dim RMSB As ME_Diff.numericInputEnableType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Numeric Input Enable - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Numeric Input Enable - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Numeric Input Enable - Connection Count Mismatch",
                                      "nothing",
                                      "defined")
             End If
@@ -2043,6 +2179,20 @@ Module Subroutines
             Next
 
         End If
+
+    End Sub
+
+    Public Sub CompareNumericInputEnableProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.numericInputEnableType = lobj
+        Dim RMSB As ME_Diff.numericInputEnableType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
 
     End Sub
 

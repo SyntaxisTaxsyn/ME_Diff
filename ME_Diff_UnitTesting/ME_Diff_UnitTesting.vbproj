@@ -242,6 +242,15 @@
     <None Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplaymain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnablemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -250,7 +259,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\02Numeric and string\01NumericInputEnable\" />
     <Folder Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\" />
     <Folder Include="Test Pages\02Numeric and string\03StringDisplay\" />
     <Folder Include="Test Pages\02Numeric and string\04StringInputEnable\" />
@@ -516,6 +524,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplayR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
