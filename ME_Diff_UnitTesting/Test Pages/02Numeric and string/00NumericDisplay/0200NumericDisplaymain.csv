@@ -1,0 +1,30 @@
+Test number,Property,Left,Right
+1,backStyle,solid,transparent
+2,borderWidth,4,5
+3,patternStyle,none,dots
+4,borderUsesBackColor,True,False
+5,backColor,navy,lime
+6,borderColor,navy,lime
+7,patternColor,white,black
+8,foreColor,white,black
+9,fontFamily,Arial,Arial Black
+10,fontSize,13,14
+11,bold,False,True
+12,italic,False,True
+13,underline,False,True
+14,alignment,middleCenter,middleLeft
+15,numberOfDigits,5,6
+16,fillLeftWith,none,spaces
+17,decimalPlaces,0,1
+18,height,22,23
+19,width,63,64
+20,top,577,578
+21,left,246,247
+22,visible,True,False
+23,Connection 0 - expression,value,values
+24,Connection 1 - expression,polarity,polaritys
+25,borderStyle,raised,inset
+26,endColor,white,black
+27,gradientStop,50,40
+28,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+29,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop

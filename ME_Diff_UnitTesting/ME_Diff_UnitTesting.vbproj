@@ -236,6 +236,12 @@
     <None Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplayconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplaymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -244,7 +250,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\02Numeric and string\" />
+    <Folder Include="Test Pages\02Numeric and string\01NumericInputEnable\" />
+    <Folder Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\" />
+    <Folder Include="Test Pages\02Numeric and string\03StringDisplay\" />
+    <Folder Include="Test Pages\02Numeric and string\04StringInputEnable\" />
     <Folder Include="Test Pages\03Display Navigation\" />
     <Folder Include="Test Pages\04Indicator\" />
     <Folder Include="Test Pages\05Gauge and graph\" />
@@ -495,6 +504,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\01Pushbutton\05Ramp\0105RampPushbuttonR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplayL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplayL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplayR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\00NumericDisplay\0200NumericDisplayR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

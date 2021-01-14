@@ -1,0 +1,7 @@
+Test number,Property,Left,Right
+1,Numeric Display - Connection Count Mismatch,1,2
+2,Numeric Display - Connection Count Mismatch,2,1
+3,Connection 0 - expression,polarity,value
+4,Connection 0 - expression,value,polarity
+5,Numeric Display - Connection Count Mismatch,defined,nothing
+6,Numeric Display - Connection Count Mismatch,nothing,defined
