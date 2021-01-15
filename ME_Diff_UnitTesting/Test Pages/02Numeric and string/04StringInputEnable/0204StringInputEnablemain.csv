@@ -1,0 +1,47 @@
+Test number,Property,Left,Right
+1,borderStyle,raised,inset
+2,backStyle,solid,transparent
+3,shape,rectangle,circle
+4,borderWidth,4,5
+5,patternStyle,none,dots
+6,borderUsesBackColor,True,False
+7,backColor,navy,lime
+8,borderColor,navy,lime
+9,patternColor,white,black
+10,highlightColor,lime,black
+11,blink,False,True
+12,horizontalMargin,0,1
+13,verticalMargin,0,1
+14,audio,True,False
+15,keyNavigation,True,False
+16,takeFocusOnPress,True,False
+17,endColor,white,black
+18,gradientStop,50,40
+19,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+20,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop
+21,stringPopup,keyboard,scratchpad
+22,numberOfInputCharacters,8,9
+23,fillCharacter,null,spaces
+24,maskScratchpad,False,True
+25,enterKeyControlDelay,400,600
+26,enterKeyHoldTime,250,500
+27,enterKeyHandshakeTime,4,5
+28,handshakeReset,nonZeroValue,zeroToNonZeroTransition
+29,RequireElectronicSignature,True,False
+30,AllowBlankComment,True,False
+31,RequireReAuthentication,True,False
+32,RequireCounterSignature,True,False
+33,AuthorizedGroup,Administrators,Windows Administrators
+34,ESDomainNameVisible,True,False
+35,ESDomainNameType,ESDomainNameConstant,ESDomainNameVariable
+36,ESDomainName,,text
+37,VariableDomainName,,text
+38,ESDomainNameDisable,True,False
+39,height,15,16
+40,width,53,54
+41,top,208,209
+42,left,530,531
+43,visible,True,False
+44,Connection 0 - expression,value,values
+45,Connection 1 - expression,enter,enters
+46,Connection 2 - expression,hshake,hshakes

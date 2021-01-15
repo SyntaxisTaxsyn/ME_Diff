@@ -1,0 +1,7 @@
+Test number,Property,Left,Right
+1,String Input Enable - Connection Count Mismatch,2,3
+2,String Input Enable - Connection Count Mismatch,3,2
+3,Connection 0 - expression,enter,value
+4,Connection 0 - expression,value,enter
+5,String Input Enable - Connection Count Mismatch,defined,nothing
+6,String Input Enable - Connection Count Mismatch,nothing,defined

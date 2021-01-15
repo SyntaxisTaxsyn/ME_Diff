@@ -260,6 +260,15 @@
     <None Include="Test Pages\02Numeric and string\03StringDisplay\0203StringDisplaymain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnablemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -268,7 +277,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\02Numeric and string\04StringInputEnable\" />
     <Folder Include="Test Pages\03Display Navigation\" />
     <Folder Include="Test Pages\04Indicator\" />
     <Folder Include="Test Pages\05Gauge and graph\" />
@@ -567,6 +575,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\02Numeric and string\03StringDisplay\0203StringDisplayR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
