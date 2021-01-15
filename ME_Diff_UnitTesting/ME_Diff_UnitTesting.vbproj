@@ -257,6 +257,9 @@
     <None Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursormain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\02Numeric and string\03StringDisplay\0203StringDisplaymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -265,7 +268,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\02Numeric and string\03StringDisplay\" />
     <Folder Include="Test Pages\02Numeric and string\04StringInputEnable\" />
     <Folder Include="Test Pages\03Display Navigation\" />
     <Folder Include="Test Pages\04Indicator\" />
@@ -559,6 +561,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursorR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\03StringDisplay\0203StringDisplayL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\03StringDisplay\0203StringDisplayR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

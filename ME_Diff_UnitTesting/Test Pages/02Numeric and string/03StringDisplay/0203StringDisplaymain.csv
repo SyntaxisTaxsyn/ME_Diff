@@ -1,0 +1,26 @@
+Test number,Property,Left,Right
+1,borderStyle,raised,inset
+2,backStyle,solid,transparent
+3,borderWidth,4,5
+4,patternStyle,none,dots
+5,borderUsesBackColor,True,False
+6,backColor,navy,lime
+7,borderColor,navy,lime
+8,patternColor,white,black
+9,foreColor,white,black
+10,blink,False,True
+11,fontFamily,Arial,Arial Black
+12,fontSize,13,14
+13,bold,False,True
+14,italic,False,True
+15,underline,False,True
+16,alignment,middleCenter,middleLeft
+17,wordWrap,True,False
+18,height,18,19
+19,width,50,51
+20,top,478,479
+21,left,254,255
+22,visible,True,False
+23,Connection 0 - expression,value,values
+24,String Display - Connection Count Mismatch,defined,nothing
+25,String Display - Connection Count Mismatch,nothing,defined
