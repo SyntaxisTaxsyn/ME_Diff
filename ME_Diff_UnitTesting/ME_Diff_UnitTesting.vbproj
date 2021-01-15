@@ -251,6 +251,12 @@
     <None Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnablemain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursorconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursormain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -259,7 +265,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\" />
     <Folder Include="Test Pages\02Numeric and string\03StringDisplay\" />
     <Folder Include="Test Pages\02Numeric and string\04StringInputEnable\" />
     <Folder Include="Test Pages\03Display Navigation\" />
@@ -542,6 +547,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\02Numeric and string\01NumericInputEnable\0201NumericInputEnableR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursorL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursorL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursorR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\02Numeric and string\02NumericInputCursorPoint\0202NumericInputCursorR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -1,0 +1,9 @@
+Test number,Property,Left,Right
+1,Numeric Input Cursor - Connection Count Mismatch,5,6
+2,Numeric Input Cursor - Connection Count Mismatch,6,5
+3,Connection 0 - expression,indicator,value
+4,Connection 0 - expression,value,indicator
+5,Numeric Input Cursor - Connection Count Mismatch,defined,nothing
+6,Numeric Input Cursor - Connection Count Mismatch,nothing,defined
+7,Connection 0 - optionalExpression,nothing,defined
+8,Connection 0 - optionalExpression,defined,nothing
