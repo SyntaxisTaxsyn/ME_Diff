@@ -269,6 +269,18 @@
     <None Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnablemain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\03Display Navigation\00Goto\0300Gotocaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\00Goto\0300Gotoconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\00Goto\0300Gotoimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\00Goto\0300Gotomain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -277,7 +289,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\03Display Navigation\" />
+    <Folder Include="Test Pages\03Display Navigation\01ReturnTo\" />
+    <Folder Include="Test Pages\03Display Navigation\02Close\" />
+    <Folder Include="Test Pages\03Display Navigation\03DisplayListSelector\" />
     <Folder Include="Test Pages\04Indicator\" />
     <Folder Include="Test Pages\05Gauge and graph\" />
     <Folder Include="Test Pages\06Trending\" />
@@ -593,6 +607,30 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\02Numeric and string\04StringInputEnable\0204StringInputEnableR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
