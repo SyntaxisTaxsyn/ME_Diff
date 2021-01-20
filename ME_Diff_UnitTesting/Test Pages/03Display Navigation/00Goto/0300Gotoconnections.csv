@@ -2,3 +2,9 @@ Test number,Property,Left,Right
 1,Connection 0 - expression,display,displays
 2,Connection 1 - expression,top,tops
 3,Connection 2 - expression,left,lefts
+4,Goto Button - Connection Count Mismatch,nothing,defined
+5,Goto Button - Connection Count Mismatch,defined,nothing
+6,Connection 0 - expression,top,display
+7,Connection 0 - expression,display,top
+8,Goto Button - Connection Count Mismatch,2,3
+9,Goto Button - Connection Count Mismatch,3,2

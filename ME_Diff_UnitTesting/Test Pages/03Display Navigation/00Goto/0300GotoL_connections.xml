@@ -28,4 +28,50 @@
                 <connection name="Left Position" expression="left" />
             </connections>
         </gotoButton>
+        <gotoButton name="gotoButton_Test4" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backColor="white" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" displayPosition="false" displayLeftPosition="0" displayTopPosition="0" UseVariableDisplay="false" UseVariableDisplayPosition="false" display="page1" parameterFile="" parameterList="" parameterType="parameterFile" captionOnBorder="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+            <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+        </gotoButton>
+        <gotoButton name="gotoButton_Test5" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backColor="white" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" displayPosition="false" displayLeftPosition="0" displayTopPosition="0" UseVariableDisplay="false" UseVariableDisplayPosition="false" display="page1" parameterFile="" parameterList="" parameterType="parameterFile" captionOnBorder="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+            <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+            <connections>
+                <connection name="Display Name" expression="display" />
+                <connection name="Top Position" expression="top" />
+                <connection name="Left Position" expression="left" />
+            </connections>
+        </gotoButton>
+        <gotoButton name="gotoButton_Test6" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backColor="white" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" displayPosition="false" displayLeftPosition="0" displayTopPosition="0" UseVariableDisplay="false" UseVariableDisplayPosition="false" display="page1" parameterFile="" parameterList="" parameterType="parameterFile" captionOnBorder="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+            <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+            <connections>
+                <connection name="Top Position" expression="top" />
+                <connection name="Left Position" expression="left" />
+            </connections>
+        </gotoButton>
+        <gotoButton name="gotoButton_Test7" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backColor="white" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" displayPosition="false" displayLeftPosition="0" displayTopPosition="0" UseVariableDisplay="false" UseVariableDisplayPosition="false" display="page1" parameterFile="" parameterList="" parameterType="parameterFile" captionOnBorder="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+            <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+            <connections>
+                <connection name="Display Name" expression="display" />
+                <connection name="Left Position" expression="left" />
+            </connections>
+        </gotoButton>
+        <gotoButton name="gotoButton_Test8" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backColor="white" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" displayPosition="false" displayLeftPosition="0" displayTopPosition="0" UseVariableDisplay="false" UseVariableDisplayPosition="false" display="page1" parameterFile="" parameterList="" parameterType="parameterFile" captionOnBorder="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+            <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+            <connections>
+                <connection name="Top Position" expression="top" />
+                <connection name="Left Position" expression="left" />
+            </connections>
+        </gotoButton>
+        <gotoButton name="gotoButton_Test9" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" audio="true" backColor="white" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" highlightColor="lime" borderColor="navy" patternColor="white" patternStyle="none" horizontalMargin="0" verticalMargin="0" shape="rectangle" touch="true" blink="false" displayPosition="false" displayLeftPosition="0" displayTopPosition="0" UseVariableDisplay="false" UseVariableDisplayPosition="false" display="page1" parameterFile="" parameterList="" parameterType="parameterFile" captionOnBorder="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="black" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+            <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+            <connections>
+                <connection name="Display Name" expression="display" />
+                <connection name="Top Position" expression="top" />
+                <connection name="Left Position" expression="left" />
+            </connections>
+        </gotoButton>
 </gfx>
