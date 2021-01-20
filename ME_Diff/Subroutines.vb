@@ -139,6 +139,10 @@ Module Subroutines
                 Call CompareStringInputEnableProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.gotoButtonType"
                 Call CompareGotoProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.pveSimpleButtonType"
+                Call ComparePVESimpleProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.closeButtonType"
+                Call CompareCloseButtonProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -181,6 +185,8 @@ Module Subroutines
                 Call CheckStringInputEnableConnections(lobj, robj, fname, Gnest)
             Case "ME_Diff.gotoButtonType"
                 Call CheckGotoConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.closeButtonType"
+                Call CheckCloseButtonConnections(lobj, robj, fname, Gnest)
 
         End Select
 
@@ -1486,6 +1492,135 @@ Module Subroutines
 
     End Sub
 
+
+    Public Sub CheckCloseButtonConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.closeButtonType = lobj
+        Dim RMSB As ME_Diff.closeButtonType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Close Button - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Close Button - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Close Button - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
     Public Sub CheckMaintainedPBConnections(ByRef lobj As Object,
                                            ByRef robj As Object,
                                            ByRef fname As String,
@@ -2463,6 +2598,34 @@ Module Subroutines
             Next
 
         End If
+
+    End Sub
+
+    Public Sub CompareCloseButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.closeButtonType = lobj
+        Dim RMSB As ME_Diff.closeButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub ComparePVESimpleProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.pveSimpleButtonType = lobj
+        Dim RMSB As ME_Diff.pveSimpleButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
 
     End Sub
 

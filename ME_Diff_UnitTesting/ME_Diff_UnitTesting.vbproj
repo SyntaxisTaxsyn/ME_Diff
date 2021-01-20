@@ -281,6 +281,30 @@
     <None Include="Test Pages\03Display Navigation\00Goto\0300Gotomain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnTocaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnTomain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\02Close\0302CloseButtoncaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\02Close\0302CloseButtonconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\02Close\0302CloseButtonimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\03Display Navigation\02Close\0302CloseButtonmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -289,8 +313,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\03Display Navigation\01ReturnTo\" />
-    <Folder Include="Test Pages\03Display Navigation\02Close\" />
     <Folder Include="Test Pages\03Display Navigation\03DisplayListSelector\" />
     <Folder Include="Test Pages\04Indicator\" />
     <Folder Include="Test Pages\05Gauge and graph\" />
@@ -631,6 +653,54 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\03Display Navigation\00Goto\0300GotoR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\01ReturnTo\0301ReturnToR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\03Display Navigation\02Close\0302CloseButtonR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
