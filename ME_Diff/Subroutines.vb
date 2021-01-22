@@ -151,6 +151,8 @@ Module Subroutines
                 Call CompareSymbolIndicatorProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.listIndicatorType"
                 Call CompareListIndicatorProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.barGraphType"
+                Call CompareBarGraphProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -201,6 +203,8 @@ Module Subroutines
                 Call CheckSymbolIndicatorConnections(lobj, robj, fname, Gnest)
             Case "ME_Diff.listIndicatorType"
                 Call CheckListIndicatorConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.barGraphType"
+                Call CheckBarGraphConnections(lobj, robj, fname, Gnest)
 
         End Select
 
@@ -2023,6 +2027,134 @@ Module Subroutines
 
     End Sub
 
+    Public Sub CheckBarGraphConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.barGraphType = lobj
+        Dim RMSB As ME_Diff.barGraphType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Bar Graph - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Bar Graph - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Bar Graph - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
     Public Sub CheckMaintainedPBConnections(ByRef lobj As Object,
                                            ByRef robj As Object,
                                            ByRef fname As String,
@@ -3358,6 +3490,140 @@ Module Subroutines
                 ' Handle special datatypes within the multistate indicator
                 Call Compare_BasicCaptionType(lobj, robj, fname, Gnest, LState, Rstate, a)
                 Call Compare_BasicImageType(lobj, robj, fname, Gnest, LState, Rstate, a)
+
+            Next
+
+        End If
+
+    End Sub
+
+    Public Sub CompareBarGraphProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.barGraphType = lobj
+        Dim RMSB As ME_Diff.barGraphType = robj
+
+        If Not LMSB.threshold.Count = RMSB.threshold.Count Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Bar graph - Threshold Count Mismatch",
+                                     LMSB.threshold.Count,
+                                     RMSB.threshold.Count)
+        Else
+
+            For a = 0 To LMSB.threshold.Count - 1
+
+                ' Declare reuseable loop variables
+                Dim MEObjType As String = GetMEObjectType(lobj)
+                Dim LState As ME_Diff.thresholdType = LMSB.threshold(a)
+                Dim Rstate As ME_Diff.thresholdType = RMSB.threshold(a)
+                Dim Left As String = ""
+                Dim Right As String = ""
+                Dim Desc As String = ""
+
+                ' blink
+                Desc = "blink"
+                Left = LState.blink.ToString
+                Right = Rstate.blink.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' blinkSpecified
+                Desc = "blinkSpecified"
+                Left = LState.blinkSpecified.ToString
+                Right = Rstate.blinkSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' fillColor
+                Desc = "fillColor"
+                Left = LState.fillColor.ToString
+                Right = Rstate.fillColor.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' thresholdIndex
+                Desc = "thresholdIndex"
+                Left = LState.thresholdIndex.ToString
+                Right = Rstate.thresholdIndex.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' thresholdIndexSpecified
+                Desc = "thresholdIndexSpecified"
+                Left = LState.thresholdIndexSpecified.ToString
+                Right = Rstate.thresholdIndexSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' thresholdValue
+                Desc = "thresholdValue"
+                Left = LState.thresholdValue.ToString
+                Right = Rstate.thresholdValue.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' thresholdValueSpecified
+                Desc = "thresholdValueSpecified"
+                Left = LState.thresholdValueSpecified.ToString
+                Right = Rstate.thresholdValueSpecified.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Threshold " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' Handle special datatypes within the multistate indicator
+                'Call Compare_ListIndicatorCaptionType(lobj, robj, fname, Gnest, LState, Rstate, a)
+                'Call Compare_SymbolIndicatorImageType(lobj, robj, fname, Gnest, LState, Rstate, a)
 
             Next
 

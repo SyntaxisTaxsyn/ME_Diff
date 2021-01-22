@@ -1,0 +1,7 @@
+Test number,Property,Left,Right
+2,Threshold 0 - thresholdValue,50,70
+3,Threshold 0 - fillColor,black,white
+4,Threshold 0 - blink,True,False
+6,Threshold 1 - thresholdValue,50,70
+7,Threshold 1 - fillColor,black,white
+8,Threshold 1 - blink,True,False

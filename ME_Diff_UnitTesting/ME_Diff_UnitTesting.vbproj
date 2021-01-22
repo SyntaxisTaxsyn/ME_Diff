@@ -353,6 +353,15 @@
     <None Include="Test Pages\04Indicator\02List\0402ListIndicatorstate.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphthreshold.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -361,7 +370,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\05Gauge and graph\" />
+    <Folder Include="Test Pages\05Gauge and graph\01Gauge\" />
+    <Folder Include="Test Pages\05Gauge and graph\02Scale\" />
     <Folder Include="Test Pages\06Trending\" />
     <Folder Include="Test Pages\07Recipe plus\" />
     <Folder Include="Test Pages\08Key\" />
@@ -843,6 +853,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\04Indicator\02List\0402ListIndicatorR_state.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphL_threshold.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphR_threshold.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
