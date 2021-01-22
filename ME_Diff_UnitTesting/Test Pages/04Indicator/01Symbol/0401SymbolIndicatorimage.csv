@@ -1,0 +1,13 @@
+Test number,Property,Left,Right
+1,State 0 - backStyle,solid,transparent
+2,State 0 - color,black,white
+3,State 0 - backColor,white,black
+4,State 0 - blink,False,True
+5,State 1 - backStyle,solid,transparent
+6,State 1 - color,black,white
+7,State 1 - backColor,white,black
+8,State 1 - blink,False,True
+9,State 3 - backStyle,solid,transparent
+10,State 3 - color,black,white
+11,State 3 - backColor,white,black
+12,State 3 - blink,False,True

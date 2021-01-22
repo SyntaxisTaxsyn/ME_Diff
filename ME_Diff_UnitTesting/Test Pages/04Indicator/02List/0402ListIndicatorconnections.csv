@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,indicator,indicators
+2,List Indicator - Connection Count Mismatch,nothing,defined
+3,List Indicator - Connection Count Mismatch,defined,nothing
