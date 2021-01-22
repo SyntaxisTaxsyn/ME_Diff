@@ -1697,7 +1697,7 @@ Partial Public Class basicStateType
             Return Me.captionField
         End Get
         Set
-            Me.captionField = value
+            Me.captionField = Value
         End Set
     End Property
 

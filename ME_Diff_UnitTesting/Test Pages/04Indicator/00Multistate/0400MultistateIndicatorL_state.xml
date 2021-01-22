@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME12.xsd">
+    <displaySettings displayType="replace" securityCode="*" backColor="white" maximumTagUpdateRate="1" focusHighlightColor="lime" disableFocusHighlight="false" width="1024" height="768" displayNumber="1" disableInitialInputFocus="false" startupMacro="" shutdownMacro="" useGradientStyle="false" endColor="teal" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight"/>
+        <multistateIndicator name="multistateIndicator_Test1" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test2" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test3" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test4" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test5" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test6" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test7" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test8" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test9" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test10" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test11" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test12" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test13" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test14" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test15" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test16" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test17" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test18" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test19" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test20" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test21" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test22" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test23" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test24" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test25" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test26" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test27" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test28" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test29" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+        <multistateIndicator name="multistateIndicator_Test30" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" borderStyle="raised" borderUsesBackColor="true" borderWidth="4" description="" shape="rectangle" triggerType="value" currentStateId="0" captionOnBorder="false" setLastStateId="5" >
+            <states>
+                <state stateId="Error" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="Error" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="0" value="0" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="1" value="1" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="2" value="2" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+                <state stateId="3" value="3" backColor="navy" borderColor="navy" patternColor="white" patternStyle="none" blink="false" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+                    <caption fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="" color="white" backColor="navy" backStyle="transparent" alignment="middleCenter" wordWrap="true" blink="false" />
+                    <imageSettings imageName="Alm_AckReqd" alignment="middleCenter" backStyle="solid" color="black" backColor="white" scaled="false" blink="false" />
+                </state>
+            </states>
+            <connections>
+                <connection name="Indicator" expression="indicator" />
+            </connections>
+        </multistateIndicator>
+</gfx>

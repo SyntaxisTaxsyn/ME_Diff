@@ -314,6 +314,21 @@
     <None Include="Test Pages\03Display Navigation\03DisplayListSelector\0303DisplayListSelectorstate.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorcaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatormain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorstate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -322,7 +337,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\04Indicator\" />
+    <Folder Include="Test Pages\04Indicator\01Symbol\" />
+    <Folder Include="Test Pages\04Indicator\02List\" />
     <Folder Include="Test Pages\05Gauge and graph\" />
     <Folder Include="Test Pages\06Trending\" />
     <Folder Include="Test Pages\07Recipe plus\" />
@@ -727,6 +743,36 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\03Display Navigation\03DisplayListSelector\0303DisplayListSelectorR_state.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorL_state.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\04Indicator\00Multistate\0400MultistateIndicatorR_state.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
