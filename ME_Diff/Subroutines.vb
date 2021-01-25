@@ -159,6 +159,8 @@ Module Subroutines
                 Call CompareLinkedButtonProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.activeXObjectType"
                 Call CompareActiveXProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.recipePlusButtonType"
+                Call CompareRecipePlusButtonProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -4365,6 +4367,21 @@ Module Subroutines
         Call Compare_BasicImageType(lobj, robj, fname, Gnest)
 
     End Sub
+
+    Public Sub CompareRecipePlusButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.recipePlusButtonType = lobj
+        Dim RMSB As ME_Diff.recipePlusButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
 
     Public Sub CompareGotoProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
 

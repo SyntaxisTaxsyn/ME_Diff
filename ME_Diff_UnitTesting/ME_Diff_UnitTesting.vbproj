@@ -401,6 +401,21 @@
     <None Include="Test Pages\06Trending\02Trend\0602Trendmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtoncaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\07Recipe plus\01RecipePlusSelector\0701RecipePlusSelectormain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\07Recipe plus\02RecipePlusTable\0702RecipePlusTablemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -409,7 +424,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\07Recipe plus\" />
     <Folder Include="Test Pages\08Key\" />
     <Folder Include="Test Pages\09User management\" />
     <Folder Include="Test Pages\10Advanced\" />
@@ -985,6 +999,36 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\06Trending\02Trend\0602TrendR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\00RecipePlusButton\0700RecipePlusButtonR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\01RecipePlusSelector\0701RecipePlusSelectorL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\01RecipePlusSelector\0701RecipePlusSelectorR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\02RecipePlusTable\0702RecipePlusTableL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\07Recipe plus\02RecipePlusTable\0702RecipePlusTableR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
