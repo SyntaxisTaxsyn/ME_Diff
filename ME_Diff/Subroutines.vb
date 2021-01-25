@@ -155,6 +155,10 @@ Module Subroutines
                 Call CompareBarGraphProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.gaugeType"
                 Call CompareGaugeProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.linkedButtonType"
+                Call CompareLinkedButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.activeXObjectType"
+                Call CompareActiveXProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -209,6 +213,8 @@ Module Subroutines
                 Call CheckBarGraphConnections(lobj, robj, fname, Gnest)
             Case "ME_Diff.gaugeType"
                 Call CheckGaugeConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.activeXObjectType"
+                Call CheckActiveXConnections(lobj, robj, fname, Gnest)
 
         End Select
 
@@ -2289,6 +2295,135 @@ Module Subroutines
 
     End Sub
 
+    Public Sub CheckActiveXConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.activeXObjectType = lobj
+        Dim RMSB As ME_Diff.activeXObjectType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "ActiveX - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "ActiveX - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "ActiveX - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
+
     Public Sub CheckMaintainedPBConnections(ByRef lobj As Object,
                                            ByRef robj As Object,
                                            ByRef fname As String,
@@ -4217,6 +4352,20 @@ Module Subroutines
 
     End Sub
 
+    Public Sub CompareLinkedButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.linkedButtonType = lobj
+        Dim RMSB As ME_Diff.linkedButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
     Public Sub CompareGotoProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
 
         ' Declare temporary variables for breaking out object properties to compare against
@@ -4474,6 +4623,377 @@ Module Subroutines
             Next
 
         End If
+
+    End Sub
+
+    Public Sub CompareActiveXProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LDat As ME_Diff.activeXObjectType = lobj
+        Dim RDat As ME_Diff.activeXObjectType = robj
+        Dim Desc As String = ""
+        Dim Left As String = ""
+        Dim Right As String = ""
+
+        'Active X Oject Animations.animatevisibility
+
+        If LDat.animations IsNot Nothing Then
+            If RDat.animations IsNot Nothing Then
+                If LDat.animations.animateVisibility IsNot Nothing Then
+                    If RDat.animations.animateVisibility IsNot Nothing Then
+                        ' expression
+                        Desc = "expression"
+                        Left = LDat.animations.animateVisibility.expression.ToString
+                        Right = RDat.animations.animateVisibility.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' expressionTrueState
+                        Desc = "expressionTrueState"
+                        Left = LDat.animations.animateVisibility.expressionTrueState.ToString
+                        Right = RDat.animations.animateVisibility.expressionTrueState.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' expressionTrueStateSpecified
+                        Desc = "expressionTrueStateSpecified"
+                        Left = LDat.animations.animateVisibility.expressionTrueStateSpecified.ToString
+                        Right = RDat.animations.animateVisibility.expressionTrueStateSpecified.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+                    Else
+                        ' right animations visibility not defined
+                        If Not LDat.animations.animateVisibility IsNot Nothing Then
+                            Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Animations-AnimateVisibility Object Mismatch",
+                                                                 "Defined",
+                                                                 "Defined")
+                        End If
+                    End If
+                Else
+                    ' left animations visibility not defined
+                    If Not RDat.animations.animateVisibility IsNot Nothing Then
+                        Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Animations-AnimateVisibility Object Mismatch",
+                                                             "Not Defined",
+                                                             "Defined")
+                    End If
+                End If
+            Else
+                ' left defined right not
+                If Not LDat.animations IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                                         fname,
+                                                         lobj.name,
+                                                         GetMEObjectType(lobj),
+                                                         "Animations Object Mismatch",
+                                                         "Defined",
+                                                         "Not Defined")
+                End If
+            End If
+        Else
+            ' check if rdat object isnot nothing and create message if true
+            If Not RDat.animations IsNot Nothing Then
+                Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Animations Object Mismatch",
+                                                     "Not Defined",
+                                                     "Defined")
+            End If
+        End If
+
+        ' Active X Object Data
+        If LDat.data IsNot Nothing Then
+            If RDat.data IsNot Nothing Then
+
+                ' data
+                Desc = "data"
+                Left = LDat.data.data.ToString
+                Right = RDat.data.data.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' fileName
+                Desc = "fileName"
+                Left = LDat.data.fileName.ToString
+                Right = RDat.data.fileName.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' fileVersion
+                Desc = "fileVersion"
+                Left = LDat.data.fileVersion.ToString
+                Right = RDat.data.fileVersion.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' progId
+                Desc = "progId"
+                Left = LDat.data.progId.ToString
+                Right = RDat.data.progId.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' typeLibrary
+                Desc = "typeLibrary"
+                Left = LDat.data.typeLibrary.ToString
+                Right = RDat.data.typeLibrary.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' typeLibVersion
+                Desc = "typeLibVersion"
+                Left = LDat.data.typeLibVersion.ToString
+                Right = RDat.data.typeLibVersion.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+            Else
+                ' left defined right not
+                If Not LDat.data IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                                         fname,
+                                                         lobj.name,
+                                                         GetMEObjectType(lobj),
+                                                         "Data Object Mismatch",
+                                                         "Defined",
+                                                         "Not Defined")
+                End If
+            End If
+        Else
+            ' check if rdat object isnot nothing and create message if true
+            If Not RDat.data IsNot Nothing Then
+                Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Data Object Mismatch",
+                                                     "Not Defined",
+                                                     "Defined")
+            End If
+        End If
+
+        ' Active X Object Parameters
+        If LDat.parameters IsNot Nothing Then
+            If RDat.parameters IsNot Nothing Then
+
+                For a = 0 To LDat.parameters.Count - 1
+
+                    ' description
+                    Desc = "description"
+                    Left = LDat.parameters(a).description.ToString
+                    Right = RDat.parameters(a).description.ToString
+                    If Not Left = Right Then
+                        Call AddListContentMatch(Gnest,
+                                                         fname,
+                                                         lobj.name,
+                                                         GetMEObjectType(lobj),
+                                                         "Parameter - " & a & " - " & Desc,
+                                                         Left,
+                                                         Right)
+                    End If
+
+                    ' name
+                    Desc = "name"
+                    Left = LDat.parameters(a).name.ToString
+                    Right = RDat.parameters(a).name.ToString
+                    If Not Left = Right Then
+                        Call AddListContentMatch(Gnest,
+                                                         fname,
+                                                         lobj.name,
+                                                         GetMEObjectType(lobj),
+                                                         "Parameter - " & a & " - " & Desc,
+                                                         Left,
+                                                         Right)
+                    End If
+
+                    ' value
+                    Desc = "value"
+                    Left = LDat.parameters(a).value.ToString
+                    Right = RDat.parameters(a).value.ToString
+                    If Not Left = Right Then
+                        Call AddListContentMatch(Gnest,
+                                                         fname,
+                                                         lobj.name,
+                                                         GetMEObjectType(lobj),
+                                                         "Parameter - " & a & " - " & Desc,
+                                                         Left,
+                                                         Right)
+                    End If
+
+                Next
+
+
+
+                ' fileName
+                Desc = "fileName"
+                Left = LDat.data.fileName.ToString
+                Right = RDat.data.fileName.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' fileVersion
+                Desc = "fileVersion"
+                Left = LDat.data.fileVersion.ToString
+                Right = RDat.data.fileVersion.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' progId
+                Desc = "progId"
+                Left = LDat.data.progId.ToString
+                Right = RDat.data.progId.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' typeLibrary
+                Desc = "typeLibrary"
+                Left = LDat.data.typeLibrary.ToString
+                Right = RDat.data.typeLibrary.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+                ' typeLibVersion
+                Desc = "typeLibVersion"
+                Left = LDat.data.typeLibVersion.ToString
+                Right = RDat.data.typeLibVersion.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     Desc,
+                                                     Left,
+                                                     Right)
+                End If
+
+            Else
+                ' left defined right not
+                If Not LDat.parameters IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                                         fname,
+                                                         lobj.name,
+                                                         GetMEObjectType(lobj),
+                                                         "Data Parameters Mismatch",
+                                                         "Defined",
+                                                         "Not Defined")
+                End If
+            End If
+        Else
+            ' check if rdat object isnot nothing and create message if true
+            If Not RDat.parameters IsNot Nothing Then
+                Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Data Parameters Mismatch",
+                                                     "Not Defined",
+                                                     "Defined")
+            End If
+        End If
+
+        ' Handle special datatypes within the multistate indicator
+        'Call Compare_BasicCaptionType(lobj, robj, fname, Gnest, LState, Rstate, a)
+        'Call Compare_BasicImageType(lobj, robj, fname, Gnest, LState, Rstate, a)
 
     End Sub
 

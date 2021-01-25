@@ -1,0 +1,17 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,pen1,pen1s
+2,Connection 1 - expression,pen2,pen2s
+3,Connection 2 - expression,pen3,pen3s
+4,Connection 3 - expression,pen4,pen4s
+5,Connection 4 - expression,pen5,pen5s
+6,Connection 5 - expression,pen6,pen6s
+7,Connection 6 - expression,pen7,pen7s
+8,Connection 7 - expression,pen8,pen8s
+9,Connection 8 - expression,min,mins
+10,Connection 9 - expression,max,maxs
+11,ActiveX - Connection Count Mismatch,nothing,defined
+12,ActiveX - Connection Count Mismatch,defined,nothing
+13,Connection 0 - expression,pen2,pen1
+14,Connection 0 - expression,pen1,pen2
+15,ActiveX - Connection Count Mismatch,9,10
+16,ActiveX - Connection Count Mismatch,10,9

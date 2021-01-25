@@ -1,0 +1,11 @@
+Test number,Property,Left,Right
+2,height,19,18
+3,width,25,24
+4,left,263,264
+5,top,439,440
+6,visible,True,False
+7,wallpaper,False,True
+8,isReferenceObject,False,True
+9,classId,{EC66E436-280E-11D4-AB9C-00C04F9915E3},{EC66E436-280E-11D4-AB9C-00C04F9915E2}
+10,keyNavigation,True,False
+11,focusHighlight,True,False
