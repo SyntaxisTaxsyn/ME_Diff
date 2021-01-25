@@ -165,6 +165,14 @@ Module Subroutines
                 Call CompareKeyButtonProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.timedKeyButtonType"
                 Call CompareTimedKeyButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.GenericButtonType"
+                Call CompareGenericButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.loginButtonType"
+                Call CompareLoginButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.logoutButtonType"
+                Call CompareLogoutButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.passwordButtonType"
+                Call ComparePasswordButtonProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -4405,6 +4413,62 @@ Module Subroutines
         ' Declare temporary variables for breaking out object properties to compare against
         Dim LMSB As ME_Diff.timedKeyButtonType = lobj
         Dim RMSB As ME_Diff.timedKeyButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareGenericButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.GenericButtonType = lobj
+        Dim RMSB As ME_Diff.GenericButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareLoginButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.loginButtonType = lobj
+        Dim RMSB As ME_Diff.loginButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareLogoutButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.logoutButtonType = lobj
+        Dim RMSB As ME_Diff.logoutButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub ComparePasswordButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.passwordButtonType = lobj
+        Dim RMSB As ME_Diff.passwordButtonType = robj
 
         ' this object type has no states to compare hence this section is empty at present
 
