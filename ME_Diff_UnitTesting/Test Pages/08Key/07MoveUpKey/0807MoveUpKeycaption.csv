@@ -1,0 +1,14 @@
+Test number,Property,Left,Right
+1,caption,text,texts
+2,fontFamily,Arial,Batang
+3,fontSize,13,14
+4,bold,False,True
+5,italic,False,True
+6,underline,False,True
+7,strikethrough,False,True
+8,color,black,white
+9,backColor,navy,lime
+10,backStyle,transparent,solid
+11,alignment,middleCenter,middleLeft
+12,wordWrap,True,False
+13,blink,False,True

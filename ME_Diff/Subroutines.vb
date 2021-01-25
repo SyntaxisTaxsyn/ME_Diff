@@ -161,6 +161,10 @@ Module Subroutines
                 Call CompareActiveXProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.recipePlusButtonType"
                 Call CompareRecipePlusButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.keyButtonType"
+                Call CompareKeyButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.timedKeyButtonType"
+                Call CompareTimedKeyButtonProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -4382,6 +4386,33 @@ Module Subroutines
 
     End Sub
 
+    Public Sub CompareKeyButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.keyButtonType = lobj
+        Dim RMSB As ME_Diff.keyButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareTimedKeyButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.timedKeyButtonType = lobj
+        Dim RMSB As ME_Diff.timedKeyButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
 
     Public Sub CompareGotoProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
 
