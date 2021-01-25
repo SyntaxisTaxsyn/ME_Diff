@@ -371,6 +371,9 @@
     <None Include="Test Pages\05Gauge and graph\01Gauge\0501Gaugethreshold.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\05Gauge and graph\02Scale\0502Scalemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -379,7 +382,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\05Gauge and graph\02Scale\" />
     <Folder Include="Test Pages\06Trending\" />
     <Folder Include="Test Pages\07Recipe plus\" />
     <Folder Include="Test Pages\08Key\" />
@@ -897,6 +899,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeR_threshold.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\02Scale\0502ScaleL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\02Scale\0502ScaleR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
