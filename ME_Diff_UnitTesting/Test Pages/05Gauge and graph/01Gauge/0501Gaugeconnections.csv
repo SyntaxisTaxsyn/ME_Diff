@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,value,values
+2,Gauge - Connection Count Mismatch,nothing,defined
+3,Gauge - Connection Count Mismatch,defined,nothing

@@ -362,6 +362,15 @@
     <None Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphthreshold.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\05Gauge and graph\01Gauge\0501Gaugeconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\05Gauge and graph\01Gauge\0501Gaugemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\05Gauge and graph\01Gauge\0501Gaugethreshold.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -370,7 +379,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\05Gauge and graph\01Gauge\" />
     <Folder Include="Test Pages\05Gauge and graph\02Scale\" />
     <Folder Include="Test Pages\06Trending\" />
     <Folder Include="Test Pages\07Recipe plus\" />
@@ -871,6 +879,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\05Gauge and graph\00BarGraph\0500BarGraphR_threshold.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeL_threshold.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\05Gauge and graph\01Gauge\0501GaugeR_threshold.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
