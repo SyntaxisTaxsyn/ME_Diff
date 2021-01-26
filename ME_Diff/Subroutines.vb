@@ -197,6 +197,8 @@ Module Subroutines
                 Call ComparePrintAlarmStatusButtonProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.simpleButtonType"
                 Call CompareSimpleButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.clearAuditTrailButtonType"
+                Call CompareClearAuditTrailButtonProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -5549,6 +5551,20 @@ Module Subroutines
         ' Declare temporary variables for breaking out object properties to compare against
         Dim LMSB As ME_Diff.simpleButtonType = lobj
         Dim RMSB As ME_Diff.simpleButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareClearAuditTrailButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.clearAuditTrailButtonType = lobj
+        Dim RMSB As ME_Diff.clearAuditTrailButtonType = robj
 
         ' this object type has no states to compare hence this section is empty at present
 
