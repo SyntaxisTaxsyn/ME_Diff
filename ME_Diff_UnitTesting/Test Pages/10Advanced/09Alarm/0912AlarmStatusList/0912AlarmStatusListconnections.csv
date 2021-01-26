@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,alarmid,alarmids
+2,Alarm Status List - Connection Count Mismatch,nothing,defined
+3,Alarm Status List - Connection Count Mismatch,defined,nothing

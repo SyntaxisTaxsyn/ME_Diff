@@ -183,6 +183,20 @@ Module Subroutines
                 Call CompareMacroProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.gotoConfigureButtonType"
                 Call CompareGotoConfigureModeProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.HMIServiceLinkedButtonType"
+                Call CompareHMILinkedServiceButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.HMIServiceButtonType"
+                Call CompareHMIServiceButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.ackAllAlarmButtonType"
+                Call CompareAckAllAlarmButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.clearAlarmHistButtonType"
+                Call CompareClearAlarmHistoryButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.printAlarmHistoryType"
+                Call ComparePrintAlarmHistoryButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.printAlarmStatusType"
+                Call ComparePrintAlarmStatusButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.simpleButtonType"
+                Call CompareSimpleButtonProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -247,7 +261,12 @@ Module Subroutines
                 Call CheckLocalMessageDisplayConnections(lobj, robj, fname, Gnest)
             Case "ME_Diff.macroButtonType"
                 Call CheckMacroConnections(lobj, robj, fname, Gnest)
-
+            Case "ME_Diff.alarmListType"
+                Call CheckAlarmListConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.alarmBannerType"
+                Call CheckAlarmBannerConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.alarmStatusListType"
+                Call CheckAlarmStatusListConnections(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -2843,6 +2862,393 @@ Module Subroutines
 
     End Sub
 
+    Public Sub CheckAlarmListConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.alarmListType = lobj
+        Dim RMSB As ME_Diff.alarmListType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Alarm List - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Alarm List - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Alarm List - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
+
+    Public Sub CheckAlarmBannerConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.alarmBannerType = lobj
+        Dim RMSB As ME_Diff.alarmBannerType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Alarm Banner - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Alarm Banner - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Alarm Banner - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
+
+    Public Sub CheckAlarmStatusListConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.alarmStatusListType = lobj
+        Dim RMSB As ME_Diff.alarmStatusListType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Alarm Status List - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Alarm Status List - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Alarm Status List - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
+
     Public Sub CheckActiveXConnections(ByRef lobj As Object,
                                            ByRef robj As Object,
                                            ByRef fname As String,
@@ -5053,6 +5459,105 @@ Module Subroutines
         Call Compare_BasicImageType(lobj, robj, fname, Gnest)
 
     End Sub
+
+    Public Sub CompareHMILinkedServiceButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.HMIServiceLinkedButtonType = lobj
+        Dim RMSB As ME_Diff.HMIServiceLinkedButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareHMIServiceButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.HMIServiceButtonType = lobj
+        Dim RMSB As ME_Diff.HMIServiceButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareAckAllAlarmButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.ackAllAlarmButtonType = lobj
+        Dim RMSB As ME_Diff.ackAllAlarmButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareClearAlarmHistoryButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.clearAlarmHistButtonType = lobj
+        Dim RMSB As ME_Diff.clearAlarmHistButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub ComparePrintAlarmHistoryButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.printAlarmHistoryType = lobj
+        Dim RMSB As ME_Diff.printAlarmHistoryType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub ComparePrintAlarmStatusButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.printAlarmStatusType = lobj
+        Dim RMSB As ME_Diff.printAlarmStatusType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
+    Public Sub CompareSimpleButtonProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.simpleButtonType = lobj
+        Dim RMSB As ME_Diff.simpleButtonType = robj
+
+        ' this object type has no states to compare hence this section is empty at present
+
+        ' Handle special datatypes within the multistate indicator
+        Call Compare_BasicCaptionType(lobj, robj, fname, Gnest)
+        Call Compare_BasicImageType(lobj, robj, fname, Gnest)
+
+    End Sub
+
 
     Public Sub CompareControlListSelectorProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
 

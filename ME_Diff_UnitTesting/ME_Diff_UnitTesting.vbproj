@@ -677,6 +677,114 @@
     <None Include="Test Pages\10Advanced\08TimeAndDate\1008TimeAndDatemain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900Acknowledgecaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900Acknowledgeimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900Acknowledgemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllcaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModecaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannercaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistorycaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistorymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistorycaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistorymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatuscaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatuscaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0908Silence\0908Silencecaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0908Silence\0908Silenceimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0908Silence\0908Silencemain.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmscaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0910AlarmList\0910AlarmListconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0910AlarmList\0910AlarmListmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\0911AlarmBannerconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\0911AlarmBannermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -685,19 +793,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0908Silence\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0910AlarmList\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\" />
-    <Folder Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\" />
     <Folder Include="Test Pages\10Advanced\10Diagnostics\1000Clear\" />
     <Folder Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\" />
     <Folder Include="Test Pages\10Advanced\10Diagnostics\1002DiagnosticsList\" />
@@ -1830,6 +1925,222 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\10Advanced\08TimeAndDate\1008TimeAndDateR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900AcknowledgeL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900AcknowledgeL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900AcknowledgeL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900AcknowledgeR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900AcknowledgeR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\0900AcknowledgeR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\0901AcknowledgeAllR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\0902AlarmStatusModeR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\0903ClearAlarmBannerR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_image.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\0905PrintAlarmHistoryR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\0906PrintAlarmStatusR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\0907ResetAlarmStatusR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0908Silence\0908SilenceL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0908Silence\0908SilenceL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0908Silence\0908SilenceL_main.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0908Silence\0908SilenceR_caption.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0908Silence\0908SilenceR_image.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0908Silence\0908SilenceR_main.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\0909SortAlarmsR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0910AlarmList\0910AlarmListL_connections.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0910AlarmList\0910AlarmListL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0910AlarmList\0910AlarmListR_connections.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0910AlarmList\0910AlarmListR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\0911AlarmBannerL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\0911AlarmBannerL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\0911AlarmBannerR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\0911AlarmBannerR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListR_main.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

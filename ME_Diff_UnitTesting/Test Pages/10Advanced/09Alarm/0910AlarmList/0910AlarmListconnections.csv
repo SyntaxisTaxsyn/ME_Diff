@@ -1,0 +1,12 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,activack,activacks
+2,Connection 1 - expression,activeunack,activeunacks
+3,Connection 2 - expression,inacktivack,inacktivacks
+4,Connection 3 - expression,inactivunack,inactivunacks
+5,Connection 4 - expression,alarmid,alarmids
+6,Alarm List - Connection Count Mismatch,nothing,defined
+7,Alarm List - Connection Count Mismatch,defined,nothing
+8,Connection 0 - expression,activeunack,activack
+9,Connection 0 - expression,activack,activeunack
+10,Alarm List - Connection Count Mismatch,4,5
+11,Alarm List - Connection Count Mismatch,5,4
