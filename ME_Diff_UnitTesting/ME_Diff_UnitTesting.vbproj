@@ -785,6 +785,27 @@
     <None Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000Clearcaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000Clearimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000Clearmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllcaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\10Diagnostics\1002DiagnosticsList\1002DiagnosticsListmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -793,9 +814,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\10Advanced\10Diagnostics\1000Clear\" />
-    <Folder Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\" />
-    <Folder Include="Test Pages\10Advanced\10Diagnostics\1002DiagnosticsList\" />
     <Folder Include="Test Pages\10Advanced\11Audit\1100ClearAuditTrail\" />
     <Folder Include="Test Pages\10Advanced\11Audit\1101AuditTrailList\" />
     <Folder Include="Test Pages\10Advanced\11Audit\1102AuditTrailDetail\" />
@@ -2130,6 +2148,48 @@
     </Content>
     <Content Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\0912AlarmStatusListR_main.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000ClearL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000ClearL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000ClearL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000ClearR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000ClearR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1000Clear\1000ClearR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\1001ClearAllR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1002DiagnosticsList\1002DiagnosticsListL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\10Diagnostics\1002DiagnosticsList\1002DiagnosticsListR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

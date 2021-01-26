@@ -1,0 +1,8 @@
+Test number,Property,Left,Right
+1,imageName,Alm_AckReqd,Alm_Active
+2,alignment,middleCenter,middleLeft
+3,backStyle,solid,transparent
+4,color,black,white
+5,backColor,white,black
+6,scaled,False,True
+7,blink,False,True
