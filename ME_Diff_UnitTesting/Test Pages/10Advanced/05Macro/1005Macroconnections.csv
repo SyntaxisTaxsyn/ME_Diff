@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,macro,macros
+2,Macro - Connection Count Mismatch,nothing,defined
+3,Macro - Connection Count Mismatch,defined,nothing

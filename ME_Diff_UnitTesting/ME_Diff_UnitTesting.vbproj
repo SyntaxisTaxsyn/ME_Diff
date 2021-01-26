@@ -596,16 +596,85 @@
     <None Include="Test Pages\09User management\09ChangeUserProperties\0909ChangeUserPropertiesmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorcaption.csv">
+    <None Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorcaption.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorconnections.csv">
+    <None Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorconnections.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectormain.csv">
+    <None Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectormain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorstate.csv">
+    <None Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorstate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorcaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectormain.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorstate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintcaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtoncaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\04LocalMessageDisplay\1004LocalMessageDisplayconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\04LocalMessageDisplay\1004LocalMessageDisplaymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\05Macro\1005Macrocaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\05Macro\1005Macroconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\05Macro\1005Macroimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\05Macro\1005Macromain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\06Shutdown\1006Shutdowncaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\06Shutdown\1006Shutdownimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\06Shutdown\1006Shutdownmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModecaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\08TimeAndDate\1008TimeAndDatemain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -616,6 +685,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Test Pages\10Advanced\09Alarm\0900Acknowledge\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0901AcknowledgeAll\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0902AlarmStatusMode\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0903ClearAlarmBanner\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0905PrintAlarmHistory\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0906PrintAlarmStatus\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0907ResetAlarmStatus\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0908Silence\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0909SortAlarms\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0910AlarmList\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0911AlarmBanner\" />
+    <Folder Include="Test Pages\10Advanced\09Alarm\0912AlarmStatusList\" />
+    <Folder Include="Test Pages\10Advanced\10Diagnostics\1000Clear\" />
+    <Folder Include="Test Pages\10Advanced\10Diagnostics\1001ClearAll\" />
+    <Folder Include="Test Pages\10Advanced\10Diagnostics\1002DiagnosticsList\" />
+    <Folder Include="Test Pages\10Advanced\11Audit\1100ClearAuditTrail\" />
+    <Folder Include="Test Pages\10Advanced\11Audit\1101AuditTrailList\" />
+    <Folder Include="Test Pages\10Advanced\11Audit\1102AuditTrailDetail\" />
+    <Folder Include="Test Pages\10Advanced\12Information\1200Acknowledge\" />
+    <Folder Include="Test Pages\10Advanced\12Information\1201MessageDisplay\" />
     <Folder Include="Test Pages\11Active X Control\" />
     <Folder Include="Test Pages\12Symbol factory\" />
   </ItemGroup>
@@ -1580,28 +1670,166 @@
     <Content Include="Test Pages\09User management\09ChangeUserProperties\0909ChangeUserPropertiesR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorL_caption.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorL_caption.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorL_connections.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorL_connections.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorL_main.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorL_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorL_state.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorL_state.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorR_caption.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorR_caption.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorR_connections.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorR_connections.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorR_main.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Test Pages\10Advanced\10ControlListSelector\1000ControlListSelectorR_state.xml">
+    <Content Include="Test Pages\10Advanced\00ControlListSelector\1000ControlListSelectorR_state.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorL_main.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorL_state.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorR_caption.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\01PilotedControlListSelector\1001PilotedControlListSelectorR_state.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\02DisplayPrint\1002DisplayPrintR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\03LanguageSwitchButton\1003LanguageSwitchButtonR_main.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\04LocalMessageDisplay\1004LocalMessageDisplayL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\04LocalMessageDisplay\1004LocalMessageDisplayL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\04LocalMessageDisplay\1004LocalMessageDisplayR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\04LocalMessageDisplay\1004LocalMessageDisplayR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\05Macro\1005MacroR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\06Shutdown\1006ShutdownL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\06Shutdown\1006ShutdownL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\06Shutdown\1006ShutdownL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\06Shutdown\1006ShutdownR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\06Shutdown\1006ShutdownR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\06Shutdown\1006ShutdownR_main.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\07GotoConfigureMode\1007GotoConfigureModeR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\08TimeAndDate\1008TimeAndDateL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\08TimeAndDate\1008TimeAndDateR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

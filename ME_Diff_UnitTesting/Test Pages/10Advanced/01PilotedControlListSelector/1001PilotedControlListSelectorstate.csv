@@ -1,0 +1,7 @@
+Test number,Property,Left,Right
+2,State 0 - value,0,-1
+3,State 0 - access,operatorAndRemote,operator
+5,State 1 - value,0,-1
+6,State 1 - access,operatorAndRemote,operator
+8,State 3 - value,0,-1
+9,State 3 - access,operatorAndRemote,operator

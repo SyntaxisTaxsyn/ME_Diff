@@ -1,0 +1,14 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,value,values
+2,Connection 1 - expression,indicator,indicators
+3,Connection 2 - expression,remote,remotes
+4,Connection 3 - expression,top,tops
+5,Connection 4 - expression,visible,visibles
+6,Connection 5 - expression,enter,enters
+7,Connection 6 - expression,hshake,hshakes
+8,Piloted Control List Selector - Connection Count Mismatch,nothing,defined
+9,Piloted Control List Selector - Connection Count Mismatch,defined,nothing
+10,Connection 0 - expression,indicator,value
+11,Connection 0 - expression,value,indicator
+12,Piloted Control List Selector - Connection Count Mismatch,6,7
+13,Piloted Control List Selector - Connection Count Mismatch,7,6

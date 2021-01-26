@@ -1,0 +1,10 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,value,values
+2,Connection 1 - expression,message,messages
+3,Connection 2 - expression,echo,echos
+4,Local Message Display - Connection Count Mismatch,nothing,defined
+5,Local Message Display - Connection Count Mismatch,defined,nothing
+6,Connection 0 - expression,message,value
+7,Connection 0 - expression,value,message
+8,Local Message Display - Connection Count Mismatch,2,3
+9,Local Message Display - Connection Count Mismatch,3,2
