@@ -173,6 +173,8 @@ Module Subroutines
                 Call CompareLogoutButtonProperties(lobj, robj, fname, Gnest)
             Case "ME_Diff.passwordButtonType"
                 Call ComparePasswordButtonProperties(lobj, robj, fname, Gnest)
+            Case "ME_Diff.controlListSelectorType"
+                Call CompareControlListSelectorProperties(lobj, robj, fname, Gnest)
         End Select
 
     End Sub
@@ -229,6 +231,8 @@ Module Subroutines
                 Call CheckGaugeConnections(lobj, robj, fname, Gnest)
             Case "ME_Diff.activeXObjectType"
                 Call CheckActiveXConnections(lobj, robj, fname, Gnest)
+            Case "ME_Diff.controlListSelectorType"
+                Call CheckControlListSelectorConnections(lobj, robj, fname, Gnest)
 
         End Select
 
@@ -2302,6 +2306,135 @@ Module Subroutines
                                      lobj.name,
                                      GetMEObjectType(lobj),
                                      "Gauge - Connection Count Mismatch",
+                                     "nothing",
+                                     "defined")
+            End If
+        End If
+
+    End Sub
+
+    Public Sub CheckControlListSelectorConnections(ByRef lobj As Object,
+                                           ByRef robj As Object,
+                                           ByRef fname As String,
+                                           ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.controlListSelectorType = lobj
+        Dim RMSB As ME_Diff.controlListSelectorType = robj
+
+        If LMSB.connections IsNot Nothing Then
+            If RMSB.connections IsNot Nothing Then
+                ' both defined
+                If Not LMSB.connections.Count = RMSB.connections.Count Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "Control List Selector - Connection Count Mismatch",
+                                             LMSB.connections.Count,
+                                             RMSB.connections.Count)
+                Else
+                    For a = 0 To LMSB.connections.Count - 1
+
+                        ' Declare reuseable loop variables
+                        Dim MEObjType As String = GetMEObjectType(lobj)
+                        Dim LConn As ME_Diff.connectionType = LMSB.connections(a)
+                        Dim RConn As ME_Diff.connectionType = RMSB.connections(a)
+                        Dim Left As String = ""
+                        Dim Right As String = ""
+                        Dim Desc As String = ""
+
+                        ' expression
+                        Desc = "expression"
+                        Left = LConn.expression.ToString
+                        Right = RConn.expression.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' name
+                        Desc = "name"
+                        Left = LConn.name.ToString
+                        Right = RConn.name.ToString
+                        If Not Left = Right Then
+                            Call AddListContentMatch(Gnest,
+                                                     fname,
+                                                     lobj.name,
+                                                     GetMEObjectType(lobj),
+                                                     "Connection " & a & " - " & Desc,
+                                                     Left,
+                                                     Right)
+                        End If
+
+                        ' optionalExpression
+                        If LConn.optionalExpression IsNot Nothing Then
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Left = LConn.optionalExpression.ToString
+                                Right = RConn.optionalExpression.ToString
+                                If Not Left = Right Then
+                                    Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             Left,
+                                                             Right)
+                                End If
+                            Else
+                                ' left defined, right nothing
+                                If LConn.optionalExpression IsNot Nothing Then
+                                    Desc = "optionalExpression"
+                                    Call AddListContentMatch(Gnest,
+                                                                 fname,
+                                                                 lobj.name,
+                                                                 GetMEObjectType(lobj),
+                                                                 "Connection " & a & " - " & Desc,
+                                                                 "defined",
+                                                                 "nothing")
+                                End If
+                            End If
+                        Else
+                            ' left nothing, right defined
+                            If RConn.optionalExpression IsNot Nothing Then
+                                Desc = "optionalExpression"
+                                Call AddListContentMatch(Gnest,
+                                                             fname,
+                                                             lobj.name,
+                                                             GetMEObjectType(lobj),
+                                                             "Connection " & a & " - " & Desc,
+                                                             "nothing",
+                                                             "defined")
+                            End If
+                        End If
+                    Next
+                End If
+            Else
+                ' left defined, right not
+                If LMSB.connections IsNot Nothing Then
+                    Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Control List Selector - Connection Count Mismatch",
+                                     "defined",
+                                     "nothing")
+                End If
+            End If
+        Else
+            If RMSB.connections IsNot Nothing Then
+                ' right defined left not
+                Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Control List Selector - Connection Count Mismatch",
                                      "nothing",
                                      "defined")
             End If
@@ -4478,6 +4611,70 @@ Module Subroutines
 
     End Sub
 
+    Public Sub CompareControlListSelectorProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
+
+        ' Declare temporary variables for breaking out object properties to compare against
+        Dim LMSB As ME_Diff.controlListSelectorType = lobj
+        Dim RMSB As ME_Diff.controlListSelectorType = robj
+
+        If Not LMSB.states.Count = RMSB.states.Count Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "Control List Selector - State Count Mismatch",
+                                     LMSB.states.Count,
+                                     RMSB.states.Count)
+        Else
+
+            For a = 0 To LMSB.states.Count - 1
+
+                ' Declare reuseable loop variables
+                Dim MEObjType As String = GetMEObjectType(lobj)
+                Dim LState As ME_Diff.controlListSelectorStateType = LMSB.states(a)
+                Dim Rstate As ME_Diff.controlListSelectorStateType = RMSB.states(a)
+                Dim Left As String = ""
+                Dim Right As String = ""
+                Dim Desc As String = ""
+
+                ' stateId
+                Desc = "stateId"
+                Left = LState.stateId.ToString
+                Right = Rstate.stateId.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' value
+                Desc = "value"
+                Left = LState.value.ToString
+                Right = Rstate.value.ToString
+                If Not Left = Right Then
+                    Call AddListContentMatch(Gnest,
+                                             fname,
+                                             lobj.name,
+                                             GetMEObjectType(lobj),
+                                             "State " & a & " - " & Desc,
+                                             Left,
+                                             Right)
+                End If
+
+                ' Handle special datatypes within the multistate indicator
+                Call Compare_BasicCaptionType(lobj, robj, fname, Gnest, LState, Rstate, a)
+                'Call Compare_BasicImageType(lobj, robj, fname, Gnest, LState, Rstate, a)
+
+            Next
+
+        End If
+
+    End Sub
+
     Public Sub CompareGotoProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
 
         ' Declare temporary variables for breaking out object properties to compare against
@@ -5463,6 +5660,148 @@ Module Subroutines
         Desc = "wordWrapSpecified"
         Left = LCap.wordWrapSpecified.ToString
         Right = RCap.wordWrapSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+    End Sub
+
+    Public Sub Compare_BasicCaptionType(ByRef lobj As Object,
+                                        ByRef robj As Object,
+                                        ByRef fname As String,
+                                        ByRef Gnest As String,
+                                        ByRef LState As ME_Diff.controlListSelectorStateType,
+                                        ByRef RState As ME_Diff.controlListSelectorStateType,
+                                        ByRef StateIndex As Integer)
+
+        Dim LCap As ME_Diff.controlListSelectorCaptionType = LState.caption
+        Dim RCap As ME_Diff.controlListSelectorCaptionType = RState.caption
+        Dim Desc As String = ""
+        Dim Left As String = ""
+        Dim Right As String = ""
+
+        ' alignment
+        Desc = "alignment"
+        Left = LCap.alignment.ToString
+        Right = RCap.alignment.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' alignmentSpecified
+        Desc = "alignmentSpecified"
+        Left = LCap.alignmentSpecified.ToString
+        Right = RCap.alignmentSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backColor
+        Desc = "backColor"
+        Left = LCap.backColor.ToString
+        Right = RCap.backColor.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyle
+        Desc = "backStyle"
+        Left = LCap.backStyle.ToString
+        Right = RCap.backStyle.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' backStyleSpecified
+        Desc = "backStyleSpecified"
+        Left = LCap.backStyleSpecified.ToString
+        Right = RCap.backStyleSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blink
+        Desc = "blink"
+        Left = LCap.blink.ToString
+        Right = RCap.blink.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' blinkSpecified
+        Desc = "blinkSpecified"
+        Left = LCap.blinkSpecified.ToString
+        Right = RCap.blinkSpecified.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' Caption
+        Desc = "caption"
+        Left = LCap.caption.ToString
+        Right = RCap.caption.ToString
+        If Not Left = Right Then
+            Call AddListContentMatch(Gnest,
+                                     fname,
+                                     lobj.name,
+                                     GetMEObjectType(lobj),
+                                     "State " & StateIndex & " - " & Desc,
+                                     Left,
+                                     Right)
+        End If
+
+        ' color
+        Desc = "color"
+        Left = LCap.color.ToString
+        Right = RCap.color.ToString
         If Not Left = Right Then
             Call AddListContentMatch(Gnest,
                                      fname,

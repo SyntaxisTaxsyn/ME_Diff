@@ -1,0 +1,10 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,value,values
+2,Connection 1 - expression,enter,enters
+3,Connection 2 - expression,hshake,hshakes
+4,Control List Selector - Connection Count Mismatch,nothing,defined
+5,Control List Selector - Connection Count Mismatch,defined,nothing
+6,Connection 0 - expression,enter,value
+7,Connection 0 - expression,value,enter
+8,Control List Selector - Connection Count Mismatch,2,3
+9,Control List Selector - Connection Count Mismatch,3,2
