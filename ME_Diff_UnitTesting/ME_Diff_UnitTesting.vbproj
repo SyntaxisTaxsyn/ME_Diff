@@ -821,6 +821,18 @@
     <None Include="Test Pages\10Advanced\11Audit\1102AuditTrailDetail\1102AuditTrailDetailmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200Acknowledgecaption.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200Acknowledgeimage.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200Acknowledgemain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\10Advanced\12Information\1201MessageDisplay\1201MessageDisplaymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -829,8 +841,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\10Advanced\12Information\1200Acknowledge\" />
-    <Folder Include="Test Pages\10Advanced\12Information\1201MessageDisplay\" />
     <Folder Include="Test Pages\11Active X Control\" />
     <Folder Include="Test Pages\12Symbol factory\" />
   </ItemGroup>
@@ -2231,6 +2241,30 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\10Advanced\11Audit\1102AuditTrailDetail\1102AuditTrailDetailR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200AcknowledgeL_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200AcknowledgeL_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200AcknowledgeL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200AcknowledgeR_caption.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200AcknowledgeR_image.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1200Acknowledge\1200AcknowledgeR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1201MessageDisplay\1201MessageDisplayL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\10Advanced\12Information\1201MessageDisplay\1201MessageDisplayR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">
