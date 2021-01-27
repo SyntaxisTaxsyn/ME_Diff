@@ -1,0 +1,20 @@
+Test number,Property,Left,Right
+2,height,19,18
+3,width,25,24
+4,left,263,264
+5,top,439,440
+6,visible,True,False
+7,wallpaper,False,True
+8,isReferenceObject,False,True
+9,backStyle,transparent,solid
+10,backColor,white,yellow
+11,foreColor,black,red
+12,lineStyle,solid,dash
+13,lineWidth,1,2
+14,patternStyle,none,dots
+15,patternColor,white,black
+16,path,100 100 200 200,100 100 200 201
+17,endColor,white,black
+18,gradientStop,50,40
+19,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+20,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop
