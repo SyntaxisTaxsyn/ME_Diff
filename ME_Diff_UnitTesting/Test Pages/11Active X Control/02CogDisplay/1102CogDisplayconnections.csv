@@ -1,0 +1,35 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,backcolor,backcolors
+2,Connection 1 - expression,image,images
+3,Connection 2 - expression,horizontal,horizontals
+4,Connection 3 - expression,vertical,verticals
+5,Connection 4 - expression,popup,popups
+6,Connection 5 - expression,panx,panxs
+7,Connection 6 - expression,pany,panys
+8,Connection 7 - expression,zoom,zooms
+9,Connection 8 - expression,scaking,scakings
+10,Connection 9 - expression,drawing,drawings
+11,Connection 10 - expression,mousemode,mousemodes
+12,Connection 11 - expression,renderenginer,renderenginers
+13,Connection 12 - expression,gridenable,gridenables
+14,Connection 13 - expression,gridcolor,gridcolors
+15,Connection 14 - expression,pixelgriden,pixelgridens
+16,Connection 15 - expression,pixelgridcolor,pixelgridcolors
+17,Connection 16 - expression,touchdistance,touchdistances
+18,Connection 17 - expression,intgraphtips,intgraphtipss
+19,Connection 18 - expression,multisel,multisels
+20,Connection 19 - expression,en,ens
+21,Connection 20 - expression,auto,autos
+22,Connection 21 - expression,fitgraphics,fitgraphicss
+23,Connection 22 - expression,mainzoom,mainzooms
+24,Connection 23 - expression,image16,image16s
+25,Connection 24 - expression,image16color,image16colors
+26,Connection 25 - expression,vispixmask,vispixmasks
+27,Connection 26 - expression,vispixmaskcol,vispixmaskcols
+28,Connection 27 - expression,image8,image8s
+29,ActiveX - Connection Count Mismatch,nothing,defined
+30,ActiveX - Connection Count Mismatch,defined,nothing
+31,Connection 0 - expression,image,backcolor
+32,Connection 0 - expression,backcolor,image
+33,ActiveX - Connection Count Mismatch,27,28
+34,ActiveX - Connection Count Mismatch,28,27

@@ -833,6 +833,45 @@
     <None Include="Test Pages\10Advanced\12Information\1201MessageDisplay\1201MessageDisplaymain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherdata.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLaunchermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerdata.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplaydata.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplaymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\03FTViewDiagnosticsViewer\1103FTViewDiagnosticsdata.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\03FTViewDiagnosticsViewer\1103FTViewDiagnosticsmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\04DBGridControl\1104DBGridControlconnections.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\11Active X Control\04DBGridControl\1104DBGridControlmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -841,7 +880,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\11Active X Control\" />
     <Folder Include="Test Pages\12Symbol factory\" />
   </ItemGroup>
   <ItemGroup>
@@ -2265,6 +2303,84 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\10Advanced\12Information\1201MessageDisplay\1201MessageDisplayR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherL_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherR_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\00MEProgramLauncher\1100MEProgramLauncherR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerL_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerR_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\01AdobePDFViewer\1101AdobePDFViewerR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayL_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayR_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\02CogDisplay\1102CogDisplayR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\03FTViewDiagnosticsViewer\1103FTViewDiagnosticsL_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\03FTViewDiagnosticsViewer\1103FTViewDiagnosticsL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\03FTViewDiagnosticsViewer\1103FTViewDiagnosticsR_data.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\03FTViewDiagnosticsViewer\1103FTViewDiagnosticsR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\04DBGridControl\1104DBGridControlL_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\04DBGridControl\1104DBGridControlL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\04DBGridControl\1104DBGridControlR_connections.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\11Active X Control\04DBGridControl\1104DBGridControlR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">

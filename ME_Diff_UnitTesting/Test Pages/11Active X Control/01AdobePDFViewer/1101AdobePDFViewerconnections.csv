@@ -1,0 +1,9 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,src,srcs
+2,Connection 1 - expression,message,messages
+3,ActiveX - Connection Count Mismatch,nothing,defined
+4,ActiveX - Connection Count Mismatch,defined,nothing
+5,Connection 0 - expression,message,src
+6,Connection 0 - expression,src,message
+7,ActiveX - Connection Count Mismatch,1,2
+8,ActiveX - Connection Count Mismatch,2,1

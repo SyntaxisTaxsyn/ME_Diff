@@ -1,0 +1,12 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,tag,tags
+2,Connection 1 - expression,tag1,tag1s
+3,Connection 2 - expression,tag2,tag2s
+4,Connection 3 - expression,tag3,tag3s
+5,Connection 4 - expression,tag4,tag4s
+6,ActiveX - Connection Count Mismatch,nothing,defined
+7,ActiveX - Connection Count Mismatch,defined,nothing
+8,Connection 0 - expression,tag1,tag
+9,Connection 0 - expression,tag,tag1
+10,ActiveX - Connection Count Mismatch,4,5
+11,ActiveX - Connection Count Mismatch,5,4

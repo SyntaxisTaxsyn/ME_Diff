@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME12.xsd">
+    <displaySettings displayType="replace" securityCode="*" backColor="white" maximumTagUpdateRate="1" focusHighlightColor="lime" disableFocusHighlight="false" width="1024" height="768" displayNumber="1" disableInitialInputFocus="false" startupMacro="" shutdownMacro="" useGradientStyle="false" endColor="teal" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight"/>
+        <activeX name="activeX_Test1" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tags" />
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test2" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowAddNew" expression="tag1s" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test3" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2s" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test4" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3s" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test5" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4s" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test6" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test7" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+        </activeX>
+        <activeX name="activeX_Test8" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test9" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test10" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowDelete" expression="tag" />
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+        <activeX name="activeX_Test11" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" classId="{EC66E436-280E-11D4-AB9C-00C04F9915E3}" keyNavigation="true" focusHighlight="true" >
+            <connections>
+                <connection name="AllowAddNew" expression="tag1" />
+                <connection name="AllowRowSizing" expression="tag2" />
+                <connection name="AllowUpdate" expression="tag3" />
+                <connection name="Appearance" expression="tag4" />
+            </connections>
+        </activeX>
+</gfx>

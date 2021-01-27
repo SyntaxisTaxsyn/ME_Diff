@@ -1,0 +1,15 @@
+Test number,Property,Left,Right
+1,Connection 0 - expression,location,locations
+2,Connection 1 - expression,parameter,parameters
+3,Connection 2 - expression,focus,focuss
+4,Connection 3 - expression,launch,launchs
+5,Connection 4 - expression,new,news
+6,Connection 5 - expression,max,maxs
+7,Connection 6 - expression,close,closes
+8,Connection 7 - expression,title,titles
+9,ActiveX - Connection Count Mismatch,nothing,defined
+10,ActiveX - Connection Count Mismatch,defined,nothing
+11,Connection 0 - expression,parameter,location
+12,Connection 0 - expression,location,parameter
+13,ActiveX - Connection Count Mismatch,7,8
+14,ActiveX - Connection Count Mismatch,8,7
