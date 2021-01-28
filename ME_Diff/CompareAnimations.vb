@@ -26,7 +26,7 @@
                     If Robj.animateColor IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateColor.expression = Robj.animateColor.expression Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Color-Expression", Lobj.animateColor.expression.ToString, Robj.animateColor.expression.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Color-expression", Lobj.animateColor.expression.ToString, Robj.animateColor.expression.ToString)
                         End If
                     Else
                         ' This is a difference where the right side has no property set
@@ -64,7 +64,7 @@
                     If Robj.animateColor IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateColor.blinkRate = Robj.animateColor.blinkRate Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Color-blinkrate", Lobj.animateColor.blinkRate.ToString, Robj.animateColor.blinkRate.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Color-blinkRate", Lobj.animateColor.blinkRate.ToString, Robj.animateColor.blinkRate.ToString)
                         End If
                     End If
                 End If
@@ -81,7 +81,7 @@
                     If Robj.animateColor IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateColor.blinkRateSpecified = Robj.animateColor.blinkRateSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Color-blinkrateSpecified", Lobj.animateColor.blinkRateSpecified.ToString, Robj.animateColor.blinkRateSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Color-blinkRateSpecified", Lobj.animateColor.blinkRateSpecified.ToString, Robj.animateColor.blinkRateSpecified.ToString)
                         End If
                     End If
                 End If
@@ -110,7 +110,7 @@
                                                              fname,
                                                              oname,
                                                              "Animation",
-                                                             "Animate Color" & " Item:" & a & " - Backbehavior",
+                                                             "Animate Color" & " Item:" & a & " - backBehavior",
                                                              LColor.backBehavior.ToString,
                                                              Rcolor.backBehavior.ToString)
                                 End If
@@ -121,7 +121,7 @@
                                                              fname,
                                                              oname,
                                                              "Animation",
-                                                             "Animate Color" & " Item:" & a & " - BackbehaviorSpecified",
+                                                             "Animate Color" & " Item:" & a & " - backBehaviorSpecified",
                                                              LColor.backBehaviorSpecified.ToString,
                                                              Rcolor.backBehaviorSpecified.ToString)
                                 End If
@@ -132,7 +132,7 @@
                                                              fname,
                                                              oname,
                                                              "Animation",
-                                                             "Animate Color" & " Item:" & a & " - Backcolor1",
+                                                             "Animate Color" & " Item:" & a & " - backColor1",
                                                              LColor.backColor1.ToString,
                                                              Rcolor.backColor1.ToString)
                                 End If
@@ -143,7 +143,7 @@
                                                              fname,
                                                              oname,
                                                              "Animation",
-                                                             "Animate Color" & " Item:" & a & " - Backcolor2",
+                                                             "Animate Color" & " Item:" & a & " - backColor2",
                                                              LColor.backColor2.ToString,
                                                              Rcolor.backColor2.ToString)
                                 End If
@@ -154,7 +154,7 @@
                                                              fname,
                                                              oname,
                                                              "Animation",
-                                                             "Animate Color" & " Item:" & a & " - End color",
+                                                             "Animate Color" & " Item:" & a & " - endColor",
                                                              LColor.endColor.ToString,
                                                              Rcolor.endColor.ToString)
                                 End If
@@ -2127,7 +2127,7 @@
                     If Robj.animateVisibility IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVisibility.expression = Robj.animateVisibility.expression Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Visibility-Expression", Lobj.animateVisibility.expression.ToString, Robj.animateVisibility.expression.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Visibility-expression", Lobj.animateVisibility.expression.ToString, Robj.animateVisibility.expression.ToString)
                         End If
                     Else
                         ' This is a difference where the right side has no property set

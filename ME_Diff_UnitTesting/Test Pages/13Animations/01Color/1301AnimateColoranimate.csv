@@ -1,0 +1,9 @@
+Test number,Property,Left,Right
+1,Visibility-expression,text,texts
+1,Visibility-expression,text,texts
+2,Visibility-expressionTrueState,visible,invisible
+2,Visibility-expressionTrueState,visible,invisible
+3,Color-expression,text,texts
+3,Color-expression,text,texts
+4,Color-blinkRate,2,3
+4,Color-blinkRate,2,3
