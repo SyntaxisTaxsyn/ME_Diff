@@ -415,7 +415,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.expression = Robj.animateFill.expression Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-Expression", Lobj.animateFill.expression.ToString, Robj.animateFill.expression.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-expression", Lobj.animateFill.expression.ToString, Robj.animateFill.expression.ToString)
                         End If
                     Else
                         ' check left property is set
@@ -458,7 +458,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.fillDirection = Robj.animateFill.fillDirection Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-Direction", Lobj.animateFill.fillDirection.ToString, Robj.animateFill.fillDirection.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-fillDirection", Lobj.animateFill.fillDirection.ToString, Robj.animateFill.fillDirection.ToString)
                         End If
                     End If
                 End If
@@ -475,7 +475,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.fillDirectionSpecified = Robj.animateFill.fillDirectionSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-DirectionSpecified", Lobj.animateFill.fillDirectionSpecified.ToString, Robj.animateFill.fillDirectionSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-fillDirectionSpecified", Lobj.animateFill.fillDirectionSpecified.ToString, Robj.animateFill.fillDirectionSpecified.ToString)
                         End If
                     End If
                 End If
@@ -492,7 +492,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.fillMax = Robj.animateFill.fillMax Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-Max", Lobj.animateFill.fillMax.ToString, Robj.animateFill.fillMax.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-fillMax", Lobj.animateFill.fillMax.ToString, Robj.animateFill.fillMax.ToString)
                         End If
                     End If
                 End If
@@ -509,7 +509,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.fillMaxSpecified = Robj.animateFill.fillMaxSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-MaxSpecified", Lobj.animateFill.fillMaxSpecified.ToString, Robj.animateFill.fillMaxSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-fillMaxSpecified", Lobj.animateFill.fillMaxSpecified.ToString, Robj.animateFill.fillMaxSpecified.ToString)
                         End If
                     End If
                 End If
@@ -526,7 +526,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.fillMin = Robj.animateFill.fillMin Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-Min", Lobj.animateFill.fillMin.ToString, Robj.animateFill.fillMin.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-fillMin", Lobj.animateFill.fillMin.ToString, Robj.animateFill.fillMin.ToString)
                         End If
                     End If
                 End If
@@ -543,7 +543,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.fillMinSpecified = Robj.animateFill.fillMinSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-MinSpecified", Lobj.animateFill.fillMinSpecified.ToString, Robj.animateFill.fillMinSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-fillMinSpecified", Lobj.animateFill.fillMinSpecified.ToString, Robj.animateFill.fillMinSpecified.ToString)
                         End If
                     End If
                 End If
@@ -560,7 +560,7 @@
                     If Robj.animateFill IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateFill.insideOnly = Robj.animateFill.insideOnly Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-InsideOnly", Lobj.animateFill.insideOnly.ToString, Robj.animateFill.insideOnly.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Fill-insideOnly", Lobj.animateFill.insideOnly.ToString, Robj.animateFill.insideOnly.ToString)
                         End If
                     End If
                 End If
@@ -617,7 +617,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Animate Fill - Item Max",
+                                                                     "Animate Fill - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -628,7 +628,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Animate Fill - Item Max Specified",
+                                                                     "Animate Fill - Item Max maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -639,7 +639,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Animate Fill - Item Min",
+                                                                     "Animate Fill - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -650,7 +650,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Animate Fill - Item Min Specified",
+                                                                     "Animate Fill - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -669,7 +669,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Animate Fill - Item Max tag",
+                                                                     "Animate Fill - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -680,7 +680,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Animate Fill - Item Min tag",
+                                                                     "Animate Fill - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
