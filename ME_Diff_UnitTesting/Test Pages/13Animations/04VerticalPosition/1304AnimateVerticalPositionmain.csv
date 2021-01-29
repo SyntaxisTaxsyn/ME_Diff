@@ -1,0 +1,21 @@
+Test number,Property,Left,Right
+2,height,19,18
+3,width,25,24
+4,left,263,264
+5,top,439,440
+6,visible,True,False
+7,wallpaper,False,True
+8,isReferenceObject,False,True
+9,backStyle,transparent,solid
+10,backColor,white,yellow
+11,foreColor,black,red
+12,wordWrap,True,False
+13,sizeToFit,True,False
+14,alignment,middleCenter,middleLeft
+15,fontFamily,Arial,Batang
+16,fontSize,13,11
+17,bold,False,True
+18,italic,False,True
+19,underline,False,True
+20,strikethrough,False,True
+21,caption,text,text1

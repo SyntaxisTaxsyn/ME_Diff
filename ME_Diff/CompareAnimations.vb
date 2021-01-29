@@ -1713,7 +1713,7 @@
                     If Robj.animateVerticalPosition IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalPosition.verticalOffsetMax = Robj.animateVerticalPosition.verticalOffsetMax Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-VerticalOffsetMax", Lobj.animateVerticalPosition.verticalOffsetMax.ToString, Robj.animateVerticalPosition.verticalOffsetMax.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-verticalOffsetMax", Lobj.animateVerticalPosition.verticalOffsetMax.ToString, Robj.animateVerticalPosition.verticalOffsetMax.ToString)
                         End If
                     End If
                 End If
@@ -1730,7 +1730,7 @@
                     If Robj.animateVerticalPosition IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalPosition.verticalOffsetMaxSpecified = Robj.animateVerticalPosition.verticalOffsetMaxSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-VerticalOffsetMaxSpecified", Lobj.animateVerticalPosition.verticalOffsetMaxSpecified.ToString, Robj.animateVerticalPosition.verticalOffsetMaxSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-verticalOffsetMaxSpecified", Lobj.animateVerticalPosition.verticalOffsetMaxSpecified.ToString, Robj.animateVerticalPosition.verticalOffsetMaxSpecified.ToString)
                         End If
                     End If
                 End If
@@ -1747,7 +1747,7 @@
                     If Robj.animateVerticalPosition IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalPosition.verticalOffsetMin = Robj.animateVerticalPosition.verticalOffsetMin Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-VerticalOffsetMin", Lobj.animateVerticalPosition.verticalOffsetMin.ToString, Robj.animateVerticalPosition.verticalOffsetMin.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-verticalOffsetMin", Lobj.animateVerticalPosition.verticalOffsetMin.ToString, Robj.animateVerticalPosition.verticalOffsetMin.ToString)
                         End If
                     End If
                 End If
@@ -1764,7 +1764,7 @@
                     If Robj.animateVerticalPosition IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalPosition.verticalOffsetMinSpecified = Robj.animateVerticalPosition.verticalOffsetMinSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-VerticalOffsetMinSpecified", Lobj.animateVerticalPosition.verticalOffsetMinSpecified.ToString, Robj.animateVerticalPosition.verticalOffsetMinSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalPosition-verticalOffsetMinSpecified", Lobj.animateVerticalPosition.verticalOffsetMinSpecified.ToString, Robj.animateVerticalPosition.verticalOffsetMinSpecified.ToString)
                         End If
                     End If
                 End If
