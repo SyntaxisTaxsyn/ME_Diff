@@ -1576,7 +1576,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Rotation - Item Max",
+                                                                     "Rotation - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -1587,7 +1587,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Rotation - Item Max Specified",
+                                                                     "Rotation - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -1598,7 +1598,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Rotation - Item Min",
+                                                                     "Rotation - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -1609,7 +1609,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Rotation - Item Min Specified",
+                                                                     "Rotation - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -1628,7 +1628,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Rotation - Item Max tag",
+                                                                     "Rotation - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -1639,7 +1639,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Rotation - Item Min tag",
+                                                                     "Rotation - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If

@@ -1,0 +1,5 @@
+Test number,Property,Left,Right
+1,Rotation-expression,text,texts
+2,Rotation-rotationMin,0,1
+3,Rotation-rotationMax,100,101
+4,Rotation-centerOfRotation,middleCenter,middleLeft

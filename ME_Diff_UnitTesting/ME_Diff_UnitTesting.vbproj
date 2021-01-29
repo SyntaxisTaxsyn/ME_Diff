@@ -971,6 +971,18 @@
     <None Include="Test Pages\13Animations\06Height\1306AnimateHeightmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\13Animations\07Rotation\1307AnimateRotationanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\07Rotation\1307AnimateRotationanimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\07Rotation\1307AnimateRotationanimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\07Rotation\1307AnimateRotationmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -979,7 +991,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\13Animations\07Rotation\" />
     <Folder Include="Test Pages\13Animations\08Hyperlink\" />
     <Folder Include="Test Pages\13Animations\09HorizontalSlider\" />
     <Folder Include="Test Pages\13Animations\10VerticalSlider\" />
@@ -2681,6 +2692,30 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\13Animations\06Height\1306AnimateHeightR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">
