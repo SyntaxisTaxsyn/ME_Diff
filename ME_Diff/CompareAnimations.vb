@@ -1105,7 +1105,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalPosition - Item Max",
+                                                                     "HorizontalPosition - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -1116,7 +1116,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalPosition - Item Max Specified",
+                                                                     "HorizontalPosition - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -1127,7 +1127,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalPosition - Item Min",
+                                                                     "HorizontalPosition - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -1138,7 +1138,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalPosition - Item Min Specified",
+                                                                     "HorizontalPosition - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -1157,7 +1157,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalPosition - Item Max tag",
+                                                                     "HorizontalPosition - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -1168,7 +1168,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalPosition - Item Min tag",
+                                                                     "HorizontalPosition - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
@@ -1804,7 +1804,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalPosition - Item Max",
+                                                                     "VerticalPosition - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -1815,7 +1815,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalPosition - Item Max Specified",
+                                                                     "VerticalPosition - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -1826,7 +1826,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalPosition - Item Min",
+                                                                     "VerticalPosition - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -1837,7 +1837,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalPosition - Item Min Specified",
+                                                                     "VerticalPosition - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -1856,7 +1856,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalPosition - Item Max tag",
+                                                                     "VerticalPosition - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -1867,7 +1867,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalPosition - Item Min tag",
+                                                                     "VerticalPosition - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
