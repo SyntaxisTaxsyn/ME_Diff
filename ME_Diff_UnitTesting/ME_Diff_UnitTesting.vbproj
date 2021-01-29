@@ -989,6 +989,30 @@
     <None Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSlideranimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSlideranimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSlideranimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSlidermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSlideranimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSlideranimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSlideranimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSlidermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -996,10 +1020,7 @@
       <Name>ME_Diff</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Test Pages\13Animations\09HorizontalSlider\" />
-    <Folder Include="Test Pages\13Animations\10VerticalSlider\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Test Pages\00Drawing\00Text\0000TextL_text.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -2733,6 +2754,54 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\09HorizontalSlider\1309AnimateHorizontalSliderR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\10VerticalSlider\1310AnimateVerticalSliderR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">

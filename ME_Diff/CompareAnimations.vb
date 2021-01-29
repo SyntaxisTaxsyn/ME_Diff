@@ -1332,7 +1332,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalSlider - Item Max",
+                                                                     "HorizontalSlider - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -1343,7 +1343,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalSlider - Item Max Specified",
+                                                                     "HorizontalSlider - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -1354,7 +1354,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalSlider - Item Min",
+                                                                     "HorizontalSlider - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -1365,7 +1365,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalSlider - Item Min Specified",
+                                                                     "HorizontalSlider - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -1384,7 +1384,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalSlider - Item Max tag",
+                                                                     "HorizontalSlider - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -1395,7 +1395,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "HorizontalSlider - Item Min tag",
+                                                                     "HorizontalSlider - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
@@ -1942,7 +1942,7 @@
                     If Robj.animateVerticalSlider IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalSlider.verticalOffsetMax = Robj.animateVerticalSlider.verticalOffsetMax Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-VerticalOffsetMax", Lobj.animateVerticalSlider.verticalOffsetMax.ToString, Robj.animateVerticalSlider.verticalOffsetMax.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-verticalOffsetMax", Lobj.animateVerticalSlider.verticalOffsetMax.ToString, Robj.animateVerticalSlider.verticalOffsetMax.ToString)
                         End If
                     End If
                 End If
@@ -1959,7 +1959,7 @@
                     If Robj.animateVerticalSlider IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalSlider.verticalOffsetMaxSpecified = Robj.animateVerticalSlider.verticalOffsetMaxSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-VerticalOffsetMaxSpecified", Lobj.animateVerticalSlider.verticalOffsetMaxSpecified.ToString, Robj.animateVerticalSlider.verticalOffsetMaxSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-verticalOffsetMaxSpecified", Lobj.animateVerticalSlider.verticalOffsetMaxSpecified.ToString, Robj.animateVerticalSlider.verticalOffsetMaxSpecified.ToString)
                         End If
                     End If
                 End If
@@ -1976,7 +1976,7 @@
                     If Robj.animateVerticalSlider IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalSlider.verticalOffsetMin = Robj.animateVerticalSlider.verticalOffsetMin Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-VerticalOffsetMin", Lobj.animateVerticalSlider.verticalOffsetMin.ToString, Robj.animateVerticalSlider.verticalOffsetMin.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-verticalOffsetMin", Lobj.animateVerticalSlider.verticalOffsetMin.ToString, Robj.animateVerticalSlider.verticalOffsetMin.ToString)
                         End If
                     End If
                 End If
@@ -1993,7 +1993,7 @@
                     If Robj.animateVerticalSlider IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateVerticalSlider.verticalOffsetMinSpecified = Robj.animateVerticalSlider.verticalOffsetMinSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-VerticalOffsetMinSpecified", Lobj.animateVerticalSlider.verticalOffsetMinSpecified.ToString, Robj.animateVerticalSlider.verticalOffsetMinSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "VerticalSlider-verticalOffsetMinSpecified", Lobj.animateVerticalSlider.verticalOffsetMinSpecified.ToString, Robj.animateVerticalSlider.verticalOffsetMinSpecified.ToString)
                         End If
                     End If
                 End If
@@ -2033,7 +2033,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalSlider - Item Max",
+                                                                     "VerticalSlider - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -2044,7 +2044,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalSlider - Item Max Specified",
+                                                                     "VerticalSlider - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -2055,7 +2055,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalSlider - Item Min",
+                                                                     "VerticalSlider - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -2066,7 +2066,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalSlider - Item Min Specified",
+                                                                     "VerticalSlider - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -2085,7 +2085,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalSlider - Item Max tag",
+                                                                     "VerticalSlider - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -2096,7 +2096,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "VerticalSlider - Item Min tag",
+                                                                     "VerticalSlider - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
