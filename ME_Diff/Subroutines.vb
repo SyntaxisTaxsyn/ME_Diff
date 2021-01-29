@@ -88,7 +88,10 @@ Module Subroutines
                         MsgBox("")
                     Case "ME_Diff.connectionType"
                         MsgBox("")
-
+                    Case "ME_Diff.animationsVisibilityType"
+                        Call CompareAnimationsProperties_AnimateVisibilityAlone(lobj.animations, robj.animations, Gnest, fname, lobj.name.ToString)
+                    Case "ME_Diff.animationsAllButRotMEType"
+                        CompareAnimationsPropertiesAllButRotType(lobj.animations, robj.animations, Gnest, fname, lobj.name.ToString)
                 End Select
                 If Not str = "ME_Diff.objectBaseType[]" Then ' ignore base class types as these are groups and dont convert to a single value
                     Try
@@ -6050,7 +6053,7 @@ Module Subroutines
                         End If
                     Else
                         ' right animations visibility not defined
-                        If Not LDat.animations.animateVisibility IsNot Nothing Then
+                        If LDat.animations.animateVisibility IsNot Nothing Then
                             Call AddListContentMatch(Gnest,
                                                                  fname,
                                                                  lobj.name,
@@ -6062,7 +6065,7 @@ Module Subroutines
                     End If
                 Else
                     ' left animations visibility not defined
-                    If Not RDat.animations.animateVisibility IsNot Nothing Then
+                    If RDat.animations.animateVisibility IsNot Nothing Then
                         Call AddListContentMatch(Gnest,
                                                              fname,
                                                              lobj.name,
@@ -6086,7 +6089,7 @@ Module Subroutines
             End If
         Else
             ' check if rdat object isnot nothing and create message if true
-            If Not RDat.animations IsNot Nothing Then
+            If RDat.animations IsNot Nothing Then
                 Call AddListContentMatch(Gnest,
                                                      fname,
                                                      lobj.name,
@@ -6187,7 +6190,7 @@ Module Subroutines
 
             Else
                 ' left defined right not
-                If Not LDat.data IsNot Nothing Then
+                If LDat.data IsNot Nothing Then
                     Call AddListContentMatch(Gnest,
                                                          fname,
                                                          lobj.name,
@@ -6199,7 +6202,7 @@ Module Subroutines
             End If
         Else
             ' check if rdat object isnot nothing and create message if true
-            If Not RDat.data IsNot Nothing Then
+            If RDat.data IsNot Nothing Then
                 Call AddListContentMatch(Gnest,
                                                      fname,
                                                      lobj.name,
@@ -6334,7 +6337,7 @@ Module Subroutines
 
             Else
                 ' left defined right not
-                If Not LDat.parameters IsNot Nothing Then
+                If LDat.parameters IsNot Nothing Then
                     Call AddListContentMatch(Gnest,
                                                          fname,
                                                          lobj.name,
@@ -6346,7 +6349,7 @@ Module Subroutines
             End If
         Else
             ' check if rdat object isnot nothing and create message if true
-            If Not RDat.parameters IsNot Nothing Then
+            If RDat.parameters IsNot Nothing Then
                 Call AddListContentMatch(Gnest,
                                                      fname,
                                                      lobj.name,

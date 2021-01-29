@@ -1,0 +1,14 @@
+Test number,Property,Left,Right
+2,height,19,18
+3,width,25,24
+4,left,263,264
+5,top,439,440
+6,visible,True,False
+7,wallpaper,False,True
+8,isReferenceObject,False,True
+9,imageBackStyle,solid,transparent
+10,imageBackColor,black,white
+11,imageColor,black,white
+12,imageBlink,True,False
+13,description,,something
+14,imageName,Alm_AckReqd,Alm_Active
