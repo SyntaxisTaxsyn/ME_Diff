@@ -2465,7 +2465,7 @@
                     If Robj.animateHyperlink IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateHyperlink.expression = Robj.animateHyperlink.expression Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Hyperlink-Expression", Lobj.animateHyperlink.expression.ToString, Robj.animateHyperlink.expression.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Hyperlink-expression", Lobj.animateHyperlink.expression.ToString, Robj.animateHyperlink.expression.ToString)
                         End If
                     Else
                         ' This is a difference where the right side has no property set

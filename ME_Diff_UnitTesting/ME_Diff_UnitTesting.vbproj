@@ -983,6 +983,12 @@
     <None Include="Test Pages\13Animations\07Rotation\1307AnimateRotationmain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -991,7 +997,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test Pages\13Animations\08Hyperlink\" />
     <Folder Include="Test Pages\13Animations\09HorizontalSlider\" />
     <Folder Include="Test Pages\13Animations\10VerticalSlider\" />
   </ItemGroup>
@@ -2716,6 +2721,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\13Animations\07Rotation\1307AnimateRotationR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\13Animations\08Hyperlink\1308AnimateHyperlinkR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">
