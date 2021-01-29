@@ -710,7 +710,7 @@
                     If Robj.animateHeight IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateHeight.anchor = Robj.animateHeight.anchor Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Height-Anchor", Lobj.animateHeight.anchor.ToString, Robj.animateHeight.anchor.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Height-anchor", Lobj.animateHeight.anchor.ToString, Robj.animateHeight.anchor.ToString)
                         End If
                     Else
                         ' check left property is set
@@ -753,7 +753,7 @@
                     If Robj.animateHeight IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateHeight.anchorSpecified = Robj.animateHeight.anchorSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Height-AnchorSpecified", Lobj.animateHeight.anchorSpecified.ToString, Robj.animateHeight.anchorSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Height-anchorSpecified", Lobj.animateHeight.anchorSpecified.ToString, Robj.animateHeight.anchorSpecified.ToString)
                         End If
                     End If
                 End If
@@ -878,7 +878,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Height - Item Max",
+                                                                     "Height - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -889,7 +889,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Height - Item Max Specified",
+                                                                     "Height - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -900,7 +900,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Height - Item Min",
+                                                                     "Height - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -911,7 +911,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Height - Item Min Specified",
+                                                                     "Height - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -930,7 +930,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Height - Item Max tag",
+                                                                     "Height - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -941,7 +941,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Height - Item Min tag",
+                                                                     "Height - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
@@ -2203,7 +2203,7 @@
                     If Robj.animateWidth IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateWidth.anchor = Robj.animateWidth.anchor Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-Anchor", Lobj.animateWidth.anchor.ToString, Robj.animateWidth.anchor.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-anchor", Lobj.animateWidth.anchor.ToString, Robj.animateWidth.anchor.ToString)
                         End If
                     Else
                         ' check left property is set
@@ -2246,7 +2246,7 @@
                     If Robj.animateWidth IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateWidth.anchorSpecified = Robj.animateWidth.anchorSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-AnchorSpecified", Lobj.animateWidth.anchorSpecified.ToString, Robj.animateWidth.anchorSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-anchorSpecified", Lobj.animateWidth.anchorSpecified.ToString, Robj.animateWidth.anchorSpecified.ToString)
                         End If
                     End If
                 End If
@@ -2280,7 +2280,7 @@
                     If Robj.animateWidth IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateWidth.horizontalChangeMax = Robj.animateWidth.horizontalChangeMax Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-HorizontalChangeMax", Lobj.animateWidth.horizontalChangeMax.ToString, Robj.animateWidth.horizontalChangeMax.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-horizontalChangeMax", Lobj.animateWidth.horizontalChangeMax.ToString, Robj.animateWidth.horizontalChangeMax.ToString)
                         End If
                     End If
                 End If
@@ -2297,7 +2297,7 @@
                     If Robj.animateWidth IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateWidth.horizontalChangeMaxSpecified = Robj.animateWidth.horizontalChangeMaxSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-HorizontalChangeMaxSpecified", Lobj.animateWidth.horizontalChangeMaxSpecified.ToString, Robj.animateWidth.horizontalChangeMaxSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-horizontalChangeMaxSpecified", Lobj.animateWidth.horizontalChangeMaxSpecified.ToString, Robj.animateWidth.horizontalChangeMaxSpecified.ToString)
                         End If
                     End If
                 End If
@@ -2314,7 +2314,7 @@
                     If Robj.animateWidth IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateWidth.horizontalChangeMin = Robj.animateWidth.horizontalChangeMin Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-HorizontalChangeMin", Lobj.animateWidth.horizontalChangeMin.ToString, Robj.animateWidth.horizontalChangeMin.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-horizontalChangeMin", Lobj.animateWidth.horizontalChangeMin.ToString, Robj.animateWidth.horizontalChangeMin.ToString)
                         End If
                     End If
                 End If
@@ -2331,7 +2331,7 @@
                     If Robj.animateWidth IsNot Nothing Then
                         ' Both have properties set so compare them
                         If Not Lobj.animateWidth.horizontalChangeMinSpecified = Robj.animateWidth.horizontalChangeMinSpecified Then
-                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-HorizontalChangeMinSpecified", Lobj.animateWidth.horizontalChangeMinSpecified.ToString, Robj.animateWidth.horizontalChangeMinSpecified.ToString)
+                            Call AddListContentMatch(Gnest, fname, oname, "Animation", "Width-horizontalChangeMinSpecified", Lobj.animateWidth.horizontalChangeMinSpecified.ToString, Robj.animateWidth.horizontalChangeMinSpecified.ToString)
                         End If
                     End If
                 End If
@@ -2371,7 +2371,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Width - Item Max",
+                                                                     "Width - Item max",
                                                                      LFill.max.ToString,
                                                                      RFill.max.ToString)
                                         End If
@@ -2382,7 +2382,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Width - Item Max Specified",
+                                                                     "Width - Item maxSpecified",
                                                                      LFill.maxSpecified.ToString,
                                                                      RFill.maxSpecified.ToString)
                                         End If
@@ -2393,7 +2393,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Width - Item Min",
+                                                                     "Width - Item min",
                                                                      LFill.min.ToString,
                                                                      RFill.min.ToString)
                                         End If
@@ -2404,7 +2404,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Width - Item Min Specified",
+                                                                     "Width - Item minSpecified",
                                                                      LFill.minSpecified.ToString,
                                                                      RFill.minSpecified.ToString)
                                         End If
@@ -2423,7 +2423,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Width - Item Max tag",
+                                                                     "Width - Item maxTag",
                                                                      LFill.maxTag.ToString,
                                                                      RFill.maxTag.ToString)
                                         End If
@@ -2434,7 +2434,7 @@
                                                                      fname,
                                                                      oname,
                                                                      "Animation",
-                                                                     "Width - Item Min tag",
+                                                                     "Width - Item minTag",
                                                                      LFill.minTag.ToString,
                                                                      RFill.minTag.ToString)
                                         End If
