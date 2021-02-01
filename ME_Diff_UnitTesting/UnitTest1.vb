@@ -2286,7 +2286,6 @@ End Class
 
 End Class
 
-
 <TestClass()> Public Class _06TrendingTests
 
     <TestMethod()> Public Sub _0600TrendPausePenTest()
@@ -4310,7 +4309,6 @@ End Class
     End Sub
 
 End Class
-
 
 <TestClass()> Public Class _10AdvancedTests
 
