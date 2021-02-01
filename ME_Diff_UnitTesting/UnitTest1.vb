@@ -9384,3 +9384,45 @@ End Class
 
     End Sub
 End Class
+
+<TestClass()> Public Class _16DisplayTypeTests
+    <TestMethod()> Public Sub _1600DisplayTypeTest()
+
+        '--------------------------------------------------------------------------
+        ' DONT COPY ME!!
+        '--------------------------------------------------------------------------
+        ' This test contains a special case call to handle display type objects as they can only have 1 instance per gfx
+        ' and hence the test number matching the item number feature of the tests does not work for this object type
+        ' The call to CheckTestCriteria has been replaced with a call to CheckDisplayTestCriteria which removes the
+        ' check for an output line having to contain the TestX number = testX number from the CSV
+
+        ' main tests
+        Dim fcomp As New FileCompare
+        Dim P As String = "16Display"
+        Dim C As String = "00DisplayType"
+        Dim I As String = "1600"
+        Dim N As String = "DisplayType"
+        Dim T As String = "main"
+        Dim tdfstr As String = GetPathToFileCSV(P, C, I, N & T) ' Added "& T" to N param as this test has multiple subtypes
+        Dim Lfile As String = GetPathToFileXML(P, C, I, N, "L", T)
+        Dim Rfile As String = GetPathToFileXML(P, C, I, N, "R", T)
+        Dim ThisTestCase As New TestCases(tdfstr)
+        Dim strlst As List(Of String)
+        Dim Result(100) As TestResult
+
+        For a = 0 To Result.Length - 1
+            Result(a) = TestResult.Fail
+        Next
+
+        fcomp.SetFilePaths(Lfile, Rfile)
+        strlst = fcomp.CompareFiles(FileCompare.UnitTestType.FixedFile)
+        For a = 0 To ThisTestCase.TestList.Count - 1
+            Result(a) = CheckDisplayTestCriteria(ThisTestCase.TestList.Item(a), strlst) ' Please note this is a special call for display type object tests only
+            Assert.IsTrue(Result(a), "Failed at index " & a &
+                          ",Property - " & ThisTestCase.TestList.Item(a).sProperty &
+                          ",Left - " & ThisTestCase.TestList.Item(a).sLeftval &
+                          ",Right - " & ThisTestCase.TestList.Item(a).sRightval)
+        Next
+
+    End Sub
+End Class

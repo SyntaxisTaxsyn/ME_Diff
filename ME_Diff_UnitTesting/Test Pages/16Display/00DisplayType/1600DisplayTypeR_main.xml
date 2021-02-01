@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME12.xsd">
+    <displaySettings displayType="onTop" securityCode="A" backColor="black" maximumTagUpdateRate="2" focusHighlightColor="navy" disableFocusHighlight="true" width="1023" height="767" displayNumber="2" disableInitialInputFocus="true" startupMacro="text" shutdownMacro="text" useGradientStyle="true" endColor="black" gradientStop="40" gradientDirection="gradientDirectionVertical" gradientShadingStyle="gradientVerticalFromTop"/>
+    <text name="Text1" height="19" width="25" left="210" top="132" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" wordWrap="true" sizeToFit="true" alignment="middleCenter" fontFamily="Arial" fontSize="13" bold="false" italic="false" underline="false" strikethrough="false" caption="text"/>
+</gfx>

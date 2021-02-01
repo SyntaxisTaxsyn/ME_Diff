@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Reflection
 Public Class FileCompare
 
     Public Sub New()
@@ -71,6 +72,8 @@ Public Class FileCompare
         LeftObj = DeserializeObjectFromXMLFile(STR_LeftPathFile)
         RightObj = DeserializeObjectFromXMLFile(STR_RightPathFile)
 
+        Call CompareDisplayParameters(LeftObj, RightObj, Fname)
+
         If LeftObj.Items.Count = RightObj.Items.Count Then
             ' Item count matches so check the names/types match
             Dim matchflag As Boolean = True
@@ -137,7 +140,7 @@ Public Class FileCompare
 
         'Next
 
-        ' Select output type#
+        ' Select output type
         Select Case TestMode
             Case UnitTestType.FixedFile
                 CompareFiles = OutputToTest_File()
@@ -152,6 +155,27 @@ Public Class FileCompare
         End Select
 
     End Function
+
+    Public Sub CompareDisplayParameters(ByRef lobj As gfx, ByRef robj As gfx, ByRef Fname As String)
+        Dim linfo() As PropertyInfo = lobj.displaySettings.GetType().GetProperties()
+        Dim rinfo() As PropertyInfo = robj.displaySettings.GetType().GetProperties()
+        For a = 0 To linfo.Count - 1
+            If linfo(a).CanRead Then
+                Dim str As String = linfo(a).PropertyType().ToString
+                If Not str = "ME_Diff.objectBaseType[]" Then ' ignore base class types as these are groups and dont convert to a single value
+                    Try
+                        If Not linfo(a).GetValue(lobj.displaySettings, Nothing) = rinfo(a).GetValue(robj.displaySettings, Nothing) Then
+                            Call AddListContentMatch("", Fname, "Display", GetMEObjectType(lobj), linfo(a).Name, linfo(a).GetValue(lobj.displaySettings, Nothing).ToString, rinfo(a).GetValue(robj.displaySettings, Nothing).ToString)
+
+                        End If
+                    Catch ex As Exception
+                        ' Im not going to do anything with these exceptions, i just want the code to find any elements that can be compared with the = operator
+                    End Try
+
+                End If
+            End If
+        Next
+    End Sub
 
     ''' <summary>
     ''' Unit test type to apply to the function call. Should be used to allow for redirection of the function output to allow for

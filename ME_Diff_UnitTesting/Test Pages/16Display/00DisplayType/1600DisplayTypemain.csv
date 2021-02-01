@@ -1,0 +1,18 @@
+Test number,Property,Left,Right
+1,displayType,replace,onTop
+2,securityCode,Item,A
+3,backColor,white,black
+4,maximumTagUpdateRate,Item1,Item2
+5,focusHighlightColor,lime,navy
+6,disableFocusHighlight,False,True
+7,width,1024,1023
+8,height,768,767
+9,displayNumber,1,2
+10,disableInitialInputFocus,False,True
+11,startupMacro,,text
+12,shutdownMacro,,text
+13,useGradientStyle,False,True
+14,endColor,teal,black
+15,gradientStop,50,40
+16,gradientDirection,gradientDirectionHorizontal,gradientDirectionVertical
+17,gradientShadingStyle,gradientHorizontalFromRight,gradientVerticalFromTop

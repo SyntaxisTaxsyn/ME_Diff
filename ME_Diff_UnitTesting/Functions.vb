@@ -85,6 +85,32 @@ Module Functions
 
     End Function
 
+    Public Function CheckDisplayTestCriteria(ByRef TCase As TestCase,
+                                      ByRef TList As List(Of String)) As TestResult
+
+        CheckDisplayTestCriteria = TestResult.Fail
+        Dim bResult As Boolean = False
+
+        For Each itm In TList
+            If itm.Contains("Parameter : " & TCase.sProperty) Then
+                If itm.Contains("Left Value = " & TCase.sLeftval) Then
+                    If itm.Contains("Right Value = " & TCase.sRightval) Then
+                        bResult = True
+                    End If
+                End If
+            End If
+            If bResult = True Then
+                CheckDisplayTestCriteria = TestResult.Pass
+                Exit Function
+            End If
+        Next
+
+        If bResult = False Then
+            CheckDisplayTestCriteria = TestResult.Fail
+        End If
+
+    End Function
+
     Public Enum TestResult
         Fail
         Pass
