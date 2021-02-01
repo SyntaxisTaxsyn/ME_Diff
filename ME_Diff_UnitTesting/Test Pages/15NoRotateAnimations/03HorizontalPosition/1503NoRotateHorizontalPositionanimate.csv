@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,HorizontalPosition-expression,text,texts
+2,HorizontalPosition-horizontalOffsetMin,1,2
+3,HorizontalPosition-horizontalOffsetMax,100,101

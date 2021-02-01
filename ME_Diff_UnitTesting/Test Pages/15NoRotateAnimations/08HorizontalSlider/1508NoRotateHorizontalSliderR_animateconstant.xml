@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME12.xsd">
+    <displaySettings displayType="replace" securityCode="*" backColor="white" maximumTagUpdateRate="1" focusHighlightColor="lime" disableFocusHighlight="false" width="1024" height="768" displayNumber="1" disableInitialInputFocus="false" startupMacro="" shutdownMacro="" useGradientStyle="false" endColor="teal" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight"/>
+        <roundedRectangle name="roundedRectangle_Test1" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+            <constantExpressionRange name="constantExpressionRange_Test1" min="2" max="100" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test2" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+            <constantExpressionRange name="constantExpressionRange_Test2" min="1" max="101" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+</gfx>

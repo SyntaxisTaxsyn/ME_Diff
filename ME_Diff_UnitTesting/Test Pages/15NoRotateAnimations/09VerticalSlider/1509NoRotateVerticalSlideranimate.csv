@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,VerticalSlider-expression,text,texts
+2,VerticalSlider-verticalOffsetMin,1,2
+3,VerticalSlider-verticalOffsetMax,100,101

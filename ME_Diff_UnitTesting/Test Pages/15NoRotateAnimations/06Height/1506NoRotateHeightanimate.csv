@@ -1,0 +1,5 @@
+Test number,Property,Left,Right
+1,Height-expression,text,texts
+2,Height-verticalChangeMin,100,101
+3,Height-verticalChangeMax,100,101
+4,Height-anchor,middle,top

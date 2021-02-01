@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gfx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Gfx-ME12.xsd">
+    <displaySettings displayType="replace" securityCode="*" backColor="white" maximumTagUpdateRate="1" focusHighlightColor="lime" disableFocusHighlight="false" width="1024" height="768" displayNumber="1" disableInitialInputFocus="false" startupMacro="" shutdownMacro="" useGradientStyle="false" endColor="teal" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight"/>
+        <roundedRectangle name="roundedRectangle_Test2" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test3" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test4" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test5" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test6" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test7" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test8" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test9" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test10" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test11" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test12" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test13" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test14" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test15" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test16" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test17" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test18" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test19" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test20" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+        <roundedRectangle name="roundedRectangle_Test21" height="19" width="25" left="263" top="439" visible="true" wallpaper="false" isReferenceObject="false" backStyle="transparent" backColor="white" foreColor="black" lineStyle="solid" lineWidth="1" patternStyle="none" patternColor="white" roundingWidth="2" roundingHeight="2" endColor="white" gradientStop="50" gradientDirection="gradientDirectionHorizontal" gradientShadingStyle="gradientHorizontalFromRight" >
+            <animations>
+            <animateHorizontalSlider expression="text" horizontalOffsetMin="1" horizontalOffsetMax="100" >
+                <readFromTagExpressionRange minTag="tag" maxTag="tag" />
+            </animateHorizontalSlider>
+            </animations>
+        </roundedRectangle>
+</gfx>

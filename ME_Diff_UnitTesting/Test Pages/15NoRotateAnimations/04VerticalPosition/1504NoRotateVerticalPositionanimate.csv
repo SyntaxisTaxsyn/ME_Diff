@@ -1,0 +1,4 @@
+Test number,Property,Left,Right
+1,VerticalPosition-expression,text,texts
+2,VerticalPosition-verticalOffsetMin,1,2
+3,VerticalPosition-verticalOffsetMax,100,101

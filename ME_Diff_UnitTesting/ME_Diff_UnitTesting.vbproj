@@ -1052,6 +1052,111 @@
     <None Include="Test Pages\14VisibilityAnimations\03StringDisplay\1403StringDisplaymain.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Test Pages\15NoRotateAnimations\00Visibility\1500NoRotateVisibilityanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\00Visibility\1500NoRotateVisibilitymain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColoranimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColoranimatecolor.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColormain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillanimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillanimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionanimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionanimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionanimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionanimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthanimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthanimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightanimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightanimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\07Hyperlink\1507NoRotateHyperlinkanimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\07Hyperlink\1507NoRotateHyperlinkmain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSlideranimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSlideranimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSlideranimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSlidermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSlideranimate.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSlideranimateconstant.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSlideranimatereadfromtag.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSlidermain.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ME_Diff\ME_Diff.vbproj">
@@ -2919,6 +3024,216 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Test Pages\14VisibilityAnimations\03StringDisplay\1403StringDisplayR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\00Visibility\1500NoRotateVisibilityL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\00Visibility\1500NoRotateVisibilityL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\00Visibility\1500NoRotateVisibilityR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\00Visibility\1500NoRotateVisibilityR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColorL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColorL_animatecolor.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColorL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColorR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColorR_animatecolor.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\01Color\1501NoRotateColorR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\02Fill\1502NoRotateFillR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\03HorizontalPosition\1503NoRotateHorizontalPositionR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\04VerticalPosition\1504NoRotateVerticalPositionR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\05Width\1505NoRotateWidthR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\06Height\1506NoRotateHeightR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\07Hyperlink\1507NoRotateHyperlinkL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\07Hyperlink\1507NoRotateHyperlinkL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\07Hyperlink\1507NoRotateHyperlinkR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\07Hyperlink\1507NoRotateHyperlinkR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\08HorizontalSlider\1508NoRotateHorizontalSliderR_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderL_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderL_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderL_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderL_main.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderR_animate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderR_animateconstant.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderR_animatereadfromtag.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Test Pages\15NoRotateAnimations\09VerticalSlider\1509NoRotateVerticalSliderR_main.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Test Pages\10Advanced\09Alarm\0904ClearAlarmHistory\0904ClearAlarmHistoryL_main.xml">
