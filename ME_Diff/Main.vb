@@ -26,6 +26,9 @@ Public Class Main
         List_FileCompareContentMatch = New List(Of String)
         List_FileCompareContentNoMatch = New List(Of String)
         List_FolderCompare = New List(Of String)
+        FilterList = New List(Of String)
+        Call RemoveAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
+        Call AddAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
     End Sub
 
 
@@ -67,10 +70,33 @@ Public Class Main
     End Sub
 
     Private Sub CheckAll_Button_Click(sender As Object, e As EventArgs) Handles CheckAll_Button.Click
-        Call CheckAll(Me.Pnl_ComparisonFilters)
+        Call RemoveAllCheckBoxSubscriptions(Pnl_ComparisonFilters) ' This will suppress the event handlers firing for each checkbox state change in the loop
+        Call CheckAll(Pnl_ComparisonFilters)
+        Call RemoveAllFilters(Pnl_ComparisonFilters)
+        Call AddAllFilters(Pnl_ComparisonFilters)
+        Call AddAllCheckBoxSubscriptions(Pnl_ComparisonFilters) ' Reinstate event handlers for checkboxes after the processing is complete
+        Call UpdateListBoxFilterViewer()
     End Sub
 
     Private Sub UncheckAll_Button_Click(sender As Object, e As EventArgs) Handles UncheckAll_Button.Click
+        Call RemoveAllCheckBoxSubscriptions(Pnl_ComparisonFilters) ' This will suppress the event handlers firing for each checkbox state change in the loop
         Call UncheckAll(Me.Pnl_ComparisonFilters)
+        Call RemoveAllFilters(Pnl_ComparisonFilters)
+        Call AddAllFilters(Pnl_ComparisonFilters) ' for consistency sake, we know that each box is unchecked but we check this anyway
+        Call AddAllCheckBoxSubscriptions(Pnl_ComparisonFilters) ' Reinstate event handlers for checkboxes after the processing is complete
+        Call UpdateListBoxFilterViewer()
+    End Sub
+
+    Public Sub CheckBoxStateChangeHandler(sender As Object, e As EventArgs)
+        Dim chkbx As CheckBox = TryCast(sender, CheckBox)
+        UpdateCheckBoxFilterList(Pnl_ComparisonFilters)
+        UpdateListBoxFilterViewer()
+    End Sub
+
+    Public Sub UpdateListBoxFilterViewer()
+        ListBox1.Items.Clear()
+        For Each itm In FilterList
+            ListBox1.Items.Add(itm)
+        Next
     End Sub
 End Class

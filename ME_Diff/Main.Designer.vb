@@ -40,6 +40,7 @@ Partial Class Main
         Me.Width_Checkbox = New System.Windows.Forms.CheckBox()
         Me.Height_Checkbox = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Pnl_ComparisonFilters.SuspendLayout()
         Me.SuspendLayout()
@@ -141,9 +142,9 @@ Partial Class Main
         Me.FontBold_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.FontBold_Checkbox.Location = New System.Drawing.Point(26, 180)
         Me.FontBold_Checkbox.Name = "FontBold_Checkbox"
-        Me.FontBold_Checkbox.Size = New System.Drawing.Size(71, 17)
+        Me.FontBold_Checkbox.Size = New System.Drawing.Size(46, 17)
         Me.FontBold_Checkbox.TabIndex = 7
-        Me.FontBold_Checkbox.Text = "Font Bold"
+        Me.FontBold_Checkbox.Text = "bold"
         Me.FontBold_Checkbox.UseVisualStyleBackColor = True
         '
         'FontType_Checkbox
@@ -153,9 +154,9 @@ Partial Class Main
         Me.FontType_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.FontType_Checkbox.Location = New System.Drawing.Point(26, 157)
         Me.FontType_Checkbox.Name = "FontType_Checkbox"
-        Me.FontType_Checkbox.Size = New System.Drawing.Size(74, 17)
+        Me.FontType_Checkbox.Size = New System.Drawing.Size(73, 17)
         Me.FontType_Checkbox.TabIndex = 6
-        Me.FontType_Checkbox.Text = "Font Type"
+        Me.FontType_Checkbox.Text = "fontFamily"
         Me.FontType_Checkbox.UseVisualStyleBackColor = True
         '
         'FontSize_Checkbox
@@ -165,9 +166,9 @@ Partial Class Main
         Me.FontSize_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.FontSize_Checkbox.Location = New System.Drawing.Point(26, 134)
         Me.FontSize_Checkbox.Name = "FontSize_Checkbox"
-        Me.FontSize_Checkbox.Size = New System.Drawing.Size(70, 17)
+        Me.FontSize_Checkbox.Size = New System.Drawing.Size(64, 17)
         Me.FontSize_Checkbox.TabIndex = 5
-        Me.FontSize_Checkbox.Text = "Font Size"
+        Me.FontSize_Checkbox.Text = "fontSize"
         Me.FontSize_Checkbox.UseVisualStyleBackColor = True
         '
         'Left_Checkbox
@@ -177,9 +178,9 @@ Partial Class Main
         Me.Left_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Left_Checkbox.Location = New System.Drawing.Point(26, 111)
         Me.Left_Checkbox.Name = "Left_Checkbox"
-        Me.Left_Checkbox.Size = New System.Drawing.Size(44, 17)
+        Me.Left_Checkbox.Size = New System.Drawing.Size(40, 17)
         Me.Left_Checkbox.TabIndex = 4
-        Me.Left_Checkbox.Text = "Left"
+        Me.Left_Checkbox.Text = "left"
         Me.Left_Checkbox.UseVisualStyleBackColor = True
         '
         'Top_Checkbox
@@ -189,9 +190,9 @@ Partial Class Main
         Me.Top_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Top_Checkbox.Location = New System.Drawing.Point(26, 88)
         Me.Top_Checkbox.Name = "Top_Checkbox"
-        Me.Top_Checkbox.Size = New System.Drawing.Size(45, 17)
+        Me.Top_Checkbox.Size = New System.Drawing.Size(41, 17)
         Me.Top_Checkbox.TabIndex = 3
-        Me.Top_Checkbox.Text = "Top"
+        Me.Top_Checkbox.Text = "top"
         Me.Top_Checkbox.UseVisualStyleBackColor = True
         '
         'Width_Checkbox
@@ -201,9 +202,9 @@ Partial Class Main
         Me.Width_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Width_Checkbox.Location = New System.Drawing.Point(26, 65)
         Me.Width_Checkbox.Name = "Width_Checkbox"
-        Me.Width_Checkbox.Size = New System.Drawing.Size(54, 17)
+        Me.Width_Checkbox.Size = New System.Drawing.Size(51, 17)
         Me.Width_Checkbox.TabIndex = 2
-        Me.Width_Checkbox.Text = "Width"
+        Me.Width_Checkbox.Text = "width"
         Me.Width_Checkbox.UseVisualStyleBackColor = True
         '
         'Height_Checkbox
@@ -213,9 +214,9 @@ Partial Class Main
         Me.Height_Checkbox.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Height_Checkbox.Location = New System.Drawing.Point(26, 42)
         Me.Height_Checkbox.Name = "Height_Checkbox"
-        Me.Height_Checkbox.Size = New System.Drawing.Size(57, 17)
+        Me.Height_Checkbox.Size = New System.Drawing.Size(55, 17)
         Me.Height_Checkbox.TabIndex = 1
-        Me.Height_Checkbox.Text = "Height"
+        Me.Height_Checkbox.Text = "height"
         Me.Height_Checkbox.UseVisualStyleBackColor = True
         '
         'Label1
@@ -228,11 +229,20 @@ Partial Class Main
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Comparison Filters"
         '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(191, 53)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(183, 342)
+        Me.ListBox1.TabIndex = 7
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Pnl_ComparisonFilters)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -267,4 +277,5 @@ Partial Class Main
     Friend WithEvents Width_Checkbox As CheckBox
     Friend WithEvents Height_Checkbox As CheckBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents ListBox1 As ListBox
 End Class

@@ -31,14 +31,86 @@ Module Subroutines
     ''' <summary>
     ''' do something
     ''' </summary>
-    Private Sub UpdateFilters()
+    Public Sub UpdateFilters(ByRef Pnl As Panel)
 
         ' Todo use this routine to update the filter switches used by the comparison algorithm
         ' Add a call to this routine in each check/uncheck all routine
         ' Also create handlers for checkbox checked state changed calls this and updates also
-        Call UpdateFilters()
+
+        ' Loop through existing checkboxes
+        ' Check if their name exists as an entry in the filter list 
+        ' Add it if not
+        For Each ctrl As Control In Pnl.Controls
+            If TypeOf ctrl Is CheckBox Then
+                Dim chkbx As CheckBox = TryCast(ctrl, CheckBox)
+                If chkbx IsNot Nothing Then
+                    If chkbx.Checked Then
+                        Dim ListCheck As Boolean = False
+                        For Each itm As String In FilterList.Where(Function(x) x = chkbx.Text)
+                            ListCheck = True
+                            Exit For
+                        Next
+                        If Not ListCheck Then
+                            FilterList.Add(chkbx.Text)
+                        End If
+                    End If
+                End If
+            End If
+        Next
 
     End Sub
+    Public Sub AddAllFilters(ByRef Pnl As Panel)
+        For Each ctrl As Control In Pnl.Controls
+            If TypeOf ctrl Is CheckBox Then
+                Dim chkbx As CheckBox = TryCast(ctrl, CheckBox)
+                If chkbx IsNot Nothing Then
+                    If chkbx.Checked Then
+                        FilterList.Add(chkbx.Text)
+                    End If
+                End If
+            End If
+        Next
+    End Sub
+    Public Sub RemoveAllFilters(ByRef Pnl As Panel)
+        FilterList.Clear()
+    End Sub
+
+    Public Sub RemoveFilter(ByRef Chkbox As CheckBox)
+        FilterList.RemoveAt(Chkbox.Text)
+    End Sub
+
+    Public Sub RemoveAllCheckBoxSubscriptions(ByRef Pnl As Panel)
+        For Each ctrl As Control In Pnl.Controls
+            If TypeOf ctrl Is CheckBox Then
+                Dim chkbx As CheckBox = TryCast(ctrl, CheckBox)
+                Try
+                    RemoveHandler chkbx.CheckedChanged, AddressOf Main.CheckBoxStateChangeHandler
+                Catch ex As Exception
+                    ' If this fails its only because the subscription didnt exist, which im not interested in
+                End Try
+            End If
+        Next
+    End Sub
+
+    Public Sub AddAllCheckBoxSubscriptions(ByRef Pnl As Panel)
+        For Each ctrl As Control In Pnl.Controls
+            If TypeOf ctrl Is CheckBox Then
+                Dim chkbx As CheckBox = TryCast(ctrl, CheckBox)
+                Try
+                    AddHandler chkbx.CheckedChanged, AddressOf Main.CheckBoxStateChangeHandler
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                    Throw New Exception("Failed to add checkbox subscription event", ex)
+                End Try
+            End If
+        Next
+    End Sub
+
+    Public Sub UpdateCheckBoxFilterList(ByRef Pnl As Panel)
+        Call RemoveAllFilters(Pnl)
+        Call AddAllFilters(Pnl)
+    End Sub
+
 
     ''' <summary>
     ''' Subroutine that controls adding content match exceptions to the report output list
