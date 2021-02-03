@@ -74,11 +74,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompareAnimations.vb" />
+    <Compile Include="EditFilterList.Designer.vb">
+      <DependentUpon>EditFilterList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditFilterList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FileCompare.vb" />
     <Compile Include="File_Open.Designer.vb">
       <DependentUpon>File_Open.vb</DependentUpon>
     </Compile>
     <Compile Include="File_Open.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFilterListHelp.Designer.vb">
+      <DependentUpon>EditFilterListHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditFilterListHelp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Functions.vb" />
@@ -109,8 +121,14 @@
     <Compile Include="Var_Global.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EditFilterList.resx">
+      <DependentUpon>EditFilterList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="File_Open.resx">
       <DependentUpon>File_Open.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFilterListHelp.resx">
+      <DependentUpon>EditFilterListHelp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -133,6 +151,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Filters.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

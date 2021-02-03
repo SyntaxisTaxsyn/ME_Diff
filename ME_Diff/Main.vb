@@ -8,6 +8,7 @@ Imports System.Runtime.Serialization.Formatters.Binary
 
 
 Public Class Main
+
     Private Sub FileToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem1.Click
         File_Open.Show()
     End Sub
@@ -27,8 +28,9 @@ Public Class Main
         List_FileCompareContentNoMatch = New List(Of String)
         List_FolderCompare = New List(Of String)
         FilterList = New List(Of String)
-        Call RemoveAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
-        Call AddAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
+        FilterConfigurationList = New List(Of String)
+        Call ReadFilterTextFileIntoList()
+        Call UpdateFilterPanelControls()
     End Sub
 
 
@@ -99,4 +101,44 @@ Public Class Main
             ListBox1.Items.Add(itm)
         Next
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        EditFilterList.ShowDialog()
+    End Sub
+
+    Public Sub PopulateFilterPanelControls()
+        Dim StartTop As Integer = 42
+        Dim StartLeft As Integer = 26
+        Dim TopPadding As Integer = 25
+        Dim WorkTop As Integer = StartTop
+        For Each item In FilterConfigurationList
+            Dim chkbox As New CheckBox()
+            Pnl_ComparisonFilters.Controls.Add(chkbox)
+            chkbox.Top = WorkTop
+            chkbox.Left = StartLeft
+            chkbox.Checked = False
+            chkbox.Text = item
+            WorkTop += TopPadding
+        Next
+    End Sub
+
+    Public Sub ClearFilterPanelControls()
+        Pnl_ComparisonFilters.Controls.Clear()
+        Dim Header As Label = New Label()
+        Dim HeaderFont As Font = New Font("Microsoft Sans Serif", 8, FontStyle.Bold)
+        Pnl_ComparisonFilters.Controls.Add(Header)
+        Header.Text = "Comparison Filters"
+        Header.Top = 13
+        Header.Left = 23
+        Header.AutoSize = True
+        Header.Font = HeaderFont
+    End Sub
+
+    Public Sub UpdateFilterPanelControls()
+        Call ClearFilterPanelControls()
+        Call PopulateFilterPanelControls()
+        Call RemoveAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
+        Call AddAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
+    End Sub
+
 End Class

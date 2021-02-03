@@ -30,8 +30,6 @@ Partial Class Main
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Pnl_ComparisonFilters = New System.Windows.Forms.Panel()
-        Me.UncheckAll_Button = New System.Windows.Forms.Button()
-        Me.CheckAll_Button = New System.Windows.Forms.Button()
         Me.FontBold_Checkbox = New System.Windows.Forms.CheckBox()
         Me.FontType_Checkbox = New System.Windows.Forms.CheckBox()
         Me.FontSize_Checkbox = New System.Windows.Forms.CheckBox()
@@ -40,7 +38,10 @@ Partial Class Main
         Me.Width_Checkbox = New System.Windows.Forms.CheckBox()
         Me.Height_Checkbox = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.UncheckAll_Button = New System.Windows.Forms.Button()
+        Me.CheckAll_Button = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.Pnl_ComparisonFilters.SuspendLayout()
         Me.SuspendLayout()
@@ -82,7 +83,7 @@ Partial Class Main
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(713, 415)
+        Me.Button1.Location = New System.Drawing.Point(713, 399)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 4
@@ -91,7 +92,7 @@ Partial Class Main
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(632, 415)
+        Me.Button2.Location = New System.Drawing.Point(632, 399)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 5
@@ -100,10 +101,9 @@ Partial Class Main
         '
         'Pnl_ComparisonFilters
         '
+        Me.Pnl_ComparisonFilters.AutoScroll = True
         Me.Pnl_ComparisonFilters.BackColor = System.Drawing.SystemColors.Control
         Me.Pnl_ComparisonFilters.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Pnl_ComparisonFilters.Controls.Add(Me.UncheckAll_Button)
-        Me.Pnl_ComparisonFilters.Controls.Add(Me.CheckAll_Button)
         Me.Pnl_ComparisonFilters.Controls.Add(Me.FontBold_Checkbox)
         Me.Pnl_ComparisonFilters.Controls.Add(Me.FontType_Checkbox)
         Me.Pnl_ComparisonFilters.Controls.Add(Me.FontSize_Checkbox)
@@ -112,28 +112,10 @@ Partial Class Main
         Me.Pnl_ComparisonFilters.Controls.Add(Me.Width_Checkbox)
         Me.Pnl_ComparisonFilters.Controls.Add(Me.Height_Checkbox)
         Me.Pnl_ComparisonFilters.Controls.Add(Me.Label1)
-        Me.Pnl_ComparisonFilters.Location = New System.Drawing.Point(570, 53)
+        Me.Pnl_ComparisonFilters.Location = New System.Drawing.Point(554, 53)
         Me.Pnl_ComparisonFilters.Name = "Pnl_ComparisonFilters"
-        Me.Pnl_ComparisonFilters.Size = New System.Drawing.Size(207, 341)
+        Me.Pnl_ComparisonFilters.Size = New System.Drawing.Size(234, 309)
         Me.Pnl_ComparisonFilters.TabIndex = 6
-        '
-        'UncheckAll_Button
-        '
-        Me.UncheckAll_Button.Location = New System.Drawing.Point(84, 309)
-        Me.UncheckAll_Button.Name = "UncheckAll_Button"
-        Me.UncheckAll_Button.Size = New System.Drawing.Size(75, 25)
-        Me.UncheckAll_Button.TabIndex = 8
-        Me.UncheckAll_Button.Text = "Uncheck All"
-        Me.UncheckAll_Button.UseVisualStyleBackColor = True
-        '
-        'CheckAll_Button
-        '
-        Me.CheckAll_Button.Location = New System.Drawing.Point(3, 309)
-        Me.CheckAll_Button.Name = "CheckAll_Button"
-        Me.CheckAll_Button.Size = New System.Drawing.Size(75, 25)
-        Me.CheckAll_Button.TabIndex = 7
-        Me.CheckAll_Button.Text = "Check All"
-        Me.CheckAll_Button.UseVisualStyleBackColor = True
         '
         'FontBold_Checkbox
         '
@@ -229,20 +211,51 @@ Partial Class Main
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Comparison Filters"
         '
+        'UncheckAll_Button
+        '
+        Me.UncheckAll_Button.Location = New System.Drawing.Point(632, 368)
+        Me.UncheckAll_Button.Name = "UncheckAll_Button"
+        Me.UncheckAll_Button.Size = New System.Drawing.Size(75, 25)
+        Me.UncheckAll_Button.TabIndex = 8
+        Me.UncheckAll_Button.Text = "Uncheck All"
+        Me.UncheckAll_Button.UseVisualStyleBackColor = True
+        '
+        'CheckAll_Button
+        '
+        Me.CheckAll_Button.Location = New System.Drawing.Point(554, 368)
+        Me.CheckAll_Button.Name = "CheckAll_Button"
+        Me.CheckAll_Button.Size = New System.Drawing.Size(75, 25)
+        Me.CheckAll_Button.TabIndex = 7
+        Me.CheckAll_Button.Text = "Check All"
+        Me.CheckAll_Button.UseVisualStyleBackColor = True
+        '
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(191, 53)
+        Me.ListBox1.Location = New System.Drawing.Point(327, 53)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(183, 342)
         Me.ListBox1.TabIndex = 7
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(713, 368)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 25)
+        Me.Button3.TabIndex = 9
+        Me.Button3.Text = "Edit Filters"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.UncheckAll_Button)
         Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.CheckAll_Button)
         Me.Controls.Add(Me.Pnl_ComparisonFilters)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -278,4 +291,5 @@ Partial Class Main
     Friend WithEvents Height_Checkbox As CheckBox
     Friend WithEvents Label1 As Label
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button3 As Button
 End Class

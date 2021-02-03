@@ -2,6 +2,28 @@
 Imports System.IO
 Module Subroutines
 
+    Public Sub ReadFilterTextFileIntoList()
+        Dim wrkstr As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) & "\Filters.txt"
+        Using reader As StreamReader = New StreamReader(wrkstr)
+            Do
+                Dim Temp As String
+                Temp = reader.ReadLine
+                If Not Temp = "" Then ' Filter empty lines in the text file
+                    FilterConfigurationList.Add(Temp)
+                End If
+            Loop Until reader.EndOfStream
+        End Using
+    End Sub
+
+    Public Sub WriteFilterListIntoTextFile()
+        Dim wrkstr As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) & "\Filters.txt"
+        Using writer As StreamWriter = New StreamWriter(wrkstr, False)
+            For Each item In FilterConfigurationList
+                writer.WriteLine(item)
+            Next
+        End Using
+    End Sub
+
     ''' <summary>
     ''' Sets the checked value to true for all checkbox controls contained within the panel control passed in by reference
     ''' </summary>

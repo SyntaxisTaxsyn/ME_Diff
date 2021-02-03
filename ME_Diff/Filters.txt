@@ -1,0 +1,7 @@
+﻿height
+width
+top
+left
+fontSize
+fontFamily
+bold
