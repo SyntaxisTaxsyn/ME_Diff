@@ -6815,6 +6815,31 @@ End Class
 
     End Sub
 
+    <TestMethod()> Public Sub _ByteArrayToStringTest()
+        Dim ByteArray As Byte() = {0, 1, 2, 3, 4}
+        Dim str As String = ""
+        str = GetStringFromByteArray(ByteArray)
+        Assert.IsTrue(str = "01234")
+        ByteArray = Nothing
+        str = Nothing
+
+        ByteArray = {10, 11, 12, 13, 14}
+        str = ""
+        str = GetStringFromByteArray(ByteArray)
+        Assert.IsTrue(str = "1011121314")
+
+        ByteArray = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+        str = ""
+        str = GetStringFromByteArray(ByteArray)
+        Assert.IsTrue(str = "0123456789")
+
+        ByteArray = {255, 123, 132, 100, 0, 12, 45, 12, 0, 0, 0, 4, 5, 3}
+        str = ""
+        str = GetStringFromByteArray(ByteArray)
+        Assert.IsTrue(str = "2551231321000124512000453")
+
+    End Sub
+
 End Class
 
 <TestClass()> Public Class _12SymbolFactoryTests

@@ -80,7 +80,7 @@
   <ItemGroup>
     <Compile Include="Functions.vb" />
     <Compile Include="TestCases.vb" />
-    <Compile Include="UnitTest1.vb" />
+    <Compile Include="GFXDisplayObjectsTests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +96,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReportObjectTests.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

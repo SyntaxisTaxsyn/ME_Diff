@@ -1,2 +1,7 @@
 Test number,Property,Left,Right
 1,progId,HMI.TrendObjectME.1,HMI.TrendObjectME.2
+2,fileName,METXView.ocx,METXViews.ocx
+3,fileVersion,11.0.230.0,11.0.230.1
+4,typeLibrary,{EC66E430-280E-11D4-AB9C-00C04F9915E3},{EC66E430-280E-11D4-AB9C-00C04F9915E2}
+5,typeLibVersion,4,4.1
+6,data,014002422200591300,0140024222005913065

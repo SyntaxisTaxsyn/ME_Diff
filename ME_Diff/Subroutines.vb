@@ -1,6 +1,6 @@
 ﻿Imports System.Reflection
 Imports System.IO
-Module Subroutines
+Public Module Subroutines
 
     Public Sub ReadFilterTextFileIntoList()
         Dim wrkstr As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) & "\Filters.txt"
@@ -6200,8 +6200,10 @@ Module Subroutines
 
                 ' data
                 Desc = "data"
-                Left = LDat.data.data.ToString
-                Right = RDat.data.data.ToString
+                Left = GetStringFromByteArray(LDat.data.data)
+                Right = GetStringFromByteArray(RDat.data.data)
+                'Left = LDat.data.data.ToString
+                'Right = RDat.data.data.ToString
                 If Not Left = Right Then
                     Call AddListContentMatch(Gnest,
                                                      fname,
@@ -6459,6 +6461,17 @@ Module Subroutines
         'Call Compare_BasicImageType(lobj, robj, fname, Gnest, LState, Rstate, a)
 
     End Sub
+
+    Public Function GetStringFromByteArray(ByRef barray As Byte()) As String
+        Dim tstr As String = ""
+        Dim tarr() As String
+        ReDim tarr(barray.Count - 1)
+        For a = 0 To barray.Count - 1
+            tarr(a) = barray(a).ToString
+        Next
+        tstr = Join(tarr, "")
+        Return tstr
+    End Function
 
     Public Sub CompareNumericInputEnableProperties(ByRef lobj As Object, ByRef robj As Object, ByRef fname As String, ByRef Gnest As String)
 
