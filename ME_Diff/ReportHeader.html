@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+
+    <title>ME Diff Report Output</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .Heading {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .Inpage1 {
+            width: 75%;
+            margin-bottom: 10px;
+        }
+
+        .Inpage2 {
+            width: 50%;
+            margin-bottom: 5px;
+        }
+
+        div {
+            font-size: medium;
+            font-family: sans-serif;
+        }
+
+        br {
+            page-break-after: always;
+        }
+
+        h1 {
+            page-break-before: auto;
+        }
+
+        h1, h2, h3, h4, h5 {
+            page-break-after: avoid;
+        }
+
+        table, figure {
+            page-break-inside: auto;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 14px/1.4 Georgia, Serif;
+        }
+
+        #page-wrap {
+            margin: 50px;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        /*
+        Generic Styling, for Desktops/Laptops
+        */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        /* Zebra striping */
+        tr:nth-of-type(odd) {
+            background: #eee;
+        }
+
+        th {
+            background: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        td, th {
+            padding: 6px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+            /*use padding to move list item from left to right*/
+            padding-left: 1em;
+        }
+
+            ul li:before {
+                content: "-";
+                position: absolute;
+                /*change margin to move dash around*/
+                margin-left: -1em;
+            }
+
+        a:link:hover {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        a:visited:hover {
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:link {
+            color: #000000;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>

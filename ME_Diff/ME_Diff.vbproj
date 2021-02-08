@@ -158,7 +158,13 @@
     <Content Include="Filters.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="PageReport.html" />
+    <Content Include="PagesSummary2.html" />
+    <Content Include="ReportFooter.html" />
     <Content Include="ReportTemplate.HTML" />
+    <Content Include="ReportHeader.html" />
+    <Content Include="Summary.html" />
+    <Content Include="PagesSummary1.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

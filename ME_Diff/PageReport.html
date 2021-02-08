@@ -1,0 +1,33 @@
+﻿<div id="page-wrap">
+    <section id="{PageLinkID}">
+        <h2>{PageName}</h2>
+        <hr class="Inpage1" />
+    </section>
+    <p>
+        <ul>
+            <li><b>Left file name - </b>{LeftFileName}</li>
+            <li><b>Right file name - </b>{RightFileName}</li>
+            <li><b>Differences found</b> - {DifferenceQuantity}</li>
+        </ul>
+    </p>
+    <hr class="Inpage2" />
+    <table>
+        <thead>
+            <tr>
+                <th>Nest Level</th>
+                <th>Object Name</th>
+                <th>Object Type</th>
+                <th>Parameter</th>
+                <th>Left Value</th>
+                <th>Right Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {TableContent}
+        </tbody>
+    </table>
+    <p>
+        <a href="#PageList">Back to page list</a>
+    </p>
+</div>
+<br />
