@@ -181,4 +181,105 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
     End Sub
 
+    <TestMethod()> Public Sub CheckReportFilter()
+        Dim result As Boolean = False
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        result = ME_Diff.NeedsFiltered("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        Assert.IsTrue(result = True)
+        result = ME_Diff.NeedsFiltered("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        Assert.IsTrue(result = True)
+        result = ME_Diff.NeedsFiltered("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        Assert.IsTrue(result = False)
+        result = ME_Diff.NeedsFiltered("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        Assert.IsTrue(result = False)
+        ME_Diff.FilterList.Add("displayType")
+        result = ME_Diff.NeedsFiltered("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        Assert.IsTrue(result = True)
+    End Sub
+
+    <TestMethod()> Public Sub CheckReportCreate()
+        Dim ResultList As List(Of String) = New List(Of String)
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group3 - Object Name : Text7 - Object Type : textDrawingObjectType - Parameter : backStyle - Left Value = transparent, Right Value = solid")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Leftfile", "RightFile")
+
+        Assert.IsTrue(ReportObject.PageList.Item(0).LeftFile = "Leftfile")
+        Assert.IsTrue(ReportObject.PageList.Item(0).RightFile = "RightFile")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).FileName = "00000Left")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).NestLevel = "")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).ObjectName = "Display")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).ObjectType = "gfx")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).Parameter = "titleBarSpecified")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).LeftValue = "False")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(0).RightValue = "True")
+
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).FileName = "00000Left")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).NestLevel = "")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).ObjectName = "Display")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).ObjectType = "gfx")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).Parameter = "displayType")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).LeftValue = "replace")
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Item(1).RightValue = "onTop")
+
+        Assert.IsTrue(ReportObject.PageList.Count = 1)
+        Assert.IsTrue(ReportObject.PageList.Item(0).OutputList.Count = 2)
+
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Leftfiles", "RightFiles")
+
+        Assert.IsTrue(ReportObject.PageList.Item(1).LeftFile = "Leftfiles")
+        Assert.IsTrue(ReportObject.PageList.Item(1).RightFile = "RightFiles")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).FileName = "00000Left")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).NestLevel = "")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).ObjectName = "Display")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).ObjectType = "gfx")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).Parameter = "titleBarSpecified")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).LeftValue = "False")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(0).RightValue = "True")
+
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).FileName = "00000Left")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).NestLevel = "")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).ObjectName = "Display")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).ObjectType = "gfx")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).Parameter = "displayType")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).LeftValue = "replace")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(1).RightValue = "onTop")
+
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).FileName = "00000Left")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).NestLevel = "Root/Group2/Group3")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).ObjectName = "Text7")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).ObjectType = "textDrawingObjectType")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).Parameter = "backStyle")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).LeftValue = "transparent")
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Item(2).RightValue = "solid")
+
+        Assert.IsTrue(ReportObject.PageList.Count = 2)
+        Assert.IsTrue(ReportObject.PageList.Item(1).OutputList.Count = 3)
+
+
+    End Sub
+    <TestMethod()> Public Sub CheckDefaultBrowserStart()
+        Dim result As Boolean = False
+        result = ME_Diff.Run(ME_Diff.DefaultWebBrowser, "C:\temp\default.html")
+        Assert.IsTrue(result = True)
+        result = ME_Diff.Run("d.exe", "C:\temp\default.html")
+        Assert.IsTrue(result = False)
+    End Sub
+
+
 End Class

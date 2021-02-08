@@ -1,5 +1,7 @@
 ﻿Imports System.Reflection
 Imports System.IO
+Imports System.Web
+
 Public Module Subroutines
 
     Public Sub ReadFilterTextFileIntoList()
@@ -10009,8 +10011,89 @@ Public Module Subroutines
         OutputToTest_File = List_FileCompareContentMatch ' return the complete list
     End Function
 
+    ''' <summary>
+    ''' Creates a new output report page instance within an existing reportoutput object and applies the currently configured filter parameters whilst doing so
+    ''' </summary>
+    ''' <param name="ReportObject">The master report object file you wish to add a report page to</param>
+    ''' <param name="ReportList">The in memory report list to use to generate the page from</param>
+    ''' <param name="LeftFile">Left file name</param>
+    ''' <param name="RightFile">Right file name</param>
+    Public Sub CreateOutputReportPage(ByRef ReportObject As ReportOutput,
+                                      ByRef ReportList As List(Of String),
+                                      ByRef LeftFile As String,
+                                      ByRef RightFile As String)
+        Dim NewReportPage As ReportOutputPage = New ReportOutputPage(LeftFile, RightFile)
+        For Each item In ReportList
+            If Not NeedsFiltered(item) Then
+                NewReportPage.AddListItem(item)
+            End If
+        Next
+        ReportObject.AddPage(NewReportPage)
+    End Sub
+    ''' <summary>
+    ''' Checks the supplied string to see if the parameter contained within matches a filter parameter
+    ''' </summary>
+    ''' <param name="item">string containing the parameter to check</param>
+    ''' <returns>True if the parameter in the string matches a filter, False if not </returns>
+    Public Function NeedsFiltered(ByRef item As String) As Boolean
+        Dim TempMember As ReportMember = New ReportMember(item)
+        Dim MatchFound As Boolean = False
+        For Each item In FilterList.Where(Function(x) x = TempMember.Parameter)
+            MatchFound = True
+            Exit For
+        Next
+        Return MatchFound
+    End Function
 
+    ''' <summary>
+    ''' Look in user system registry and determine the default browser
+    ''' </summary>
+    ''' <returns>a string containing the name of the default browser</returns>
+    Public Function DefaultWebBrowser() As String
+        Dim path As String = "\http\shell\open\command"
+        Using Reg As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(path)
+            If Reg IsNot Nothing Then
+                Dim webBrowserPath As String = Reg.GetValue(String.Empty).ToString
+                If Not webBrowserPath = "" Then
+                    If webBrowserPath IsNot Nothing Then
+                        If webBrowserPath.First() = """" Then
+                            Dim tarr()
+                            tarr = Split(webBrowserPath, """")
+                            Return tarr(1)
+                        Else
+                            Dim tarr()
+                            tarr = Split(webBrowserPath, " ")
+                            Return tarr(0)
+                        End If
+                    End If
+                End If
+            End If
+            Return ""
+        End Using
+    End Function
 
+    ''' <summary>
+    ''' run a program with supplied arguments
+    ''' </summary>
+    ''' <param name="FileName">Filename and path of the executable to run (must have .exe on the end to work)</param>
+    ''' <param name="Args">Any arguments supplied to the program at runtime</param>
+    ''' <returns>Boolean True if process start was called successfully, False if a problem was encountered</returns>
+    Public Function Run(ByRef FileName As String, ByRef Args As String) As Boolean
 
+        Try
+            Dim proc As New ProcessStartInfo
+            proc.FileName = FileName
+            proc.WindowStyle = ProcessWindowStyle.Normal
+            If Not Args = "" Then
+                proc.Arguments = Args
+            End If
+            System.Diagnostics.Process.Start(proc)
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
 
 End Module
+

@@ -7,6 +7,9 @@
         Dim NewReportPage As New ReportOutputPage(LeftFileStr, RightFileStr)
         PageList.Add(NewReportPage)
     End Sub
+    Public Sub AddPage(ByRef PageObject As ReportOutputPage)
+        PageList.Add(PageObject)
+    End Sub
 End Class
 
 Public Class ReportOutputPage

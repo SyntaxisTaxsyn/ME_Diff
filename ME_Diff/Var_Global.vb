@@ -1,4 +1,4 @@
-﻿Module Var_Global
+﻿Public Module Var_Global
 
     Public STR_LeftPathFile As String
     Public STR_RightPathFile As String
