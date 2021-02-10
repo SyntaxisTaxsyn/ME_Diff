@@ -275,9 +275,10 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
     End Sub
     <TestMethod()> Public Sub CheckDefaultBrowserStart()
         Dim result As Boolean = False
-        result = ME_Diff.Run(ME_Diff.DefaultWebBrowser, "C:\temp\default.html")
+        Dim ReportObject As New ME_Diff.ReportOutput
+        result = ReportObject.Run(ReportObject.DefaultWebBrowser, "C:\temp\default.html")
         Assert.IsTrue(result = True)
-        result = ME_Diff.Run("d.exe", "C:\temp\default.html")
+        result = ReportObject.Run("d.exe", "C:\temp\default.html")
         Assert.IsTrue(result = False)
     End Sub
 
@@ -609,6 +610,297 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
 
         Assert.IsTrue(results(0))
+
+
+    End Sub
+
+    <TestMethod()> Public Sub CheckSummary2Output_5Pages3NoDiffs()
+
+        Dim results(50) As Boolean
+        For a = 0 To results.Length - 1
+            results(a) = False
+        Next
+
+        ' Create the mock report data
+        Dim ResultList As List(Of String) = New List(Of String)
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group3 - Object Name : Text7 - Object Type : textDrawingObjectType - Parameter : backStyle - Left Value = transparent, Right Value = solid")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 1", "Page 1")
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 2", "Page 2")
+
+        ' add all items to the filter list to create a blank page entry
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ME_Diff.FilterList.Add("titleBarSpecified")
+        ME_Diff.FilterList.Add("displayType")
+        ME_Diff.FilterList.Add("backStyle")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff", "RightNoDiff")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff1", "RightNoDiff2")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff2", "RightNoDiff3")
+
+        ' Generate the report output
+        ReportObject.GenerateHTMLReport()
+        ' collect the report output into variables
+        Dim ListItem1 As String = ReportObject.Summary2.Item(7)
+        Dim ListItem2 As String = ReportObject.Summary2.Item(8)
+
+
+        ' Check the content
+        If InStr(ListItem1, "Page 1") > 0 Then
+            results(0) = True
+        End If
+        ' Check the content
+        If InStr(ListItem2, "Page 2") > 0 Then
+            results(1) = True
+        End If ' Check the content
+
+
+        Assert.IsTrue(results(0))
+        Assert.IsTrue(results(1))
+
+
+    End Sub
+
+    <TestMethod()> Public Sub CheckSummary2Output_5Pages2NoDiffs()
+
+        Dim results(50) As Boolean
+        For a = 0 To results.Length - 1
+            results(a) = False
+        Next
+
+        ' Create the mock report data
+        Dim ResultList As List(Of String) = New List(Of String)
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group3 - Object Name : Text7 - Object Type : textDrawingObjectType - Parameter : backStyle - Left Value = transparent, Right Value = solid")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 1", "Page 1")
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 2", "Page 2")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page3.xml", "Page3.xml")
+
+        ' add all items to the filter list to create a blank page entry
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ME_Diff.FilterList.Add("titleBarSpecified")
+        ME_Diff.FilterList.Add("displayType")
+        ME_Diff.FilterList.Add("backStyle")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff", "RightNoDiff")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff1", "RightNoDiff2")
+
+        ' Generate the report output
+        ReportObject.GenerateHTMLReport()
+        ' collect the report output into variables
+        Dim ListItem1 As String = ReportObject.Summary2.Item(7)
+        Dim ListItem2 As String = ReportObject.Summary2.Item(8)
+        Dim ListItem3 As String = ReportObject.Summary2.Item(9)
+
+
+        ' Check the content
+        If InStr(ListItem1, "Page 1") > 0 Then
+            results(0) = True
+        End If
+        If InStr(ListItem2, "Page 2") > 0 Then
+            results(1) = True
+        End If
+        If InStr(ListItem3, "Page3") > 0 Then
+            results(2) = True
+        End If
+
+
+        Assert.IsTrue(results(0))
+        Assert.IsTrue(results(1))
+        Assert.IsTrue(results(2))
+
+
+    End Sub
+
+    <TestMethod()> Public Sub CheckSummary2Output_3PagesNoDiffs()
+
+        Dim results(50) As Boolean
+        For a = 0 To results.Length - 1
+            results(a) = False
+        Next
+
+        ' Create the mock report data
+        Dim ResultList As List(Of String) = New List(Of String)
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group3 - Object Name : Text7 - Object Type : textDrawingObjectType - Parameter : backStyle - Left Value = transparent, Right Value = solid")
+
+        'Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 1", "Page 1")
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+
+        'Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 2", "Page 2")
+
+        'Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page3.xml", "Page3.xml")
+
+        ' add all items to the filter list to create a blank page entry
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ME_Diff.FilterList.Add("titleBarSpecified")
+        ME_Diff.FilterList.Add("displayType")
+        ME_Diff.FilterList.Add("backStyle")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff", "RightNoDiff")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff1", "RightNoDiff2")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff2", "RightNoDiff3")
+
+        ' Generate the report output
+        ReportObject.GenerateHTMLReport()
+        ' collect the report output into variables
+        Dim ListItem1 As String = ReportObject.Summary2.Item(7)
+
+        ' Check the content
+        If InStr(ListItem1, "</ul>") > 0 Then ' No content for this page so the list output will contain end of list at this line
+            results(0) = True
+        End If
+
+
+        Assert.IsTrue(results(0))
+
+
+    End Sub
+
+    <TestMethod()> Public Sub CheckReportTablesOutput_5Pages2NoDiffs()
+
+        Dim results(50) As Boolean
+        For a = 0 To results.Length - 1
+            results(a) = False
+        Next
+
+        ' Create the mock report data
+        Dim ResultList As List(Of String) = New List(Of String)
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group3 - Object Name : Text7 - Object Type : textDrawingObjectType - Parameter : backStyle - Left Value = transparent, Right Value = solid")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 1 Left", "Page 1 Right")
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 2 Left", "Page 2 Right")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page3.xml", "Page3.xml")
+
+        ' add all items to the filter list to create a blank page entry
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ME_Diff.FilterList.Add("titleBarSpecified")
+        ME_Diff.FilterList.Add("displayType")
+        ME_Diff.FilterList.Add("backStyle")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff", "RightNoDiff")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff1", "RightNoDiff2")
+
+        ' Generate the report output
+        ReportObject.GenerateHTMLReport()
+        ' collect the report output into variables
+        Dim ListItem1 As String = ReportObject.PageReports.Item(0).Item(1)
+        Dim ListItem2 As String = ReportObject.PageReports.Item(0).Item(2)
+        Dim ListItem3 As String = ReportObject.PageReports.Item(0).Item(7)
+        Dim ListItem4 As String = ReportObject.PageReports.Item(0).Item(8)
+        Dim ListItem5 As String = ReportObject.PageReports.Item(0).Item(9)
+
+        Dim ListItem6 As String = ReportObject.PageReports.Item(0).Item(26)
+        Dim ListItem7 As String = ReportObject.PageReports.Item(0).Item(27)
+        Dim ListItem8 As String = ReportObject.PageReports.Item(0).Item(28)
+        Dim ListItem9 As String = ReportObject.PageReports.Item(0).Item(29)
+        Dim ListItem10 As String = ReportObject.PageReports.Item(0).Item(30)
+        Dim ListItem11 As String = ReportObject.PageReports.Item(0).Item(31)
+
+        Dim ListItem12 As String = ReportObject.PageReports.Item(0).Item(34)
+        Dim ListItem13 As String = ReportObject.PageReports.Item(0).Item(35)
+        Dim ListItem14 As String = ReportObject.PageReports.Item(0).Item(36)
+        Dim ListItem15 As String = ReportObject.PageReports.Item(0).Item(37)
+        Dim ListItem16 As String = ReportObject.PageReports.Item(0).Item(38)
+        Dim ListItem17 As String = ReportObject.PageReports.Item(0).Item(39)
+
+        If InStr(ListItem1, "Page_1_Left") > 0 Then results(0) = True
+        If InStr(ListItem2, "Page 1 Left") > 0 Then results(1) = True
+        If InStr(ListItem3, "Page 1 Left") > 0 Then results(2) = True
+        If InStr(ListItem4, "Page 1 Right") > 0 Then results(3) = True
+        If InStr(ListItem5, "2") > 0 Then results(4) = True
+
+        If InStr(ListItem6, "<td></td>") > 0 Then results(5) = True
+        If InStr(ListItem7, "Display") > 0 Then results(6) = True
+        If InStr(ListItem8, "gfx") > 0 Then results(7) = True
+        If InStr(ListItem9, "titleBarSpecified") > 0 Then results(8) = True
+        If InStr(ListItem10, "False") > 0 Then results(9) = True
+        If InStr(ListItem11, "True") > 0 Then results(10) = True
+
+        If InStr(ListItem12, "<td></td>") > 0 Then results(11) = True
+        If InStr(ListItem13, "Display") > 0 Then results(12) = True
+        If InStr(ListItem14, "gfx") > 0 Then results(13) = True
+        If InStr(ListItem15, "displayType") > 0 Then results(14) = True
+        If InStr(ListItem16, "replace") > 0 Then results(15) = True
+        If InStr(ListItem17, "onTop") > 0 Then results(16) = True
+
+
+        Assert.IsTrue(results(0))
+        Assert.IsTrue(results(1))
+        Assert.IsTrue(results(2))
+        Assert.IsTrue(results(3))
+        Assert.IsTrue(results(4))
+        Assert.IsTrue(results(5))
+        Assert.IsTrue(results(6))
+        Assert.IsTrue(results(7))
+        Assert.IsTrue(results(8))
+        Assert.IsTrue(results(9))
+        Assert.IsTrue(results(10))
+        Assert.IsTrue(results(11))
+        Assert.IsTrue(results(12))
+        Assert.IsTrue(results(13))
+        Assert.IsTrue(results(14))
+        Assert.IsTrue(results(15))
+        Assert.IsTrue(results(16))
 
 
     End Sub

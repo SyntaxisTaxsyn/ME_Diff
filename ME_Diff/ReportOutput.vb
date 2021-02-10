@@ -7,6 +7,7 @@ Public Class ReportOutput
     Public Summary1 As List(Of String)
     Public Summary2 As List(Of String)
     Public PageReport As List(Of String)
+    Public PageReports As List(Of List(Of String))
     Public Footer As List(Of String)
     Public Sub New()
         PageList = New List(Of ReportOutputPage)
@@ -45,11 +46,16 @@ Public Class ReportOutput
         Summary1 = ReadFileToList(Summary1Path)
         Summary2 = ReadFileToList(Summary2Path)
         PageReport = ReadFileToList(PageReportPath)
+        PageReports = New List(Of List(Of String))
         Footer = ReadFileToList(FooterPath)
 
         ' Get report content
         ReportSummary = GetReportSummary(ReportSummary)
         Summary1 = GetSummary1(Summary1)
+        Summary2 = GetSummary2(Summary2)
+        PageReports = GetPageReports(PageReports, PageReport)
+
+
 
         '' Get Lists of page content
         'Dim EmptyPageList As List(Of String)
@@ -57,6 +63,178 @@ Public Class ReportOutput
 
 
     End Sub
+    ''' <summary>
+    ''' Takes the list of lists of strings pagereports object and adds 1 object containing a list of strings populated with the report details
+    ''' For each page found in the pagelist that had differences on it
+    ''' </summary>
+    ''' <param name="PageReports">Object containing a list of page lists</param>
+    ''' <param name="PageReport">Template page list for generating individual page lists</param>
+    ''' <returns>An object containing a list of page list reports</returns>
+    Public Function GetPageReports(ByRef PageReports As List(Of List(Of String)),
+                                   ByRef PageReport As List(Of String)) As List(Of List(Of String))
+
+        Dim PageReportList As List(Of List(Of String)) = New List(Of List(Of String))
+
+        For Each Page In PageList
+            If Page.OutputList.Count > 0 Then
+                Dim NewPageReport As List(Of String)
+                NewPageReport = GetPageReport(Page, PageReport)
+                PageReportList.Add(NewPageReport)
+            End If
+        Next
+
+        Return PageReportList
+
+    End Function
+
+    ''' <summary>
+    ''' Takes a page report from the reportoutput object and a page report template and produces a list of strings containing
+    ''' the correctly formatted page report with all the data contained in the correct places
+    ''' </summary>
+    ''' <param name="Page">Page object containing the page details to add to the report template</param>
+    ''' <param name="PageReport">Template page list for generating individual page lists</param>
+    ''' <returns>Formatted list of strings containing the report data for the specific page</returns>
+    Public Function GetPageReport(ByRef Page As ReportOutputPage, ByRef PageReport As List(Of String)) As List(Of String)
+
+        ' Order of events in here 
+
+        ' Create a new list object for the table content
+        ' Add the table content from the page report
+        ' Combine the 2 lists into an output report and return it
+
+        ' Get a copy of the report template into a new list object
+        Dim ReportCopy As List(Of String) = New List(Of String)
+        For Each item In PageReport
+            ReportCopy.Add(item)
+        Next
+
+        ' Declare variables to use for page content substitution
+        Dim PageLinkID As String
+        Dim PageName As String
+        Dim LeftFileName As String
+        Dim RightFileName As String
+        Dim DifferenceQuantity As Integer
+
+        ' Assign values to page content replacements
+        PageLinkID = Replace(Page.LeftFile, " ", "_")
+        PageName = Page.LeftFile
+        LeftFileName = Page.LeftFile
+        RightFileName = Page.RightFile
+        DifferenceQuantity = Page.OutputList.Count
+
+        ' Parse report list copy and replace values with variable content
+        ReportCopy = SearchListForSubstituteString(ReportCopy, "{PageLinkID}", PageLinkID)
+        ReportCopy = SearchListForSubstituteString(ReportCopy, "{PageName}", PageName)
+        ReportCopy = SearchListForSubstituteString(ReportCopy, "{LeftFileName}", LeftFileName)
+        ReportCopy = SearchListForSubstituteString(ReportCopy, "{RightFileName}", RightFileName)
+        ReportCopy = SearchListForSubstituteString(ReportCopy, "{DifferenceQuantity}", DifferenceQuantity)
+
+        Dim ReportTableList As List(Of String) = New List(Of String)
+        ReportTableList = GetTableReportList(Page.OutputList)
+
+        Dim NewList As New List(Of String)
+        For Each item In ReportCopy
+            If Not InStr(item, "{TableContent}") > 0 Then
+                NewList.Add(item)
+            Else
+                For Each line In ReportTableList
+                    NewList.Add(line)
+                Next
+            End If
+        Next
+
+        Return NewList
+
+    End Function
+
+    Public Function GetTableReportList(ByRef ReportOutputList As List(Of ReportMember)) As List(Of String)
+
+        Dim NewList As New List(Of String)
+        Dim TableReportList As New List(Of List(Of String))
+        Dim OriginalContent As String = ""
+
+        ' Get original content to maintain line spacing from template
+        For Each item In PageReport
+            If InStr(item, "{TableContent}") Then
+                OriginalContent = item
+            End If
+        Next
+
+        For Each item In ReportOutputList
+            Dim NewTableRow As New List(Of String)
+            NewTableRow = GetTableReportRowList(item, OriginalContent)
+            TableReportList.Add(NewTableRow)
+        Next
+
+        For Each tRow In TableReportList
+            For Each item In tRow
+                NewList.Add(item)
+            Next
+        Next
+
+        Return NewList
+
+    End Function
+
+    Public Function GetTableReportRowList(ByRef Item As ReportMember, ByRef OC As String) As List(Of String)
+
+        Dim NewList As New List(Of String)
+        Dim OFT As String ' Original Format
+        OFT = Replace(OC, "{TableContent}", "") ' Gets the line indent from the report template
+        NewList.Add(OFT & "<tr>")
+        NewList.Add(OFT & "    <td>" & Item.NestLevel & "</td>")
+        NewList.Add(OFT & "    <td>" & Item.ObjectName & "</td>")
+        NewList.Add(OFT & "    <td>" & Item.ObjectType & "</td>")
+        NewList.Add(OFT & "    <td>" & Item.Parameter & "</td>")
+        NewList.Add(OFT & "    <td>" & Item.LeftValue & "</td>")
+        NewList.Add(OFT & "    <td>" & Item.RightValue & "</td>")
+        NewList.Add(OFT & "</tr>")
+        Return NewList
+
+    End Function
+
+    ''' <summary>
+    ''' Process the summary 2 page. Takes the template report page as an argument
+    ''' </summary>
+    ''' <param name="Slist">Template report page</param>
+    ''' <returns>A new list containing the original template content, with a list of pages included whose report objects indicate differences were found</returns>
+    Public Function GetSummary2(ByRef Slist As List(Of String)) As List(Of String)
+
+        Dim PageList As List(Of String)
+        Dim NewList As List(Of String) = New List(Of String)
+        PageList = GetPagesWithDifferenceList()
+        PageList = FormatListasHTMLAnchorListElement(PageList)
+
+        For Each item In Slist
+            If Not InStr(item, "{ListContent}") > 0 Then
+                NewList.Add(item)
+            Else
+                Dim OriginalFormat As String = item
+                For Each PageItem In PageList
+                    Dim NewItem As String = OriginalFormat.Replace("{ListContent}", PageItem)
+                    NewList.Add(NewItem)
+                Next
+            End If
+        Next
+
+        Return NewList
+
+    End Function
+
+    ''' <summary>
+    ''' Wrap a supplied string with html list element and anchor tags
+    ''' </summary>
+    ''' <param name="Slist">String to format</param>
+    ''' <returns>String formatted with html list elements, anchor tag and wrapped in bold tags</returns>
+    Public Function FormatListasHTMLAnchorListElement(ByRef Slist As List(Of String)) As List(Of String)
+        '<li><a href="#Page3"><b>Page 3</b></a></li>
+        For a = 0 To Slist.Count - 1
+            Slist.Item(a) = "<li><a href=""#" & Replace(Slist.Item(a), " ", "_") &
+                            """><b>" & Slist.Item(a) & "</b></a></li>"
+        Next
+        Return Slist
+    End Function
+
     ''' <summary>
     ''' Process the summary 1 page. Takes the template report page as an argument
     ''' </summary>
@@ -166,6 +344,16 @@ Public Class ReportOutput
 
     End Function
 
+    Public Function GetPagesWithDifferenceList() As List(Of String)
+        Dim Nlist As New List(Of String)
+        For Each Page In PageList
+            If Page.OutputList.Count > 0 Then
+                Nlist.Add(Page.LeftFile)
+            End If
+        Next
+        Return Nlist
+    End Function
+
     Public Function GetPagesNoDifferenceList() As List(Of String)
         Dim Nlist As New List(Of String)
         For Each Page In PageList
@@ -200,6 +388,56 @@ Public Class ReportOutput
         Dim wrkstr As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
         wrkstr &= "\" & Filename
         Return wrkstr
+    End Function
+
+    ''' <summary>
+    ''' Look in user system registry and determine the default browser
+    ''' </summary>
+    ''' <returns>a string containing the name of the default browser</returns>
+    Public Function DefaultWebBrowser() As String
+        Dim path As String = "\http\shell\open\command"
+        Using Reg As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(path)
+            If Reg IsNot Nothing Then
+                Dim webBrowserPath As String = Reg.GetValue(String.Empty).ToString
+                If Not webBrowserPath = "" Then
+                    If webBrowserPath IsNot Nothing Then
+                        If webBrowserPath.First() = """" Then
+                            Dim tarr()
+                            tarr = Split(webBrowserPath, """")
+                            Return tarr(1)
+                        Else
+                            Dim tarr()
+                            tarr = Split(webBrowserPath, " ")
+                            Return tarr(0)
+                        End If
+                    End If
+                End If
+            End If
+            Return ""
+        End Using
+    End Function
+
+    ''' <summary>
+    ''' run a program with supplied arguments
+    ''' </summary>
+    ''' <param name="FileName">Filename and path of the executable to run (must have .exe on the end to work)</param>
+    ''' <param name="Args">Any arguments supplied to the program at runtime</param>
+    ''' <returns>Boolean True if process start was called successfully, False if a problem was encountered</returns>
+    Public Function Run(ByRef FileName As String, ByRef Args As String) As Boolean
+
+        Try
+            Dim proc As New ProcessStartInfo
+            proc.FileName = FileName
+            proc.WindowStyle = ProcessWindowStyle.Normal
+            If Not Args = "" Then
+                proc.Arguments = Args
+            End If
+            System.Diagnostics.Process.Start(proc)
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
     End Function
 
 End Class

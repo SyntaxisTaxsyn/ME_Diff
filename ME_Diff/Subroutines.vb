@@ -10045,55 +10045,5 @@ Public Module Subroutines
         Return MatchFound
     End Function
 
-    ''' <summary>
-    ''' Look in user system registry and determine the default browser
-    ''' </summary>
-    ''' <returns>a string containing the name of the default browser</returns>
-    Public Function DefaultWebBrowser() As String
-        Dim path As String = "\http\shell\open\command"
-        Using Reg As Microsoft.Win32.RegistryKey = Microsoft.Win32.Registry.ClassesRoot.OpenSubKey(path)
-            If Reg IsNot Nothing Then
-                Dim webBrowserPath As String = Reg.GetValue(String.Empty).ToString
-                If Not webBrowserPath = "" Then
-                    If webBrowserPath IsNot Nothing Then
-                        If webBrowserPath.First() = """" Then
-                            Dim tarr()
-                            tarr = Split(webBrowserPath, """")
-                            Return tarr(1)
-                        Else
-                            Dim tarr()
-                            tarr = Split(webBrowserPath, " ")
-                            Return tarr(0)
-                        End If
-                    End If
-                End If
-            End If
-            Return ""
-        End Using
-    End Function
-
-    ''' <summary>
-    ''' run a program with supplied arguments
-    ''' </summary>
-    ''' <param name="FileName">Filename and path of the executable to run (must have .exe on the end to work)</param>
-    ''' <param name="Args">Any arguments supplied to the program at runtime</param>
-    ''' <returns>Boolean True if process start was called successfully, False if a problem was encountered</returns>
-    Public Function Run(ByRef FileName As String, ByRef Args As String) As Boolean
-
-        Try
-            Dim proc As New ProcessStartInfo
-            proc.FileName = FileName
-            proc.WindowStyle = ProcessWindowStyle.Normal
-            If Not Args = "" Then
-                proc.Arguments = Args
-            End If
-            System.Diagnostics.Process.Start(proc)
-            Return True
-        Catch ex As Exception
-            Return False
-        End Try
-
-    End Function
-
 End Module
 
