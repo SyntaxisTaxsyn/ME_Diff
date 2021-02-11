@@ -146,7 +146,13 @@ Public Class FileCompare
                 CompareFiles = OutputToTest_File()
                 Exit Function
             Case UnitTestType.DontUse
-                Call Outputreport(STR_LeftPathFile)
+                Select Case ReportOutputType
+                    Case ReportType.Text
+                        Call Outputreport(STR_LeftPathFile)
+                    Case ReportType.HTML
+                        Call OutputHTMLReport(STR_LeftPathFile)
+                End Select
+
                 CompareFiles = ""
                 Exit Function
             Case Else
@@ -155,6 +161,31 @@ Public Class FileCompare
         End Select
 
     End Function
+
+    Public Sub OutputHTMLReport(ByRef path As String)
+
+        Dim ReportObject As New ReportOutput
+
+        ' Get left file name
+        Dim LFname As String
+        Dim wrk()
+        wrk = Split(STR_LeftPathFile, "\")
+        wrk = Split(wrk(wrk.Length - 1), ".")
+        LFname = wrk(0)
+
+        ' Get right file name
+        Dim RFname As String
+        wrk = Split(STR_RightPathFile, "\")
+        wrk = Split(wrk(wrk.Length - 1), ".")
+        RFname = wrk(0)
+
+        ' add the page to report object
+        CreateOutputReportPage(ReportObject, List_FileCompareContentMatch, LFname, RFname)
+
+        ' Output the report
+        ReportObject.GenerateHTMLReport()
+
+    End Sub
 
     Public Sub CompareDisplayParameters(ByRef lobj As gfx, ByRef robj As gfx, ByRef Fname As String)
         Dim linfo() As PropertyInfo = lobj.displaySettings.GetType().GetProperties()
@@ -190,5 +221,10 @@ Public Class FileCompare
         ''' Dont use the unit test output redirect feature (sends output directly to the text file and displays as before)
         ''' </summary>
         DontUse
+    End Enum
+
+    Public Enum ReportType
+        Text
+        HTML
     End Enum
 End Class

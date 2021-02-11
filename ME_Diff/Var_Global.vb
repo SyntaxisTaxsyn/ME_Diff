@@ -10,5 +10,6 @@
     Public Fname As String
     Public FilterList As List(Of String)
     Public FilterConfigurationList As List(Of String)
+    Public ReportOutputType As FileCompare.ReportType = FileCompare.ReportType.HTML
 
 End Module
