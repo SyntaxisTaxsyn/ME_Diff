@@ -905,5 +905,116 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
     End Sub
 
+    <TestMethod()> Public Sub CheckBuildHTMLReport()
+
+        Dim results(50) As Boolean
+        For a = 0 To results.Length - 1
+            results(a) = False
+        Next
+
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+
+        ' Initialise lists 
+        ReportObject.Header = New List(Of String)
+        ReportObject.ReportSummary = New List(Of String)
+        ReportObject.Summary1 = New List(Of String)
+        ReportObject.Summary2 = New List(Of String)
+        ReportObject.PageReports = New List(Of List(Of String))
+        ReportObject.Footer = New List(Of String)
+
+        ' Add content
+        ReportObject.Header.Add("1")
+        ReportObject.Header.Add("2")
+        ReportObject.ReportSummary.Add("3")
+        ReportObject.ReportSummary.Add("4")
+        ReportObject.Summary1.Add("5")
+        ReportObject.Summary1.Add("6")
+        ReportObject.Summary2.Add("7")
+        ReportObject.Summary2.Add("8")
+
+        Dim PageList As New List(Of String)
+        PageList.Add("9")
+        PageList.Add("10")
+        ReportObject.PageReports.Add(PageList)
+
+        PageList = New List(Of String)
+        PageList.Add("11")
+        PageList.Add("12")
+        ReportObject.PageReports.Add(PageList)
+
+        ReportObject.Footer.Add("13")
+        ReportObject.Footer.Add("14")
+
+        ReportObject.BuildHTMLReport()
+
+        If ReportObject.HTMLReport.Item(0) = "1" Then results(0) = True
+        If ReportObject.HTMLReport.Item(1) = "2" Then results(1) = True
+        If ReportObject.HTMLReport.Item(2) = "3" Then results(2) = True
+        If ReportObject.HTMLReport.Item(3) = "4" Then results(3) = True
+        If ReportObject.HTMLReport.Item(4) = "5" Then results(4) = True
+        If ReportObject.HTMLReport.Item(5) = "6" Then results(5) = True
+        If ReportObject.HTMLReport.Item(6) = "7" Then results(6) = True
+        If ReportObject.HTMLReport.Item(7) = "8" Then results(7) = True
+        If ReportObject.HTMLReport.Item(8) = "9" Then results(8) = True
+        If ReportObject.HTMLReport.Item(9) = "10" Then results(9) = True
+        If ReportObject.HTMLReport.Item(10) = "11" Then results(10) = True
+        If ReportObject.HTMLReport.Item(11) = "12" Then results(11) = True
+        If ReportObject.HTMLReport.Item(12) = "13" Then results(12) = True
+        If ReportObject.HTMLReport.Item(13) = "14" Then results(13) = True
+
+        For a = 0 To 13
+            Assert.IsTrue(results(a))
+        Next
+
+    End Sub
+
+    <TestMethod()> Public Sub CheckHTMLReportOutput_5Pages2NoDiffs()
+
+        Dim results(50) As Boolean
+        For a = 0 To results.Length - 1
+            results(a) = False
+        Next
+
+        ' Create the mock report data
+        Dim ResultList As List(Of String) = New List(Of String)
+        Dim ReportObject As ME_Diff.ReportOutput = New ME_Diff.ReportOutput
+        ME_Diff.FilterList = New List(Of String)
+        ME_Diff.FilterList.Add("backStyle")
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root - Object Name : EditComboControl5 - Object Type : activeXObjectType - Parameter : data - Left Value = 00102171600200110040002555004002552553484648100, Right Value = 0010217160020011004000255500400103484648100")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group1 - Object Name : Text2 - Object Type : textDrawingObjectType - Parameter : width - Left Value = 80, Right Value = 88")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : titleBarSpecified - Left Value = False, Right Value = True")
+        ResultList.Add("File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop")
+        ResultList.Add("File Name : 00000Left - Nest Level : Root/Group2/Group3 - Object Name : Text7 - Object Type : textDrawingObjectType - Parameter : backStyle - Left Value = transparent, Right Value = solid")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 1 Left", "Page 1 Right")
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page 2 Left", "Page 2 Right")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "Page3.xml", "Page3.xml")
+
+        ' add all items to the filter list to create a blank page entry
+        ME_Diff.FilterList.Clear()
+        ME_Diff.FilterList.Add("data")
+        ME_Diff.FilterList.Add("width")
+        ME_Diff.FilterList.Add("titleBarSpecified")
+        ME_Diff.FilterList.Add("displayType")
+        ME_Diff.FilterList.Add("backStyle")
+
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff", "RightNoDiff")
+        Call ME_Diff.CreateOutputReportPage(ReportObject, ResultList, "LeftNoDiff1", "RightNoDiff2")
+
+        ME_Diff.STR_LeftPathFile = "C:\temp\ME_Diff\00000Left.xml"
+
+        ' Generate the report output
+        ReportObject.GenerateHTMLReport()
+
+
+    End Sub
+
 
 End Class

@@ -9,6 +9,7 @@ Public Class ReportOutput
     Public PageReport As List(Of String)
     Public PageReports As List(Of List(Of String))
     Public Footer As List(Of String)
+    Public HTMLReport As List(Of String)
     Public Sub New()
         PageList = New List(Of ReportOutputPage)
     End Sub
@@ -55,12 +56,57 @@ Public Class ReportOutput
         Summary2 = GetSummary2(Summary2)
         PageReports = GetPageReports(PageReports, PageReport)
 
+        ' Build report and display
+        Call BuildHTMLReport()
+        Call WriteHTMLReportOutToFile()
+        Call DisplayHTMLReport
 
 
-        '' Get Lists of page content
-        'Dim EmptyPageList As List(Of String)
-        'Dim DiffPageList As List(Of String)
+    End Sub
 
+    Public Sub DisplayHTMLReport()
+
+        Dim ReportPath As String = Path.GetDirectoryName(STR_LeftPathFile) & "\Report.html"
+        Dim RunResult As Boolean
+        RunResult = Run(DefaultWebBrowser, ReportPath)
+
+    End Sub
+    Public Sub WriteHTMLReportOutToFile()
+        Using output As StreamWriter = New StreamWriter(Path.GetDirectoryName(STR_LeftPathFile) & "\Report.html", False)
+            For Each line In HTMLReport
+                output.WriteLine(line)
+            Next
+        End Using
+    End Sub
+
+    Public Sub BuildHTMLReport()
+        HTMLReport = New List(Of String)
+
+        For Each line In Header
+            HTMLReport.Add(line)
+        Next
+
+        For Each line In ReportSummary
+            HTMLReport.Add(line)
+        Next
+
+        For Each line In Summary1
+            HTMLReport.Add(line)
+        Next
+
+        For Each line In Summary2
+            HTMLReport.Add(line)
+        Next
+
+        For Each page In PageReports
+            For Each item In page
+                HTMLReport.Add(item)
+            Next
+        Next
+
+        For Each line In Footer
+            HTMLReport.Add(line)
+        Next
 
     End Sub
     ''' <summary>
