@@ -106,9 +106,77 @@ Public Class FileCompare
                 Next
             Else
                 ' other cases when top level content doesnt match are handled here
+                ' this would get triggered if the top level item count matches, but the types/names dont
             End If
         Else
-            Throw New Exception("Object count no match exception, not implemented yet")
+
+            ' Find items in groups that do match and run regular comparison on them
+            For Each Litm In LeftObj.Items
+                For Each Ritm In RightObj.Items
+                    If Litm.name = Ritm.name Then
+                        If Litm.GetType = Ritm.GetType Then
+
+                            If Litm.GetType.ToString = "ME_Diff.groupType" Then
+                                ' compare elements of group first
+                                Call CompareItemsByType_Obj(Litm, Ritm, Fname, "Root")
+                                Dim msg As String
+                                Dim gobj As ME_Diff.groupType = Litm
+                                msg = CompareLikeForLike(Litm, Ritm, Fname, "Root/" & gobj.name)
+                                If Not msg = "" Then
+                                    Dim exgroup As ME_Diff.groupType = Litm
+                                    Call AddListContentMatchGroupException(exgroup.name, Fname, "Root", "Group content match exception encountered - Contents are not comparable, manual check is required - " & msg)
+                                End If
+                            Else
+                                Call CompareItemsByType_Obj(Litm, Ritm, Fname, "Root")
+                            End If
+
+                        End If
+                    End If
+                Next
+            Next
+
+            ' Find groups that dont match on both sides
+            If LeftObj.Items.Count > RightObj.Items.Count Then
+                ' Left has more, find the left items that dont exist
+                Dim NoMatch As Boolean = False
+                For Each Litm In LeftObj.Items
+                    For Each Ritm In RightObj.Items
+                        If Ritm.name = Litm.name Then
+                            If Ritm.GetType = Litm.GetType Then
+                                NoMatch = True
+                                Exit For
+                            End If
+                        End If
+                    Next
+                    If NoMatch = False Then
+                        Call AddListContentMatchGroupException(Litm.name.ToString, Fname, "Root", "Object Type : " & GetTypeFromString(Litm.GetType.ToString) & " - Parameter : Group item mismatch - Left Value = Present, Right Value = None")
+                    End If
+                    NoMatch = False
+                Next
+            End If
+
+            If RightObj.Items.Count > LeftObj.Items.Count Then
+                ' Right has more, find the right items that dont exist
+                Dim NoMatch As Boolean = False
+                For Each Ritm In RightObj.Items
+                    For Each Litm In LeftObj.Items
+                        If Ritm.name = Litm.name Then
+                            If Ritm.GetType = Litm.GetType Then
+                                NoMatch = True
+                                Exit For
+                            End If
+                        End If
+                    Next
+                    If NoMatch = False Then
+                        Call AddListContentMatchGroupException(Ritm.name.ToString, Fname, "Root", "Object Type : " & GetTypeFromString(Ritm.GetType.ToString) & " - Parameter : Group item mismatch - Left Value = None, Right Value = Present")
+                    End If
+                    NoMatch = False
+                Next
+            End If
+
+            'Throw New Exception("Object count no match exception, not implemented yet")
+
+
         End If
 
         'For a = 0 To LeftObj.ItemsElementName.Count - 1

@@ -171,6 +171,19 @@ Public Module Subroutines
         ' todo - add filter controls for ignoring parameters
         ' todo - add select case handler for complex types that need to be compared, do an HMI page with every type possible and work on code that detects the changes in each of those special object types 
 
+        'If lobj.GetType.ToString = "ME_Diff.groupType" Then
+        '    If robj.GetType.ToString = "ME_Diff.groupType" Then
+        '        Dim lGpObj As ME_Diff.groupType = lobj
+        '        Dim rGpObj As ME_Diff.groupType = robj
+        '        For a = 0 To lGpObj.Items.Count - 1
+        '            If lGpObj.name = rGpObj.name Then
+        '                MsgBox(lGpObj.name)
+        '            End If
+        '        Next
+        '    End If
+        'End If
+
+
         Dim linfo() As PropertyInfo = lobj.GetType().GetProperties()
         Dim rinfo() As PropertyInfo = robj.GetType().GetProperties()
         For a = 0 To linfo.Count - 1
@@ -181,9 +194,9 @@ Public Module Subroutines
                         ' call special case handler for dealing with animation property comparison
                         Call CompareAnimationsProperties(lobj.animations, robj.animations, Gnest, fname, lobj.name.ToString)
                     Case "ME_Diff.multistateButtonBaseStateType"
-                        MsgBox("")
+                        MsgBox("") ' Was there a good reason this was left without an attached action
                     Case "ME_Diff.connectionType"
-                        MsgBox("")
+                        MsgBox("") ' Same for here, is it because this type of object cannot be encountered at this level?
                     Case "ME_Diff.animationsVisibilityType"
                         Call CompareAnimationsProperties_AnimateVisibilityAlone(lobj.animations, robj.animations, Gnest, fname, lobj.name.ToString)
                     Case "ME_Diff.animationsAllButRotMEType"
@@ -9980,7 +9993,7 @@ Public Module Subroutines
         Dim msg As String = ""
         msg = msg & "File Name : " & fname & " - "
         msg = msg & "Nest Level : " & Gnest & " - "
-        msg = msg & "Group Name : " & Gname & " - "
+        msg = msg & "Object Name : " & Gname & " - "
         msg = msg & ExMessage
         List_FileCompareContentMatch.Add(msg)
     End Sub

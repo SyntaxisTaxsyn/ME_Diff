@@ -121,6 +121,7 @@
     <Compile Include="ReportOutput.vb" />
     <Compile Include="Subroutines.vb" />
     <Compile Include="Var_Global.vb" />
+    <Compile Include="XMLTree.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EditFilterList.resx">

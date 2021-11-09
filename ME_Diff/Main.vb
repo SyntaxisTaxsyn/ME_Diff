@@ -141,4 +141,33 @@ Public Class Main
         Call AddAllCheckBoxSubscriptions(Pnl_ComparisonFilters)
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        ' Declare variables
+        Dim TLeftFile As List(Of String)
+        Dim TRightFile As List(Of String)
+        TLeftFile = New List(Of String)
+        TRightFile = New List(Of String)
+        Dim XMLLeft As New XMLTree
+        Dim XMLRight As New XMLTree
+
+        ' Get left contents
+        Using Reader As New StreamReader("D:\Users\speirsp\Desktop\Pick and place v3 hmi\xmltree\Left.xml")
+            Do
+                TLeftFile.Add(Reader.ReadLine)
+            Loop Until Reader.EndOfStream
+        End Using
+
+        ' Get right contents
+        Using Reader As New StreamReader("D:\Users\speirsp\Desktop\Pick and place v3 hmi\xmltree\Right.xml")
+            Do
+                TRightFile.Add(Reader.ReadLine)
+            Loop Until Reader.EndOfStream
+        End Using
+
+        XMLLeft.ParseList(TLeftFile)
+        XMLRight.ParseList(TRightFile)
+        MsgBox("done")
+
+    End Sub
 End Class
