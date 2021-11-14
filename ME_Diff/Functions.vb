@@ -109,7 +109,11 @@ Module Functions
 
         Else
 
+            Dim NoMatch As Boolean = False
+            Dim MatchFound As Boolean = False
+
             For a = 0 To LObj.Items.Count - 1
+
                 If LObj.ItemsElementName(a) = RObj.ItemsElementName(a) Then
                     'Select Case LObj.ItemsElementName(a)
                     '    Case ME_Diff.ItemsChoiceType.group
@@ -124,8 +128,41 @@ Module Functions
                     Else
                         Call CompareItemsByType_Obj(LObj.Items(a), RObj.Items(a), fname, gnest)
                     End If
+                Else
+                    ' execution falls into here when the group count matches but the item names dont, this means that the group composition is different
+                    NoMatch = True
                 End If
             Next
+
+            ' At the end of the main loop, if the nomatch flag is on then detect which groups left/right are not present on either side
+            If NoMatch Then
+                For a = 0 To LObj.Items.Count - 1
+                    MatchFound = False
+                    For b = 0 To RObj.Items.Count - 1
+                        If LObj.ItemsElementName(a) = RObj.ItemsElementName(b) Then
+                            MatchFound = True
+                            Exit For
+                        End If
+                    Next
+                    If MatchFound = False Then
+                        Call AddListContentMatch(gnest, fname, LObj.ItemsElementName(a), GetMEObjectType(LObj), "Group item mismatch", "Present", "Nothing") 'linfo(a).Name, linfo(a).GetValue(LObj, Nothing).ToString, rinfo(a).GetValue(RObj, Nothing).ToString
+                    End If
+                Next
+
+                For a = 0 To RObj.Items.Count - 1
+                    MatchFound = False
+                    For b = 0 To LObj.Items.Count - 1
+                        If RObj.ItemsElementName(a) = LObj.ItemsElementName(b) Then
+                            MatchFound = True
+                            Exit For
+                        End If
+                    Next
+                    If MatchFound = False Then
+                        Call AddListContentMatch(gnest, fname, RObj.ItemsElementName(a), GetMEObjectType(RObj), "Group item mismatch", "Nothing", "Present")
+                    End If
+                Next
+
+            End If
 
         End If
 
