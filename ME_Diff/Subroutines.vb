@@ -10051,7 +10051,8 @@ Public Module Subroutines
     Public Function NeedsFiltered(ByRef item As String) As Boolean
         Dim TempMember As ReportMember = New ReportMember(item)
         Dim MatchFound As Boolean = False
-        For Each item In FilterList.Where(Function(x) x = TempMember.Parameter)
+        'If item.Contains("State") Then MsgBox("Stop here")
+        For Each itm In FilterList.Where(Function(x) TempMember.Parameter.Contains(x))
             MatchFound = True
             Exit For
         Next

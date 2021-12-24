@@ -519,6 +519,7 @@ Public Class ReportMember
     Public Sub New(ByRef outputline As String)
         '"File Name : 00000Left - Nest Level :  - Object Name : Display - Object Type : gfx - Parameter : displayType - Left Value = replace, Right Value = onTop"
         Dim tarr() As String
+        Dim isMultiState As Boolean = False
         Dim SearchParams As String() = {
             OutputMembers.FileName,
             OutputMembers.NestLevel,
@@ -527,6 +528,10 @@ Public Class ReportMember
             OutputMembers.Parameter,
             OutputMembers.LeftValue,
             OutputMembers.RightValue}
+
+        If outputline.Contains("State") Then
+            isMultiState = True
+        End If
 
         tarr = Split(outputline, " - ") ' whitespace added to the - split character to deliberately consume the additonal whitespacing in the input message
         For Each item In SearchParams
@@ -555,7 +560,11 @@ Public Class ReportMember
                                 Case OutputMembers.ObjectType
                                     ObjectType = intr(1)
                                 Case OutputMembers.Parameter
-                                    Parameter = intr(1)
+                                    If isMultiState Then
+                                        Parameter = intr(1) & " - " & tarr(5)
+                                    Else
+                                        Parameter = intr(1)
+                                    End If
                             End Select
                         End If
                     End If

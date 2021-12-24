@@ -170,4 +170,15 @@ Public Class Main
         MsgBox("done")
 
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim str As String = "State - something"
+        If str.Contains("something") Then
+            MsgBox("boo")
+        End If
+    End Sub
+
+    Private Sub EditFiltersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditFiltersToolStripMenuItem.Click
+        EditFilterList.ShowDialog()
+    End Sub
 End Class

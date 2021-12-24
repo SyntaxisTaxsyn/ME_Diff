@@ -35,6 +35,8 @@ Public Class FileCompare
         ' this is to allow for like comparison between different sizes of HMI
         ' 
 
+        Dim ProcessCount As Integer = 0
+
         ' Check the file names are populated
         If STR_LeftPathFile = "" Then
             'MsgBox("Unable to compare, file name missing")
@@ -74,6 +76,12 @@ Public Class FileCompare
 
         Call CompareDisplayParameters(LeftObj, RightObj, Fname)
 
+        Main.Label6.Visible = True
+        Main.Label6.Text = "Processing " & ProcessCount & " of " & LeftObj.Items.Count
+        Main.ProgressBar1.Value = 0
+        Main.ProgressBar1.Maximum = LeftObj.Items.Count
+        Main.ProgressBar1.Visible = True
+
         If LeftObj.Items.Count = RightObj.Items.Count Then
             ' Item count matches so check the names/types match
             Dim matchflag As Boolean = True
@@ -89,13 +97,17 @@ Public Class FileCompare
                 ' basic type/name checking has passed so proceed to the next step of the algorithm and compare the elements/properties
                 ' if group type of object, then compare the group properties first, then pass the group into the comparegroup function
                 ' If any other type of object then pass to compareitemsbytype_obj
+
                 For a = 0 To LeftObj.Items.Count - 1
+                    ProcessCount += 1
+                    Main.Label6.Text = "Processing " & ProcessCount & " of " & LeftObj.Items.Count
                     If LeftObj.ItemsElementName(a) = ME_Diff.ItemsChoiceType.group Then
                         ' compare elements of group first
                         Call CompareItemsByType_Obj(LeftObj.Items(a), RightObj.Items(a), Fname, "Root")
                         Dim msg As String
                         Dim gobj As ME_Diff.groupType = LeftObj.Items(a)
-                        msg = CompareLikeForLike(LeftObj.Items(a), RightObj.Items(a), Fname, "Root/" & gobj.name)
+                        msg = CompareLikeForLike(LeftObj.Items(a), RightObj.Items(a), Fname, "Root/" &
+                                                 gobj.name)
                         If Not msg = "" Then
                             Dim exgroup As ME_Diff.groupType = LeftObj.Items(a)
                             Call AddListContentMatchGroupException(exgroup.name, Fname, "Root", "Group content match exception encountered - Contents are not comparable, manual check is required - " & msg)
@@ -103,8 +115,13 @@ Public Class FileCompare
                     Else
                         Call CompareItemsByType_Obj(LeftObj.Items(a), RightObj.Items(a), Fname, "Root")
                     End If
+                    Main.ProgressBar1.Value += 1
+                    Application.DoEvents()
                 Next
+
+
             Else
+                MsgBox("You forgot to implement this you prat!")
                 ' other cases when top level content doesnt match are handled here
                 ' this would get triggered if the top level item count matches, but the types/names dont
             End If

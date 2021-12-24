@@ -49,4 +49,5 @@
         Me.TextBox2.Text = STR_RightPathFile
 
     End Sub
+
 End Class

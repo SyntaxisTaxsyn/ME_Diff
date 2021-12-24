@@ -45,126 +45,132 @@ Module Functions
         ' currently group match check is only item count
         ' expand to include object type and object name 
 
-        CompareLikeForLike = ""
-        'MsgBox(LObj.GetType.ToString)
-        If Not LObj.Items.Count = RObj.Items.Count Then
+        If Not LObj.Items Is Nothing Then
+            If Not RObj.Items Is Nothing Then
+                CompareLikeForLike = ""
+                'MsgBox(LObj.GetType.ToString)
+                If Not LObj.Items.Count = RObj.Items.Count Then
 
-            ' Group contents dont match so we need to use alternate algorithm that attempts to match group elements by name before comparing them
-            For Each Litm In LObj.Items
-                For Each Ritm In RObj.Items
-                    If Litm.name = Ritm.name Then
-                        If Litm.GetType = Ritm.GetType Then
-                            ' Would appear to be a candidate for attempting a deeper comparison of elements on
-                            If Litm.GetType.ToString = "ME_Diff.groupType" Then
-                                Dim msg As String = ""
-                                Dim gobj As ME_Diff.groupType = Litm
-                                msg = CompareLikeForLike(Litm, Ritm, fname, gnest & "/" & gobj.name)
-                            Else
-                                Call CompareItemsByType_Obj(Litm, Ritm, fname, gnest)
-                            End If
-                        End If
-                    End If
-                Next
-            Next
-
-            ' Now try to pull the names of the groups out that dont have matches
-            ' Find groups that dont match on both sides
-            If LObj.Items.Count > RObj.Items.Count Then
-                ' Left has more, find the left items that dont exist
-                Dim NoMatch As Boolean = False
-                For Each Litm In LObj.Items
-                    For Each Ritm In RObj.Items
-                        If Ritm.name = Litm.name Then
-                            If Ritm.GetType = Litm.GetType Then
-                                NoMatch = True
-                                Exit For
-                            End If
-                        End If
-                    Next
-                    If NoMatch = False Then
-                        Call AddListContentMatchGroupException(Litm.name.ToString, fname, gnest & "/" & LObj.name, "Object Type : " & GetTypeFromString(Litm.GetType.ToString) & " - Parameter : Group item mismatch - Left Value = Present, Right Value = None")
-                    End If
-                    NoMatch = False
-                Next
-            End If
-
-            If RObj.Items.Count > LObj.Items.Count Then
-                ' Right has more, find the right items that dont exist
-                Dim NoMatch As Boolean = False
-                For Each Ritm In RObj.Items
+                    ' Group contents dont match so we need to use alternate algorithm that attempts to match group elements by name before comparing them
                     For Each Litm In LObj.Items
-                        If Ritm.name = Litm.name Then
-                            If Ritm.GetType = Litm.GetType Then
-                                NoMatch = True
-                                Exit For
+                        For Each Ritm In RObj.Items
+                            If Litm.name = Ritm.name Then
+                                If Litm.GetType = Ritm.GetType Then
+                                    ' Would appear to be a candidate for attempting a deeper comparison of elements on
+                                    If Litm.GetType.ToString = "ME_Diff.groupType" Then
+                                        Dim msg As String = ""
+                                        Dim gobj As ME_Diff.groupType = Litm
+                                        msg = CompareLikeForLike(Litm, Ritm, fname, gnest & "/" & gobj.name)
+                                    Else
+                                        Call CompareItemsByType_Obj(Litm, Ritm, fname, gnest)
+                                    End If
+                                End If
                             End If
-                        End If
+                        Next
                     Next
-                    If NoMatch = False Then
-                        Call AddListContentMatchGroupException(Ritm.name.ToString, fname, gnest & "/" & RObj.name, "Object Type : " & GetTypeFromString(Ritm.GetType.ToString) & " - Parameter : Group item mismatch - Left Value = None, Right Value = Present")
+
+                    ' Now try to pull the names of the groups out that dont have matches
+                    ' Find groups that dont match on both sides
+                    If LObj.Items.Count > RObj.Items.Count Then
+                        ' Left has more, find the left items that dont exist
+                        Dim NoMatch As Boolean = False
+                        For Each Litm In LObj.Items
+                            For Each Ritm In RObj.Items
+                                If Ritm.name = Litm.name Then
+                                    If Ritm.GetType = Litm.GetType Then
+                                        NoMatch = True
+                                        Exit For
+                                    End If
+                                End If
+                            Next
+                            If NoMatch = False Then
+                                Call AddListContentMatchGroupException(Litm.name.ToString, fname, gnest & "/" & LObj.name, "Object Type : " & GetTypeFromString(Litm.GetType.ToString) & " - Parameter : Group item mismatch - Left Value = Present, Right Value = None")
+                            End If
+                            NoMatch = False
+                        Next
                     End If
-                    NoMatch = False
-                Next
-            End If
 
-        Else
-
-            Dim NoMatch As Boolean = False
-            Dim MatchFound As Boolean = False
-
-            For a = 0 To LObj.Items.Count - 1
-
-                If LObj.ItemsElementName(a) = RObj.ItemsElementName(a) Then
-                    'Select Case LObj.ItemsElementName(a)
-                    '    Case ME_Diff.ItemsChoiceType.group
-                    'End Select
-
-                    ' matching element types are found so proceed to compare all the properties of the objects after checking they are not a group type
-                    ' Check not a group else call this function again
-                    If LObj.ItemsElementName(a) = ME_Diff.ItemsChoiceType.group Then
-                        Dim msg As String = ""
-                        Dim gobj As ME_Diff.groupType = LObj.Items(a)
-                        msg = CompareLikeForLike(LObj.Items(a), RObj.Items(a), fname, gnest & "/" & gobj.name)
-                    Else
-                        Call CompareItemsByType_Obj(LObj.Items(a), RObj.Items(a), fname, gnest)
+                    If RObj.Items.Count > LObj.Items.Count Then
+                        ' Right has more, find the right items that dont exist
+                        Dim NoMatch As Boolean = False
+                        For Each Ritm In RObj.Items
+                            For Each Litm In LObj.Items
+                                If Ritm.name = Litm.name Then
+                                    If Ritm.GetType = Litm.GetType Then
+                                        NoMatch = True
+                                        Exit For
+                                    End If
+                                End If
+                            Next
+                            If NoMatch = False Then
+                                Call AddListContentMatchGroupException(Ritm.name.ToString, fname, gnest & "/" & RObj.name, "Object Type : " & GetTypeFromString(Ritm.GetType.ToString) & " - Parameter : Group item mismatch - Left Value = None, Right Value = Present")
+                            End If
+                            NoMatch = False
+                        Next
                     End If
+
                 Else
-                    ' execution falls into here when the group count matches but the item names dont, this means that the group composition is different
-                    NoMatch = True
+
+                    Dim NoMatch As Boolean = False
+                    Dim MatchFound As Boolean = False
+
+                    For a = 0 To LObj.Items.Count - 1
+
+                        If LObj.ItemsElementName(a) = RObj.ItemsElementName(a) Then
+                            'Select Case LObj.ItemsElementName(a)
+                            '    Case ME_Diff.ItemsChoiceType.group
+                            'End Select
+
+                            ' matching element types are found so proceed to compare all the properties of the objects after checking they are not a group type
+                            ' Check not a group else call this function again
+                            If LObj.ItemsElementName(a) = ME_Diff.ItemsChoiceType.group Then
+                                Dim msg As String = ""
+                                Dim gobj As ME_Diff.groupType = LObj.Items(a)
+                                msg = CompareLikeForLike(LObj.Items(a), RObj.Items(a), fname, gnest & "/" & gobj.name)
+                            Else
+                                Call CompareItemsByType_Obj(LObj.Items(a), RObj.Items(a), fname, gnest)
+                            End If
+                        Else
+                            ' execution falls into here when the group count matches but the item names dont, this means that the group composition is different
+                            NoMatch = True
+                        End If
+                    Next
+
+                    ' At the end of the main loop, if the nomatch flag is on then detect which groups left/right are not present on either side
+                    If NoMatch Then
+                        For a = 0 To LObj.Items.Count - 1
+                            MatchFound = False
+                            For b = 0 To RObj.Items.Count - 1
+                                If LObj.ItemsElementName(a) = RObj.ItemsElementName(b) Then
+                                    MatchFound = True
+                                    Exit For
+                                End If
+                            Next
+                            If MatchFound = False Then
+                                Call AddListContentMatch(gnest, fname, LObj.ItemsElementName(a), GetMEObjectType(LObj), "Group item mismatch", "Present", "Nothing") 'linfo(a).Name, linfo(a).GetValue(LObj, Nothing).ToString, rinfo(a).GetValue(RObj, Nothing).ToString
+                            End If
+                        Next
+
+                        For a = 0 To RObj.Items.Count - 1
+                            MatchFound = False
+                            For b = 0 To LObj.Items.Count - 1
+                                If RObj.ItemsElementName(a) = LObj.ItemsElementName(b) Then
+                                    MatchFound = True
+                                    Exit For
+                                End If
+                            Next
+                            If MatchFound = False Then
+                                Call AddListContentMatch(gnest, fname, RObj.ItemsElementName(a), GetMEObjectType(RObj), "Group item mismatch", "Nothing", "Present")
+                            End If
+                        Next
+
+                    End If
+
                 End If
-            Next
-
-            ' At the end of the main loop, if the nomatch flag is on then detect which groups left/right are not present on either side
-            If NoMatch Then
-                For a = 0 To LObj.Items.Count - 1
-                    MatchFound = False
-                    For b = 0 To RObj.Items.Count - 1
-                        If LObj.ItemsElementName(a) = RObj.ItemsElementName(b) Then
-                            MatchFound = True
-                            Exit For
-                        End If
-                    Next
-                    If MatchFound = False Then
-                        Call AddListContentMatch(gnest, fname, LObj.ItemsElementName(a), GetMEObjectType(LObj), "Group item mismatch", "Present", "Nothing") 'linfo(a).Name, linfo(a).GetValue(LObj, Nothing).ToString, rinfo(a).GetValue(RObj, Nothing).ToString
-                    End If
-                Next
-
-                For a = 0 To RObj.Items.Count - 1
-                    MatchFound = False
-                    For b = 0 To LObj.Items.Count - 1
-                        If RObj.ItemsElementName(a) = LObj.ItemsElementName(b) Then
-                            MatchFound = True
-                            Exit For
-                        End If
-                    Next
-                    If MatchFound = False Then
-                        Call AddListContentMatch(gnest, fname, RObj.ItemsElementName(a), GetMEObjectType(RObj), "Group item mismatch", "Nothing", "Present")
-                    End If
-                Next
-
             End If
-
         End If
+
+
 
     End Function
 

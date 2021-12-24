@@ -40,6 +40,8 @@ Partial Class File_Open
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(487, 20)
         Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = "D:\Users\speirsp\Desktop\Pick and place v3 hmi\1200\[993] Pick and Place Manual.x" &
+    "ml"
         '
         'Button1
         '
@@ -83,6 +85,8 @@ Partial Class File_Open
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(487, 20)
         Me.TextBox2.TabIndex = 3
+        Me.TextBox2.Text = "D:\Users\speirsp\Desktop\Pick and place v3 hmi\1500\[993] Pick and Place Manual.x" &
+    "ml"
         '
         'Button3
         '
